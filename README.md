@@ -7,7 +7,8 @@ MV2 of Munim, Inc. ・ データ CC BY 4.0、コード Apache-2.0 ・ 本調査�
 MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents working in MV2's name.
 
 最新の期限一覧 / Latest expiry list: [watch/2026-10-22/watch.md](watch/2026-10-22/watch.md) ・
-2027年4月1日のグループ別予測 / Forecast for 2027-04-01 by group: [forecast/2027-04-01/forecast.md](forecast/2027-04-01/forecast.md)
+2027年4月1日のグループ別予測 / Forecast for 2027-04-01 by group: [forecast/2027-04-01/forecast.md](forecast/2027-04-01/forecast.md) ・
+まとまりを考えた幅と過去の検証 / Clustering and back-test: [forecast/2027-04-01/cluster_band.md](forecast/2027-04-01/cluster_band.md)
 
 ---
 
@@ -41,10 +42,26 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 2026年の割合（prior 40.0%、other 18.2%）なら約61.6件（14.8＋46.8）、2024〜2026年の割合（31.9%、15.9%）なら約52.7件、
   グループ分けなしの2026年の割合（20.2%）なら約59.4件。
 - 仮説: 2027年4月1日の空白の割合は prior が other より高い（片側フィッシャー正確検定、p < 0.05、データ1件ずつ）。
-- 表の「90%の目安」はデータを独立とみなした概算で、同じ提供者のデータはまとめて空白になりやすいため実際の幅はもっと広くなります。
+- 表の「90%の目安」はデータを独立とみなした概算で、同じ提供者のデータはまとめて空白になりやすいため実際の幅はもっと広くなります
+  （次の節）。
 - このファイルのコミット日が、2027年4月1日より前に記録した証拠です。4月1日以降に新しい調査の `lapses.csv` で
   `python tools/fy2027_risk.py --census <調査> --score <新しいlapses.csv> --cohort forecast/2027-04-01/cohort.csv` を実行して採点します。
   上の単純な予測（292件中42〜59件）もそのまま残し、両方を採点します。
+
+### まとまりを考えた幅と過去の検証（事前登録、2026年10月22日）
+`tools/cluster_band.py` で、同じ提供者・同じ都道府県のデータが4月1日にまとめて空白になる度合い（級内相関ICC、分散分析による推定）を
+年ごとに求め、予測の「90%の目安」をデザイン効果 1 + (m − 1) × ICC で広げました（`forecast/2027-04-01/cluster_band.md`）。
+- 2026年のICCは提供者0.65、都道府県0.23（2024〜2026年をまとめると0.70と0.20）。2027年の294件は228の提供者・38の都道府県に属し、
+  デザイン効果は提供者で約2.1、都道府県で約4.0〜4.4です。
+- 広げた幅: 2026年の割合（約61.6件）なら、独立とみなして50〜73件、提供者で広げて45〜78件、都道府県で広げて37〜86件。
+  2024〜2026年の割合（約52.7件）なら42〜64件、37〜69件、30〜76件。
+- 過去の検証（前年の割合とICCだけで翌年を予測）: 空白のあった2022〜2026年の5回のうち、独立の幅に入ったのは1回（2025年）、
+  提供者で広げた幅は2回（2024・2025年）、都道府県で広げた幅は2回（2025年と、上限ちょうどの2026年）でした。
+- 外れた回はすべて、実際の件数が幅の上限を超えていました。割合がおおむね上がっている（2022年2.5%、2023年9.1%、2024年15.4%、
+  2025年14.4%、2026年20.2%）ため、前年の割合では少なめに出ます。幅を広げるだけでは足りないということです。
+  割合の伸びを入れた予測は別に検証し、次の版で追記します。
+- ここでの対象は `repeat_cliff.py` の定義（3月31日に切れ、その日に空白中でないデータ）なので、2024・2025年は上の集計（150件・230件）
+  より1件ずつ少ない149件・229件です。ICCは年ごとの少ないまとまりから推定するので不安定です（空白の少ない年は負や1になります）。
 
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
@@ -68,9 +85,10 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - `data/2026-10-16/feeds.csv` データごとの集計（提供者・ライセンス付き）、`versions.csv` 全版、`lapses.csv` 空白1回ごと、
   `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`repeat_cliff.csv`・`repeat_cliff.md`（再発）、`summary.json`、`findings.md`
 - `watch/<日付>/` 期限の一覧
-- `forecast/2027-04-01/` グループ別の予測（`cohort.csv`・`forecast.json`・`forecast.md`）
+- `forecast/2027-04-01/` グループ別の予測（`cohort.csv`・`forecast.json`・`forecast.md`）、まとまりを考えた幅と過去の検証
+  （`cluster_band.json`・`cluster_band.md`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
-  `tools/fy2027_risk.py`（グループ別の予測と採点）、各 `test_*.py`
+  `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
@@ -115,11 +133,30 @@ had no valid file on 2026-04-01 (prior, 37 feeds) and the rest (other, 257) (`fo
 - Hypothesis: on 2027-04-01 the prior group lapses at a higher share than the other group (one-sided Fisher exact
   test, p < 0.05, one feed at a time).
 - The "rough 90%" ranges in the table treat feeds as independent. Feeds from one publisher tend to lapse together, so
-  the real spread is wider.
+  the real spread is wider (next section).
 - The commit date of these files is the proof that they were recorded before 2027-04-01. After that day, the score
   comes from a new census's `lapses.csv` with
   `python tools/fy2027_risk.py --census <census> --score <new lapses.csv> --cohort forecast/2027-04-01/cohort.csv`.
   The simple forecast above (42–59 of 292) stays as written, and both will be scored.
+
+### Clustering and a back-test (recorded in advance, 2026-10-22)
+`tools/cluster_band.py` estimates, for each year, how strongly feeds from one publisher or one prefecture lapse together
+on April 1 (intra-cluster correlation, ICC, ANOVA estimate) and widens the rough 90% ranges by the design effect
+1 + (m − 1) × ICC (`forecast/2027-04-01/cluster_band.md`).
+- ICC in 2026: 0.65 by publisher, 0.23 by prefecture (pooled over 2024–2026: 0.70 and 0.20). The 294 feeds of the 2027
+  cohort belong to 228 publishers and 38 prefectures, giving design effects of about 2.1 (publisher) and 4.0–4.4
+  (prefecture).
+- Widened ranges: at the 2026 rates (about 61.6) 50–73 treating feeds as independent, 45–78 widened by publisher and
+  37–86 by prefecture; at the 2024–2026 rates (about 52.7) 42–64, 37–69 and 30–76.
+- Back-test, predicting each year from the year before only (its rate and its ICC): in the five years 2022–2026 that
+  had lapses, the independent range held the observed count once (2025), the publisher-widened range twice (2024,
+  2025) and the prefecture-widened range twice (2025, and 2026 exactly at its upper end).
+- Every miss was an observed count above the top of the range. The share has mostly risen (2022 2.5%, 2023 9.1%,
+  2024 15.4%, 2025 14.4%, 2026 20.2%), so the year-before rate runs low; wider ranges alone do not fix that. A forecast
+  that allows for the rise is being back-tested separately and will be added in the next version.
+- These counts use the at-risk rule of `repeat_cliff.py` (a file ending on March 31 and no lapse already running that
+  day), so 2024 and 2025 have 149 and 229 feeds, one fewer each than the 150 and 230 above. The ICC comes from few
+  clusters per year and is noisy (years with few lapses give negative values or 1).
 
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
@@ -148,9 +185,11 @@ include networks that stopped updating without being marked discontinued. The li
   lapse, `years.csv`, `prefectures.csv`, `fy_cliff.csv` (April 1), `repeat_cliff.csv` and `repeat_cliff.md` (repeats),
   `summary.json`, `findings.md`
 - `watch/<date>/` expiry lists
-- `forecast/2027-04-01/` the forecast by group (`cohort.csv`, `forecast.json`, `forecast.md`)
+- `forecast/2027-04-01/` the forecast by group (`cohort.csv`, `forecast.json`, `forecast.md`) and the clustering
+  ranges with their back-test (`cluster_band.json`, `cluster_band.md`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
-  `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score), each with `test_*.py`
+  `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score),
+  `tools/cluster_band.py` (clustering and ranges), each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
