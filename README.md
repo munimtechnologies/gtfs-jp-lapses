@@ -6,6 +6,8 @@ A census of the days on which Japan's published bus timetables (GTFS) had no val
 MV2 of Munim, Inc. ・ データ CC BY 4.0、コード Apache-2.0 ・ 本調査はMV2の名のもと、AIエージェントが作成しました。
 MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents working in MV2's name.
 
+最新の期限一覧 / Latest expiry list: [watch/2026-10-22/watch.md](watch/2026-10-22/watch.md)
+
 ---
 
 ## 日本語
@@ -20,9 +22,13 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 空白203回のうち121回（59.6%）は4月1日（年度初日）に始まり、空白日数の62%を占めます。
 - 3月31日でデータが切れたデータのうち、4月1日に空白になった割合:
   2023年 9/99（9.1%）、2024年 23/150（15.3%）、2025年 33/230（14.3%）、2026年 55/272（20.2%）。
-- 前年の4月1日にも空白になったデータは、2026年には21件中10件（48%）が再び空白に（他は251件中45件、18%）。
-  2025年は17件中3件（18%、他は約14%）で、差は小さめでした。同じ提供者のデータはまとめて空白になりやすく、件数は独立ではありません。
-- 現在有効な574件のうち292件（51%）は2027年3月31日に期限を迎えます。
+- 前年の4月1日にも空白になったデータは、2026年には25件中10件（40%）が再び空白に（他は247件中45件、18%、片側二項検定 p ≈ 0.009）。
+  2025年は17件中3件（18%、他は212件中30件、14%）、2024年は5件中2件（他は144件中21件、15%）で、差は小さめでした。
+  同じ提供者のデータはまとめて空白になりやすく、件数は独立ではありません（`data/2026-10-16/repeat_cliff.md`）。
+- 現在有効な574件のうち292件（51%）は2027年3月31日に期限を迎えます（2026年10月22日の一覧では580件中294件）。
+
+**訂正（2026-10-22）:** 以前の版は2026年の再発を「21件中10件（48%）、他は251件中45件」と書いていました。公開している
+`tools/repeat_cliff.py` で数え直すと25件中10件、他は247件中45件です（合計272件は上の3月31日のデータ数と一致します）。
 
 ### 2027年4月1日の予測（事前登録）
 過去3年の割合（14.3〜20.2%）が続けば、**2027年4月1日に292件のうち約42〜59件（中央の見込み約47件）が空白になる**と予測します。
@@ -35,6 +41,10 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 公開するものです。出力は `watch/<日付>/` の `expiring.csv`・`watch.md`・`summary.json`。
 実行: `python tools/expiry_watch.py --out out`（`--as-of YYYY-MM-DD` で日付指定）。
 
+2026年10月22日（日本時間）の一覧: 有効580件のうち期限切れ27件、7日以内1件、8〜30日17件、31〜60日10件。載った55件のうち31件に
+過去の空白があり、18件は4月1日の空白です。期限切れの27件には、運行終了の印がないまま更新の止まったデータも含まれるとみられます。
+今後は週に1回ほど更新します。
+
 ### 限界
 - 空白は「リポジトリに有効なデータがない日」で、バスが走らなかった日ではありません。
 - リポジトリ以外で配布されるデータ、リポジトリから消えた古い版は見えません。
@@ -44,9 +54,11 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 
 ### ファイル
 - `data/2026-10-16/feeds.csv` データごとの集計（提供者・ライセンス付き）、`versions.csv` 全版、`lapses.csv` 空白1回ごと、
-  `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`summary.json`、`findings.md`
+  `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`repeat_cliff.csv`・`repeat_cliff.md`（再発）、`summary.json`、`findings.md`
+- `watch/<日付>/` 期限の一覧
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
+  → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
 ### 出典とライセンス
 版履歴はGTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPIから取得しました。各データの提供者とライセンスは `feeds.csv` の
@@ -67,10 +79,14 @@ From the version history (publication date, validity period) that the GTFS Data 
 - 121 of the 203 lapses (59.6%) began on April 1, the first day of Japan's fiscal year; they hold 62% of all lapsed days.
 - Of the feeds whose data ended on March 31, the share with no valid file on April 1 was 9.1% (2023, 9/99),
   15.3% (2024, 23/150), 14.3% (2025, 33/230) and 20.2% (2026, 55/272).
-- Feeds that lapsed on the previous April 1 lapsed again in 2026 in 10 of 21 cases (48%), against 45 of 251 (18%) for
-  the rest. In 2025 the gap was small (3 of 17, 18%, vs about 14%). Feeds from one publisher tend to lapse together,
-  so these counts are not independent.
-- 292 of the 574 active feeds (51%) are set to expire on 2027-03-31.
+- Feeds that lapsed on the previous April 1 lapsed again in 2026 in 10 of 25 cases (40%), against 45 of 247 (18%) for
+  the rest (one-sided binomial p ≈ 0.009). The gap was smaller in 2025 (3 of 17, 18%, vs 30 of 212, 14%) and 2024
+  (2 of 5 vs 21 of 144, 15%). Feeds from one publisher tend to lapse together, so these counts are not independent
+  (`data/2026-10-16/repeat_cliff.md`).
+- 292 of the 574 active feeds (51%) are set to expire on 2027-03-31 (294 of 580 in the 2026-10-22 list).
+
+**Correction (2026-10-22):** an earlier version gave the 2026 repeat figures as 10 of 21 (48%) against 45 of 251.
+The published `tools/repeat_cliff.py` gives 10 of 25 and 45 of 247 (the 272 total matches the March 31 count above).
 
 ### Forecast for 2027-04-01 (recorded in advance)
 If the last three years' rates (14.3–20.2%) hold, **about 42–59 of those 292 feeds (central estimate ~47) will have no
@@ -84,6 +100,10 @@ April 1) from this census's `lapses.csv`. The repository already e-mails each pu
 this list puts the same signal in public for the apps and route planners that read the feeds. Output:
 `watch/<date>/expiring.csv`, `watch.md` and `summary.json`. Run: `python tools/expiry_watch.py --out out`
 (`--as-of YYYY-MM-DD` for another day).
+
+The list for 2026-10-22 (Japan time): of 580 active feeds, 27 have expired, 1 ends within 7 days, 17 in 8 to 30 days and
+10 in 31 to 60 days. 31 of the 55 listed feeds lapsed before, 18 of them on an April 1. The 27 expired feeds probably
+include networks that stopped updating without being marked discontinued. The list will be refreshed about weekly.
 
 ### Limits
 - A lapse means the repository had no valid file, not that buses stopped running.

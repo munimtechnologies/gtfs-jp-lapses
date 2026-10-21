@@ -1,0 +1,10 @@
+# Repeat April-1 lapses
+
+prior = feeds whose lapse began on April 1 of the previous year; at risk = a published file valid until March 31 of this year and watched past April 1. p_one_sided = binomial P(lapsed_again or more | prior_at_risk, others_share). Feeds from one publisher often lapse together, so they are not independent and p is only a rough guide.
+
+| year | prior_lapsers | prior_at_risk | lapsed_again | lapsed_again_orgs | repeat_share | others_at_risk | others_lapsed | others_share | p_one_sided |
+|---|---|---|---|---|---|---|---|---|---|
+| 2023 | 1 | 0 | 0 | 0 |  | 99 | 9 | 0.0909 |  |
+| 2024 | 9 | 5 | 2 | 2 | 0.4 | 144 | 21 | 0.1458 | 0.1572 |
+| 2025 | 23 | 17 | 3 | 3 | 0.1765 | 212 | 30 | 0.1415 | 0.4397 |
+| 2026 | 33 | 25 | 10 | 10 | 0.4 | 247 | 45 | 0.1822 | 0.0091 |
