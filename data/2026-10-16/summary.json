@@ -1,0 +1,142 @@
+{
+ "as_of": "2026-10-16",
+ "source": "https://api.gtfs-data.jp/v2 (GTFS Data Repository) + https://raw.githubusercontent.com/munimtechnologies/kaerimichi/main/feeds.txt",
+ "feed_days": 492026,
+ "lapsed_feed_days": 28029,
+ "lapsed_share": 0.057,
+ "lapsed_feed_days_strict": 27729,
+ "feeds_with_lapse": 156,
+ "lapses": 203,
+ "active_lapsed_now": 27,
+ "expiry": {
+  "active_feeds": 574,
+  "expired": 27,
+  "expiring_7_days": 0,
+  "expiring_30_days": 19,
+  "ending_by_fy_end": 427,
+  "ending_exactly_fy_end": 292,
+  "fy_end": "2027-03-31",
+  "as_of": "2026-10-16"
+ },
+ "lapse_lengths": [
+  {
+   "days": "1-7",
+   "ended": 35,
+   "ongoing": 0
+  },
+  {
+   "days": "8-30",
+   "ended": 30,
+   "ongoing": 2
+  },
+  {
+   "days": "31-90",
+   "ended": 41,
+   "ongoing": 0
+  },
+  {
+   "days": "91-365",
+   "ended": 61,
+   "ongoing": 17
+  },
+  {
+   "days": "366+",
+   "ended": 8,
+   "ongoing": 9
+  }
+ ],
+ "years": [
+  {
+   "year": 2021,
+   "feeds_observed": 12,
+   "feed_days": 1729,
+   "lapsed_feed_days": 0,
+   "feeds_with_lapse": 0,
+   "files_published": 0,
+   "backdated_files": 0,
+   "lapsed_share": 0.0,
+   "median_lead_days": null,
+   "backdated_share": null,
+   "lapses_started": 0
+  },
+  {
+   "year": 2022,
+   "feeds_observed": 87,
+   "feed_days": 15521,
+   "lapsed_feed_days": 203,
+   "feeds_with_lapse": 3,
+   "files_published": 194,
+   "backdated_files": 188,
+   "lapsed_share": 0.0131,
+   "median_lead_days": -247.5,
+   "backdated_share": 0.9691,
+   "lapses_started": 3
+  },
+  {
+   "year": 2023,
+   "feeds_observed": 243,
+   "feed_days": 65411,
+   "lapsed_feed_days": 1304,
+   "feeds_with_lapse": 17,
+   "files_published": 831,
+   "backdated_files": 575,
+   "lapsed_share": 0.0199,
+   "median_lead_days": -98,
+   "backdated_share": 0.6919,
+   "lapses_started": 17
+  },
+  {
+   "year": 2024,
+   "feeds_observed": 383,
+   "feed_days": 110391,
+   "lapsed_feed_days": 6033,
+   "feeds_with_lapse": 45,
+   "files_published": 1008,
+   "backdated_files": 601,
+   "lapsed_share": 0.0547,
+   "median_lead_days": -8.0,
+   "backdated_share": 0.5962,
+   "lapses_started": 41
+  },
+  {
+   "year": 2025,
+   "feeds_observed": 461,
+   "feed_days": 151254,
+   "lapsed_feed_days": 10085,
+   "feeds_with_lapse": 74,
+   "files_published": 3631,
+   "backdated_files": 3038,
+   "lapsed_share": 0.0667,
+   "median_lead_days": -27,
+   "backdated_share": 0.8367,
+   "lapses_started": 66
+  },
+  {
+   "year": 2026,
+   "feeds_observed": 581,
+   "feed_days": 147720,
+   "lapsed_feed_days": 10404,
+   "feeds_with_lapse": 94,
+   "files_published": 3811,
+   "backdated_files": 3231,
+   "lapsed_share": 0.0704,
+   "median_lead_days": -25,
+   "backdated_share": 0.8478,
+   "lapses_started": 76
+  }
+ ],
+ "checks": {
+  "feeds_in_list": 602,
+  "feeds_read": 602,
+  "errors": 0,
+  "all_read_or_error": true,
+  "error_share_below_5pct": true,
+  "feeds_with_files": 602,
+  "feeds_fewer_prev_files_than_api_max_prev": 0,
+  "latest_to_matches_list_end": 584,
+  "files_unusable": 0,
+  "update_files": 6189,
+  "files": 9475
+ },
+ "generated_at": "2026-10-16T08:51:02Z"
+}
