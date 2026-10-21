@@ -28,16 +28,24 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 過去3年の割合（14.3〜20.2%）が続けば、**2027年4月1日に292件のうち約42〜59件（中央の見込み約47件）が空白になる**と予測します。
 2027年4月8日ごろに同じ方法で集計し、ここに結果を追記します。単純な外挿で、モデルではありません。
 
+### 期限切れ・期限間近の一覧（expiry_watch.py）
+`tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
+データを残り日数の順に並べ、それぞれの過去の空白回数（うち4月1日）をこの調査の `lapses.csv` から付けます。
+リポジトリは期限の14日前に各提供者へメールで知らせています。この一覧は同じ情報を、データを読むアプリや経路検索の側から見られるように
+公開するものです。出力は `watch/<日付>/` の `expiring.csv`・`watch.md`・`summary.json`。
+実行: `python tools/expiry_watch.py --out out`（`--as-of YYYY-MM-DD` で日付指定）。
+
 ### 限界
 - 空白は「リポジトリに有効なデータがない日」で、バスが走らなかった日ではありません。
 - リポジトリ以外で配布されるデータ、リポジトリから消えた古い版は見えません。
 - NEWの版は公開日から、UPDATEの版は有効開始日から数えます（厳密版 lapsed_feed_days_strict はUPDATEも公開日から）。
 - 運行終了の印がないまま終わった路線は、空白が続いているように見えることがあります。個別の地域名は事実の記録であり、評価ではありません。
+- 期限の一覧は latest_feed_end_date だけを見るので、次のデータの開始が遅れる場合の空白などは拾えません。
 
 ### ファイル
 - `data/2026-10-16/feeds.csv` データごとの集計（提供者・ライセンス付き）、`versions.csv` 全版、`lapses.csv` 空白1回ごと、
   `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`summary.json`、`findings.md`
-- `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、各 `test_*.py`
+- `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
 
 ### 出典とライセンス
@@ -69,6 +77,14 @@ If the last three years' rates (14.3–20.2%) hold, **about 42–59 of those 292
 valid file on 2027-04-01**. We will re-run the census around 2027-04-08 and add the result here. This is a simple
 extrapolation, not a model.
 
+### Expiring feeds (expiry_watch.py)
+`tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
+whose latest file has already ended or ends within 60 days, with the feed's own past lapses (and how many began on
+April 1) from this census's `lapses.csv`. The repository already e-mails each publisher 14 days before a file ends;
+this list puts the same signal in public for the apps and route planners that read the feeds. Output:
+`watch/<date>/expiring.csv`, `watch.md` and `summary.json`. Run: `python tools/expiry_watch.py --out out`
+(`--as-of YYYY-MM-DD` for another day).
+
 ### Limits
 - A lapse means the repository had no valid file, not that buses stopped running.
 - Files distributed outside the repository, and old versions no longer in it, are not seen.
@@ -76,6 +92,8 @@ extrapolation, not a model.
   publication).
 - A network that ended without being marked discontinued can look like an open lapse. Place names in the data are
   records of fact, not judgements.
+- The expiry list reads only latest_feed_end_date, so it misses gaps such as a newer file that starts some days after
+  the old one ends.
 
 ### Sources and licences
 Version histories come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's publisher and licence are
