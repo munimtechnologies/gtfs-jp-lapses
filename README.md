@@ -6,7 +6,8 @@ A census of the days on which Japan's published bus timetables (GTFS) had no val
 MV2 of Munim, Inc. ・ データ CC BY 4.0、コード Apache-2.0 ・ 本調査はMV2の名のもと、AIエージェントが作成しました。
 MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents working in MV2's name.
 
-最新の期限一覧 / Latest expiry list: [watch/2026-10-22/watch.md](watch/2026-10-22/watch.md)
+最新の期限一覧 / Latest expiry list: [watch/2026-10-22/watch.md](watch/2026-10-22/watch.md) ・
+2027年4月1日のグループ別予測 / Forecast for 2027-04-01 by group: [forecast/2027-04-01/forecast.md](forecast/2027-04-01/forecast.md)
 
 ---
 
@@ -34,6 +35,17 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 過去3年の割合（14.3〜20.2%）が続けば、**2027年4月1日に292件のうち約42〜59件（中央の見込み約47件）が空白になる**と予測します。
 2027年4月8日ごろに同じ方法で集計し、ここに結果を追記します。単純な外挿で、モデルではありません。
 
+### グループ別の予測（事前登録、2026年10月22日）
+`tools/fy2027_risk.py` で、2027年3月31日に最新データが切れる有効なデータ294件を、2026年4月1日にも空白になったもの
+（prior、37件）とそれ以外（other、257件）に分けて記録しました（`forecast/2027-04-01/cohort.csv`）。
+- 2026年の割合（prior 40.0%、other 18.2%）なら約61.6件（14.8＋46.8）、2024〜2026年の割合（31.9%、15.9%）なら約52.7件、
+  グループ分けなしの2026年の割合（20.2%）なら約59.4件。
+- 仮説: 2027年4月1日の空白の割合は prior が other より高い（片側フィッシャー正確検定、p < 0.05、データ1件ずつ）。
+- 表の「90%の目安」はデータを独立とみなした概算で、同じ提供者のデータはまとめて空白になりやすいため実際の幅はもっと広くなります。
+- このファイルのコミット日が、2027年4月1日より前に記録した証拠です。4月1日以降に新しい調査の `lapses.csv` で
+  `python tools/fy2027_risk.py --census <調査> --score <新しいlapses.csv> --cohort forecast/2027-04-01/cohort.csv` を実行して採点します。
+  上の単純な予測（292件中42〜59件）もそのまま残し、両方を採点します。
+
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
 データを残り日数の順に並べ、それぞれの過去の空白回数（うち4月1日）をこの調査の `lapses.csv` から付けます。
@@ -56,7 +68,9 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - `data/2026-10-16/feeds.csv` データごとの集計（提供者・ライセンス付き）、`versions.csv` 全版、`lapses.csv` 空白1回ごと、
   `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`repeat_cliff.csv`・`repeat_cliff.md`（再発）、`summary.json`、`findings.md`
 - `watch/<日付>/` 期限の一覧
-- `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、各 `test_*.py`
+- `forecast/2027-04-01/` グループ別の予測（`cohort.csv`・`forecast.json`・`forecast.md`）
+- `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
+  `tools/fy2027_risk.py`（グループ別の予測と採点）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
@@ -93,6 +107,20 @@ If the last three years' rates (14.3–20.2%) hold, **about 42–59 of those 292
 valid file on 2027-04-01**. We will re-run the census around 2027-04-08 and add the result here. This is a simple
 extrapolation, not a model.
 
+### Forecast by group (recorded in advance, 2026-10-22)
+`tools/fy2027_risk.py` recorded the 294 active feeds whose latest file ends on 2027-03-31, split into those that also
+had no valid file on 2026-04-01 (prior, 37 feeds) and the rest (other, 257) (`forecast/2027-04-01/cohort.csv`).
+- At the 2026 rates (prior 40.0%, other 18.2%) about 61.6 lapses are expected (14.8 + 46.8); at the 2024–2026 rates
+  (31.9%, 15.9%) about 52.7; at one 2026 rate for all (20.2%) about 59.4.
+- Hypothesis: on 2027-04-01 the prior group lapses at a higher share than the other group (one-sided Fisher exact
+  test, p < 0.05, one feed at a time).
+- The "rough 90%" ranges in the table treat feeds as independent. Feeds from one publisher tend to lapse together, so
+  the real spread is wider.
+- The commit date of these files is the proof that they were recorded before 2027-04-01. After that day, the score
+  comes from a new census's `lapses.csv` with
+  `python tools/fy2027_risk.py --census <census> --score <new lapses.csv> --cohort forecast/2027-04-01/cohort.csv`.
+  The simple forecast above (42–59 of 292) stays as written, and both will be scored.
+
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
 whose latest file has already ended or ends within 60 days, with the feed's own past lapses (and how many began on
@@ -114,6 +142,17 @@ include networks that stopped updating without being marked discontinued. The li
   records of fact, not judgements.
 - The expiry list reads only latest_feed_end_date, so it misses gaps such as a newer file that starts some days after
   the old one ends.
+
+### Files
+- `data/2026-10-16/feeds.csv` per feed (with publisher and licence), `versions.csv` every file, `lapses.csv` one row per
+  lapse, `years.csv`, `prefectures.csv`, `fy_cliff.csv` (April 1), `repeat_cliff.csv` and `repeat_cliff.md` (repeats),
+  `summary.json`, `findings.md`
+- `watch/<date>/` expiry lists
+- `forecast/2027-04-01/` the forecast by group (`cohort.csv`, `forecast.json`, `forecast.md`)
+- `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
+  `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score), each with `test_*.py`
+- Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
+  `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
 ### Sources and licences
 Version histories come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's publisher and licence are

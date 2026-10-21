@@ -1,0 +1,48 @@
+{
+ "recorded": "2026-10-22",
+ "source": "https://api.gtfs-data.jp/v2/feeds",
+ "census": "census",
+ "forecast": {
+  "cohort": 294,
+  "prior": 37,
+  "other": 257,
+  "prior_definition": "a lapse that began on 2026-04-01 in the census",
+  "target_day": "2027-04-01",
+  "models": {
+   "rates_2026": {
+    "expected": 61.6,
+    "low90": 50,
+    "high90": 73,
+    "expected_prior": 14.8,
+    "expected_other": 46.8,
+    "prior_share": 0.4,
+    "other_share": 0.1822,
+    "from_prior_at_risk": 25,
+    "from_others_at_risk": 247
+   },
+   "rates_2024_2026": {
+    "expected": 52.7,
+    "low90": 42,
+    "high90": 64,
+    "expected_prior": 11.8,
+    "expected_other": 40.9,
+    "prior_share": 0.3191,
+    "other_share": 0.1592,
+    "from_prior_at_risk": 47,
+    "from_others_at_risk": 603
+   },
+   "flat_2026": {
+    "expected": 59.4,
+    "low90": 48,
+    "high90": 71,
+    "expected_prior": 0,
+    "expected_other": 59.4,
+    "share": 0.2022
+   }
+  },
+  "hypothesis": "On 2027-04-01 the prior group lapses at a higher share than the other group (one-sided Fisher exact test, p < 0.05), feeds counted one by one."
+ },
+ "result": null,
+ "generated_at": "2026-10-21T19:39:02Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
