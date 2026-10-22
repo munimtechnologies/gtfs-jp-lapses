@@ -72,13 +72,23 @@ class Test(unittest.TestCase):
         p = hr.predictions(keyed(BEFORE), keyed(AFTER), '2026-12-15')
         self.assertEqual((p['R1']['cohort'], p['R1']['applicable_after'], p['R1']['handled_after']), (2, 1, 1))
         self.assertFalse(p['R1']['held'])
+        # 1 of 3 pairs handled is 33%, not under 25%: R2 does not hold here (the first version of this test said it
+        # did, which was the test's mistake; the rule in holiday_recheck.py is unchanged).
         self.assertEqual((p['R2']['pairs'], p['R2']['handled_after'], p['R2']['share']), (3, 1, 0.333))
-        self.assertTrue(p['R2']['held'])
+        self.assertFalse(p['R2']['held'])
         self.assertEqual((p['R3']['shown'], p['R3']['applicable'], p['R3']['share'], p['R3']['share_2026_10_22']),
                          (2, 5, 0.4, 0.6))
         self.assertTrue(p['R3']['held'])
         self.assertTrue(all(x['in_window'] for x in p.values()))
         self.assertFalse(hr.predictions(keyed(BEFORE), keyed(AFTER), '2027-01-05')['R1']['in_window'])
+
+    def test_predictions_unchanged_files(self):
+        # Nothing changed: no pair is newly handled (R2 holds), and none of the cohort handles 2027-01-11 (R1 holds).
+        p = hr.predictions(keyed(BEFORE), keyed(BEFORE), '2026-12-15')
+        self.assertEqual((p['R1']['applicable_after'], p['R1']['handled_after']), (2, 0))
+        self.assertTrue(p['R1']['held'])
+        self.assertEqual((p['R2']['pairs'], p['R2']['handled_after']), (3, 0))
+        self.assertTrue(p['R2']['held'])
 
     def test_changes(self):
         ch = hr.changes(keyed(BEFORE), keyed(AFTER))
