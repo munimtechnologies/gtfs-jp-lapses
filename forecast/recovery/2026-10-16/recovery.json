@@ -1,0 +1,329 @@
+{
+ "as_of": "2026-10-16",
+ "excluded_discontinued": 1,
+ "horizons": [
+  {
+   "horizon_days": 30,
+   "last_lapse_day": "2026-11-15",
+   "open_lapses": 27,
+   "expected_recoveries": 1.0,
+   "median": 1,
+   "range_90": [
+    0,
+    3
+   ]
+  },
+  {
+   "horizon_days": 90,
+   "last_lapse_day": "2027-01-14",
+   "open_lapses": 27,
+   "expected_recoveries": 5.45,
+   "median": 5,
+   "range_90": [
+    2,
+    9
+   ]
+  }
+ ],
+ "lapses": [
+  {
+   "organization_id": "kanumacity",
+   "feed_id": "ri-bus",
+   "feed_name": "リーバス",
+   "pref_id": "9",
+   "start": "2024-08-01",
+   "age_days": 807,
+   "april_1": false,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "tochigi-nakagawatown",
+   "feed_id": "nakagawamaticommunitybus",
+   "feed_name": "那珂川町コミュニティバス（馬頭烏山線）",
+   "pref_id": "9",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "chiba-rainbow-bus",
+   "feed_id": "chibarainbowbus",
+   "feed_name": "ちばレインボーバス",
+   "pref_id": "12",
+   "start": "2025-10-01",
+   "age_days": 381,
+   "april_1": false,
+   "p_over_within_30d": 0.1429,
+   "p_over_within_90d": 0.2143
+  },
+  {
+   "organization_id": "sanjocity",
+   "feed_id": "guruttosan",
+   "feed_name": "三条市循環バスぐるっとさん",
+   "pref_id": "15",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "uozucity",
+   "feed_id": "omotenashi",
+   "feed_name": "おもてなし魚津直行便",
+   "pref_id": "16",
+   "start": "2026-03-17",
+   "age_days": 214,
+   "april_1": false,
+   "p_over_within_30d": 0.0571,
+   "p_over_within_90d": 0.2919
+  },
+  {
+   "organization_id": "kiyosato",
+   "feed_id": "kiyosato-picnicbus",
+   "feed_name": "清里ピクニックバス",
+   "pref_id": "19",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "minobutown",
+   "feed_id": "iitomimotosukosen",
+   "feed_name": "飯富本栖湖線",
+   "pref_id": "19",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "minobutown",
+   "feed_id": "furusekizyunkansen",
+   "feed_name": "古関循環線",
+   "pref_id": "19",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "minobutown",
+   "feed_id": "furusekikaiiwamasen",
+   "feed_name": "古関甲斐岩間線",
+   "pref_id": "19",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "nirasakicity",
+   "feed_id": "shiminbus",
+   "feed_name": "韮崎市民バス",
+   "pref_id": "19",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "iijimatown",
+   "feed_id": "iichanbus",
+   "feed_name": "いいちゃんバス",
+   "pref_id": "20",
+   "start": "2025-12-10",
+   "age_days": 311,
+   "april_1": false,
+   "p_over_within_30d": 0.0455,
+   "p_over_within_90d": 0.3669
+  },
+  {
+   "organization_id": "kitaaikivillage",
+   "feed_id": "soneibus",
+   "feed_name": "北相木村村営バス",
+   "pref_id": "20",
+   "start": "2024-04-01",
+   "age_days": 929,
+   "april_1": true,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "nagano-nakanocity",
+   "feed_id": "fureaibus",
+   "feed_name": "中野市ふれあいバス",
+   "pref_id": "20",
+   "start": "2025-01-12",
+   "age_days": 643,
+   "april_1": false,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "okayacity",
+   "feed_id": "silkybus",
+   "feed_name": "シルキーバス",
+   "pref_id": "20",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "shinanotown",
+   "feed_id": "rosenbus",
+   "feed_name": "信濃町路線バス",
+   "pref_id": "20",
+   "start": "2024-04-01",
+   "age_days": 929,
+   "april_1": true,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "tateshinatown",
+   "feed_id": "tateshinasmile",
+   "feed_name": "たてしなスマイル交通",
+   "pref_id": "20",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "higashiomicity",
+   "feed_id": "higasiohmisicommunitybus",
+   "feed_name": "東近江市ちょこっとバス",
+   "pref_id": "25",
+   "start": "2026-10-01",
+   "age_days": 16,
+   "april_1": false,
+   "p_over_within_30d": 0.1544,
+   "p_over_within_90d": 0.4161
+  },
+  {
+   "organization_id": "rittocity",
+   "feed_id": "rittoukurichanbus",
+   "feed_name": "栗東市　くりちゃんバス",
+   "pref_id": "25",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "hyogo-kamitown",
+   "feed_id": "kamichominbus",
+   "feed_name": "香美町民バス",
+   "pref_id": "28",
+   "start": "2024-04-01",
+   "age_days": 929,
+   "april_1": true,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "katocity",
+   "feed_id": "yashiroshigaichinoriaitaxi",
+   "feed_name": "社市街地乗合タクシー",
+   "pref_id": "28",
+   "start": "2025-04-01",
+   "age_days": 564,
+   "april_1": true,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "yabucity",
+   "feed_id": "waiwai-sekimiya-yoka",
+   "feed_name": "わいわいバス/関宮ふれあいバス/八鹿コミュニティバス",
+   "pref_id": "28",
+   "start": "2025-01-01",
+   "age_days": 654,
+   "april_1": false,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "andotown",
+   "feed_id": "andocombus",
+   "feed_name": "安堵町コミュニティバス",
+   "pref_id": "29",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "susamitown",
+   "feed_id": "Communitybus",
+   "feed_name": "すさみ町コミュニティバス",
+   "pref_id": "30",
+   "start": "2025-04-01",
+   "age_days": 564,
+   "april_1": true,
+   "p_over_within_30d": 0.0,
+   "p_over_within_90d": 0.0
+  },
+  {
+   "organization_id": "waketown",
+   "feed_id": "wakechoueibasu",
+   "feed_name": "和気町営バス「わけまろ号」",
+   "pref_id": "33",
+   "start": "2026-01-01",
+   "age_days": 289,
+   "april_1": false,
+   "p_over_within_30d": 0.0417,
+   "p_over_within_90d": 0.3466
+  },
+  {
+   "organization_id": "kamikatsutown",
+   "feed_id": "kamikatsutownbus",
+   "feed_name": "上勝町営バス",
+   "pref_id": "36",
+   "start": "2026-04-01",
+   "age_days": 199,
+   "april_1": true,
+   "p_over_within_30d": 0.0286,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "tokushima-minamitown",
+   "feed_id": "minabubyoinrenrakubus",
+   "feed_name": "美波病院連絡バス",
+   "pref_id": "36",
+   "start": "2026-03-21",
+   "age_days": 210,
+   "april_1": false,
+   "p_over_within_30d": 0.0571,
+   "p_over_within_90d": 0.2611
+  },
+  {
+   "organization_id": "kotosan",
+   "feed_id": "kotohira-local",
+   "feed_name": "琴平路線",
+   "pref_id": "37",
+   "start": "2026-10-01",
+   "age_days": 16,
+   "april_1": false,
+   "p_over_within_30d": 0.1544,
+   "p_over_within_90d": 0.4161
+  }
+ ],
+ "generated_at": "2026-10-22T03:58:45Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

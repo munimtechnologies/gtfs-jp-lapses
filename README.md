@@ -10,7 +10,8 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 2027年4月1日のグループ別予測 / Forecast for 2027-04-01 by group: [forecast/2027-04-01/forecast.md](forecast/2027-04-01/forecast.md) ・
 まとまりを考えた幅と過去の検証 / Clustering and back-test: [forecast/2027-04-01/cluster_band.md](forecast/2027-04-01/cluster_band.md) ・
 割合の伸びを入れた予測 / Trend check: [forecast/2027-04-01/trend_band.md](forecast/2027-04-01/trend_band.md) ・
-空白はどれだけ続くか / How long lapses last: [data/2026-10-16/lapse_survival.md](data/2026-10-16/lapse_survival.md)
+空白はどれだけ続くか / How long lapses last: [data/2026-10-16/lapse_survival.md](data/2026-10-16/lapse_survival.md) ・
+続いている空白はいつ終わるか / When the open lapses end: [forecast/recovery/2026-10-16/recovery.md](forecast/recovery/2026-10-16/recovery.md)
 
 ---
 
@@ -101,6 +102,20 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 限界: 運行終了の印がないまま終わった路線は終わらない空白に見え、長さを長めにします。あとから公開された版の有効期間が
   さかのぼって空白を埋めた場合も、空白はその日に終わったと数えます。すでに集計で見ていたデータの記述で、事前登録ではありません。
 
+### 続いている空白はいつ終わるか（事前登録、2026年10月22日）
+`tools/recovery_forecast.py` で、調査日（2026年10月16日）にまだ続いていた空白27回（運行終了の印が付いたデータの1回は除く）それぞれについて、
+上のカプラン・マイヤー曲線とそれまでの長さから、30日・90日以内に有効なデータが戻る確率を求めました（`forecast/recovery/2026-10-16/recovery.md`）。
+- 30日以内（空白の最終日が2026年11月15日まで）: 戻る見込み1.0回（中央1回、90%の目安0〜3回）。
+- 90日以内（2027年1月14日まで）: 5.45回（中央5回、2〜9回）。
+- 続いている空白の長さは16〜929日。2026年10月1日に始まった2回は、30日以内に戻る確率15%、90日以内42%。2026年4月1日に始まった
+  12回はそれぞれ3%と26%。27回のうち8回（564日以上）は、これまでに終わったどの空白よりも長く続いているため確率0と出ます。
+  運行終了の印がないまま更新の止まったデータが多いとみられます。
+- 記録は2026年10月22日で、使ったのは10月16日の調査だけです。10月22日の期限一覧（上）はすでに公開していましたが、この予測には
+  使っていません。2026年11月16日ごろと2027年1月15日以降に新しい調査で採点し、ここに追記します:
+  `python tools/recovery_forecast.py --lapses <新しいlapses.csv> --score <新しいlapses.csv> --as-of <その調査日> --forecast-json forecast/recovery/2026-10-16/recovery.json --out out`
+- 限界: 同じ提供者のデータはまとめて戻ることが多いので、幅は実際より狭めです。曲線の後ろの方は空白が少なく揺れが大きい
+  （381日続く1回の30日以内の確率14%が、199日の空白の3%より高く出るなど）。
+
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
 データを残り日数の順に並べ、それぞれの過去の空白回数（うち4月1日）をこの調査の `lapses.csv` から付けます。
@@ -126,9 +141,10 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - `watch/<日付>/` 期限の一覧
 - `forecast/2027-04-01/` グループ別の予測（`cohort.csv`・`forecast.json`・`forecast.md`）、まとまりを考えた幅と過去の検証
   （`cluster_band.json`・`cluster_band.md`）、割合の伸びを入れた予測（`trend_band.json`・`trend_band.md`）
+- `forecast/recovery/2026-10-16/` 続いている空白が終わる確率（`recovery.json`・`recovery.md`・`recovery.csv`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
-  `tools/lapse_survival.py`（空白の続く日数）、各 `test_*.py`
+  `tools/lapse_survival.py`（空白の続く日数）、`tools/recovery_forecast.py`（続いている空白の予測と採点）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
@@ -242,6 +258,22 @@ far (`data/2026-10-16/lapse_survival.md`).
   estimate. A lapse also counts as over on the day a later, back-dated file covers. This describes data already seen in
   aggregate; it was not registered in advance.
 
+### When the open lapses end (recorded in advance, 2026-10-22)
+`tools/recovery_forecast.py` takes each of the 27 lapses still open on the census day (2026-10-16; one more, on a feed
+marked discontinued, is left out) and reads off the Kaplan-Meier curve above, given how long it has lasted so far, the
+chance that a valid file exists again within 30 and 90 days (`forecast/recovery/2026-10-16/recovery.md`).
+- Within 30 days (last lapsed day 2026-11-15): 1.0 recovery expected (median 1, rough 90% range 0–3).
+- Within 90 days (to 2027-01-14): 5.45 expected (median 5, range 2–9).
+- The open lapses have lasted 16 to 929 days. The two that began on 2026-10-01 have a 15% chance of ending within 30
+  days and 42% within 90; the twelve that began on 2026-04-01, 3% and 26%. Eight of the 27 (564 days or more) have
+  already lasted longer than any lapse that ever ended, so they get probability 0; most are probably feeds that
+  stopped updating without being marked discontinued.
+- Recorded on 2026-10-22 from the 2026-10-16 census only. The 2026-10-22 expiry list above was already public but was
+  not used. It will be scored with new censuses around 2026-11-16 and after 2027-01-15, and the results added here:
+  `python tools/recovery_forecast.py --lapses <new lapses.csv> --score <new lapses.csv> --as-of <its census day> --forecast-json forecast/recovery/2026-10-16/recovery.json --out out`
+- Limits: one publisher's feeds often recover together, so the real range is wider. The tail of the curve rests on few
+  lapses and is jumpy (the one open lapse at 381 days gets 14% within 30 days, more than the 3% of the 199-day ones).
+
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
 whose latest file has already ended or ends within 60 days, with the feed's own past lapses (and how many began on
@@ -272,10 +304,12 @@ include networks that stopped updating without being marked discontinued. The li
 - `forecast/2027-04-01/` the forecast by group (`cohort.csv`, `forecast.json`, `forecast.md`), the clustering
   ranges with their back-test (`cluster_band.json`, `cluster_band.md`) and the trend check (`trend_band.json`,
   `trend_band.md`)
+- `forecast/recovery/2026-10-16/` the chance that each open lapse ends (`recovery.json`, `recovery.md`, `recovery.csv`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
   `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score),
   `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check),
-  `tools/lapse_survival.py` (how long lapses last), each with `test_*.py`
+  `tools/lapse_survival.py` (how long lapses last), `tools/recovery_forecast.py` (open-lapse forecast and its score),
+  each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
