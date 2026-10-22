@@ -13,7 +13,8 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 空白はどれだけ続くか / How long lapses last: [data/2026-10-16/lapse_survival.md](data/2026-10-16/lapse_survival.md) ・
 続いている空白はいつ終わるか / When the open lapses end: [forecast/recovery/2026-10-16/recovery.md](forecast/recovery/2026-10-16/recovery.md) ・
 祝日・年末年始の扱い / Holidays and the New Year break: [holidays/2026-10-22/holidays.md](holidays/2026-10-22/holidays.md) ・
-停留所名のよみがな・英語 / Stop-name readings and English: [names/2026-10-22/names.md](names/2026-10-22/names.md)（再集計 / recount: [verify/recount.md](names/2026-10-22/verify/recount.md)）
+停留所名のよみがな・英語 / Stop-name readings and English: [names/2026-10-22/names.md](names/2026-10-22/names.md)（再集計 / recount: [verify/recount.md](names/2026-10-22/verify/recount.md)） ・
+データの健康診断 / Data-health table: [health/2026-10-22/health.md](health/2026-10-22/health.md)
 
 ---
 
@@ -178,6 +179,25 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   いるかだけ）。行先は trip_headsign だけで、stop_headsign は見ていません。各データの現行ファイルは10月22日に読んだもの
   （再集計で2回）だけです。個別の地域名は事実の記録であり、評価ではありません。
 
+### データの健康診断（2026年10月22日、予測は事前登録）
+`tools/data_health.py` で、ここまでの4つの集計（10月22日の期限一覧、10月16日の空白の調査、祝日、停留所名）を、新しいダウンロードを
+せずにデータごとに1行にまとめました（`health/2026-10-22/`）。対象は、祝日か停留所名の調査で現行ファイルを読んだ有効でオープンライセンスの
+553件です。各データに4つの確認を ok・flag・n/a で付けます: 期限（期限切れか60日以内に切れる）、祝日（これからの祝日・年末年始の
+どこか1日にふだんどおりの運行）、よみがな（9割未満の停留所にしかない）、英語（同じく9割未満。英語は推奨のみ）。
+- 期限 flag 28件、祝日 flag 236件（対象485件中。対象外68件）、よみがな flag 8件、英語 flag 146件。
+- 必須の3つ（期限・祝日・よみがな）のどれかに flag があるデータは553件中267件（48.3%）。2つに flag があるのは5件だけで、
+  3つすべてのデータはありません。4つの確認がすべて ok のデータは168件です。都道府県ごとの数は `health/2026-10-22/prefectures.csv`。
+- 表を作る前に記録した2つの予測（`tools/data_health.py` の PREDICTIONS）はどちらも外れました。
+  D1（過去に空白のあったデータは祝日の flag が多い）: 115件中55件（47.8%）対 364件中178件（48.9%）、片側フィッシャー正確検定 p = 0.62。
+  D2（英語が flag のデータは祝日の flag が多い）: 132件中59件（44.7%）対 353件中177件（50.1%）、p = 0.88。
+  期限の更新が遅れたことのあるデータや英語を付けていないデータほど祝日の扱いが抜けている、とは言えません。
+  こうした抜けは、データごとにばらばらに起きているように見えます。
+- 予測ではない参考: 過去に空白のあったデータ126件のうち期限 flag は4件（3.2%）、空白のなかったデータは421件中23件（5.5%）。
+- 期限一覧のうち期限切れの27件は、有効な現行ファイルがないため祝日・停留所名の調査で読んでおらず、この表には入っていません。
+- 限界: 各集計はそれぞれの日に読んだもの（空白の調査は10月16日、その他は10月22日）で、その後の更新は見ていません。祝日の flag には、
+  12月29日・30日のように本当にふだんの平日ダイヤで走る日も含まれます。flag は確かめるきっかけで、誤りの証明ではありません。
+  個別の地域名は事実の記録であり、評価ではありません。
+
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
 データを残り日数の順に並べ、それぞれの過去の空白回数（うち4月1日）をこの調査の `lapses.csv` から付けます。
@@ -209,15 +229,17 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   `holidays/predictions-2026-10-22.md`・`holidays/predictions-recheck-2026-12.md`（事前登録）
 - `names/2026-10-22/` 停留所名のよみがな・英語（`feeds.csv`、`prefectures.csv`、`skipped.csv`、`summary.json`、`names.md`、
   再集計 `verify/` の `recount.csv`・`recount.md`・`summary.json`）、`names/predictions-2026-10-22.md`（事前登録）
+- `health/2026-10-22/` データの健康診断（`feeds.csv` データごとの4つの確認、`prefectures.csv`、`summary.json`、`health.md`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
   `tools/lapse_survival.py`（空白の続く日数）、`tools/recovery_forecast.py`（続いている空白の予測と採点）、
   `tools/holiday_check.py`（祝日・年末年始）、`tools/holiday_recheck.py`（先の祝日の抜けと12月の再確認）、
-  `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、各 `test_*.py`
+  `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、`tools/data_health.py`（健康診断）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`。祝日: `python tools/holiday_check.py --as-of 2026-10-22 --out out`
   （その日の現行ファイルを読みます）→ `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`。
-  停留所名: `python tools/names_check.py --as-of 2026-10-22 --out out` → `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`
+  停留所名: `python tools/names_check.py --as-of 2026-10-22 --out out` → `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`。
+  健康診断: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### 出典とライセンス
 版履歴はGTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPIから取得しました。各データの提供者とライセンスは `feeds.csv` の
@@ -421,6 +443,30 @@ and checking tools).
   current file was read on 2026-10-22 only (twice, counting the recount). Place names in the data are records of fact,
   not judgements.
 
+### Data-health table (2026-10-22, predictions recorded in advance)
+`tools/data_health.py` joins the four censuses above (the 2026-10-22 expiry list, the 2026-10-16 lapse census, holidays
+and stop names) into one row per feed, with no new downloads (`health/2026-10-22/`). It covers the 553 active, openly
+licensed feeds whose current file the holiday or stop-name census read. Each feed gets four checks, each ok, flag or
+n/a: expiry (expired or ending within 60 days), holidays (the ordinary timetable on at least one holiday or New Year day
+still to come), readings (a kana reading for under 90% of its stops) and English (an English name for under 90% of its
+stops; English is only recommended).
+- Expiry flag 28 feeds, holidays flag 236 (of 485 applicable; 68 n/a), readings flag 8, English flag 146.
+- 267 of the 553 feeds (48.3%) have at least one flag among the three required checks (expiry, holidays, readings).
+  Only 5 have two, and none has all three. 168 feeds are ok on all four checks. Counts by prefecture are in
+  `health/2026-10-22/prefectures.csv`.
+- Both predictions fixed before the table was first made (PREDICTIONS in `tools/data_health.py`) did not hold.
+  D1 (feeds with a past lapse get a holiday flag more often): 55 of 115 (47.8%) against 178 of 364 (48.9%), one-sided
+  Fisher exact p = 0.62. D2 (feeds flagged on English get a holiday flag more often): 59 of 132 (44.7%) against 177 of
+  353 (50.1%), p = 0.88. Feeds that have lapsed before, or that give no English, are no more likely to leave holidays
+  out. These gaps seem to arise feed by feed, not as one "careless publisher" trait.
+- Not a prediction: 4 of the 126 feeds with a past lapse (3.2%) are on the expiry list, against 23 of 421 (5.5%)
+  without one.
+- The 27 expired feeds on the expiry list have no valid current file, so the file censuses did not read them and they
+  are not in this table.
+- Limits: each census was read on its own day (lapses 2026-10-16, the rest 2026-10-22) and later files are not seen. The
+  holiday flag includes days such as 12-29 and 12-30 on which many routes really do run their weekday timetable. A flag
+  is a sign to check, not proof of a mistake. Place names in the data are records of fact, not judgements.
+
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
 whose latest file has already ended or ends within 60 days, with the feed's own past lapses (and how many began on
@@ -458,18 +504,22 @@ include networks that stopped updating without being marked discontinued. The li
 - `names/2026-10-22/` stop-name readings and English (`feeds.csv`, `prefectures.csv`, `skipped.csv`, `summary.json`,
   `names.md`, the recount in `verify/`: `recount.csv`, `recount.md`, `summary.json`); `names/predictions-2026-10-22.md`
   (recorded in advance)
+- `health/2026-10-22/` the data-health table (`feeds.csv` four checks per feed, `prefectures.csv`, `summary.json`,
+  `health.md`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
   `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score),
   `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check),
   `tools/lapse_survival.py` (how long lapses last), `tools/recovery_forecast.py` (open-lapse forecast and its score),
   `tools/holiday_check.py` (holidays), `tools/holiday_recheck.py` (later holidays and the December re-check),
-  `tools/names_check.py` (stop names), `tools/verify_names.py` (stop-name recount), each with `test_*.py`
+  `tools/names_check.py` (stop names), `tools/verify_names.py` (stop-name recount), `tools/data_health.py`
+  (data-health table), each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`.
   Holidays: `python tools/holiday_check.py --as-of 2026-10-22 --out out` (reads the files current on the day it runs) →
   `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`.
   Stop names: `python tools/names_check.py --as-of 2026-10-22 --out out` →
-  `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`
+  `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`.
+  Data health: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### Sources and licences
 Version histories and timetable files come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's

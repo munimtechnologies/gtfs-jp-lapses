@@ -1,0 +1,80 @@
+{
+ "as_of": "2026-10-22",
+ "feeds": 553,
+ "checks": {
+  "expiry": {
+   "flag": 28,
+   "ok": 525
+  },
+  "holidays": {
+   "flag": 236,
+   "n/a": 68,
+   "ok": 249
+  },
+  "readings": {
+   "flag": 8,
+   "ok": 545
+  },
+  "english": {
+   "flag": 146,
+   "ok": 407
+  }
+ },
+ "flags_required": {
+  "0": 286,
+  "1": 262,
+  "2": 5
+ },
+ "any_required_flag": 267,
+ "all_ok": 168,
+ "watch_outside": {
+  "expired": 27
+ },
+ "expiry_by_past_lapses": {
+  "first": [
+   4,
+   126
+  ],
+  "rest": [
+   23,
+   421
+  ],
+  "share_first": 0.032,
+  "share_rest": 0.055,
+  "p": 0.904529
+ },
+ "predictions": {
+  "D1": {
+   "statement": "Among feeds with a lapse-census row and a holiday check, feeds with at least one past lapse have a holiday flag more often than feeds with none (one-sided Fisher exact test, p < 0.05).",
+   "first": [
+    55,
+    115
+   ],
+   "rest": [
+    178,
+    364
+   ],
+   "share_first": 0.478,
+   "share_rest": 0.489,
+   "p": 0.620766,
+   "held": false
+  },
+  "D2": {
+   "statement": "Among feeds with a holiday check and an English check, feeds whose English check is flagged have a holiday flag more often than feeds whose English check is ok (one-sided Fisher exact test, p < 0.05).",
+   "first": [
+    59,
+    132
+   ],
+   "rest": [
+    177,
+    353
+   ],
+   "share_first": 0.447,
+   "share_rest": 0.501,
+   "p": 0.879017,
+   "held": false
+  }
+ },
+ "generated_at": "2026-10-22T13:20:00Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

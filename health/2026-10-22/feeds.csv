@@ -1,0 +1,554 @@
+﻿organization_id,feed_id,organization_name,feed_name,pref_id,pref_name,license,end_date,end_date_source,days_left,expiry,expiry_status,past_lapses,lapsed_days,longest_lapse_days,upcoming_ordinary,upcoming_applicable,holidays,stops,stops_reading,readings,stops_en,english,flags_required,all_ok
+gan-wu,shiokazeline,岩宇地域公共交通活性化協議会,しおかぜライン,1,北海道,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,2,11,flag,105,105,ok,105,ok,1,no
+ishikariwanshinko,on-demandtransit_itsumo,石狩湾新港地域公共交通サービス推進協議会,石狩市AIデマンド交通「いつモ」,1,北海道,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,134,134,ok,0,flag,0,no
+kamishihorotown,kamishihoro,上士幌町,上士幌町コミュニティバス,1,北海道,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,30,30,ok,30,ok,1,no
+kamishihorotown,kamishihoro-self-bus,上士幌町,上士幌町自動運転バス,1,北海道,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,18,18,ok,0,flag,1,no
+nemurokotsu,nemurobus,根室交通株式会社,根室交通株式会社,1,北海道,CC0 1.0,2027-05-25,census,215,ok,,0,0,0,3,10,flag,331,331,ok,305,ok,1,no
+fukauratown,fukaura-town-communitybus,深浦町,深浦町コミュニティバス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,7,10,flag,131,131,ok,131,ok,1,no
+goshogawaracity,goshogawara-communitybus,五所川原市,五所川原市コミュニティバス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,123,123,ok,123,ok,0,yes
+hachinohe,hachinohe-citybus,八戸市交通部,八戸市営バス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,680,680,ok,675,ok,1,no
+hachinohecity,hachinohe-nango,八戸市,八戸市南郷コミュニティバス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,171,171,ok,171,ok,0,yes
+hashikamitown,hashikamibus,階上町,階上町コミュニティバス,2,青森県,CC0 1.0,2027-03-31,census,160,ok,,1,85,85,0,11,ok,97,97,ok,0,flag,0,no
+hirakawacity,hirakawa-sharedtaxi,平川市,予約型乗り合いタクシー東部・平賀線,2,青森県,CC BY 4.0,2026-11-01,watch,10,flag,ends_30,0,0,0,0,0,n/a,18,18,ok,18,ok,1,no
+hirakawacity,hirakwacitybus,平川市,平川市碇ヶ関・平賀線バス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,6,6,flag,18,18,ok,18,ok,1,no
+hiranaitown,hiranaitownbus,平内町,平内町民バス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,4,11,flag,177,177,ok,177,ok,1,no
+hirosakicity,hokusei-noriai,弘前市,弘前市乗合タクシー（北星交通）,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,1,176,176,3,10,flag,282,282,ok,282,ok,1,no
+hirosakicity,kounan-tetsudou,弘前市,弘南鉄道,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,1,176,176,0,0,n/a,27,27,ok,27,ok,0,no
+jr-east-morioka,JR-east_tsugaruline,JR東日本盛岡支社,JR津軽線代行バス（蟹田駅～三厩体育館）,2,青森県,CC BY 4.0,2027-04-30,census,190,ok,,0,0,0,0,10,ok,19,19,ok,19,ok,0,yes
+jr-east-morioka,JReast_wandotaxi,JR東日本盛岡支社,わんタク定時便,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,0,n/a,44,44,ok,44,ok,0,no
+kuroishicity,kuroishi,黒石市,ぷらっと号,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,72,72,ok,72,ok,0,no
+misawacity,misawacity-mebus,三沢市,三沢市コミュニティバス「みーばす」,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,4,11,flag,237,237,ok,237,ok,1,no
+nakadomaritown,nakadomari-communitybus,中泊町,中泊町コミュニティバス,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,117,117,ok,117,ok,0,yes
+owanitown,owanitown-sunekarabus,大鰐町,大鰐町スネカラバス,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,3,5,flag,106,106,ok,106,ok,1,no
+rokkashovillage,rokkasho-sharedtaxi,六ヶ所村,六ヶ所村乗合タクシー,2,青森県,CC BY 4.0,2026-10-30,watch,8,flag,ends_30,0,0,0,0,0,n/a,6,6,ok,6,ok,1,no
+shichinohetown,shichinohe_community-bus,七戸町,七戸町コミュニティバス・シャトルバス,2,青森県,CC BY 4.0,2028-03-31,census,526,ok,,0,0,0,2,10,flag,155,155,ok,155,ok,1,no
+shimoko,shimokitakotsu,下北交通株式会社,下北交通,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,697,697,ok,697,ok,1,no
+shingovillage,shingo-mizubashogo,新郷村,新郷村営バス,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,88,88,ok,88,ok,0,yes
+sotogahamatown,sotogahama-townbus,外ヶ浜町,外ヶ浜町営バス,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,135,135,ok,135,ok,0,yes
+tohokutown,tohoku-town-bus,東北町,東北町町民バス,2,青森県,CC0 1.0,2027-03-31,census,160,ok,,1,60,60,0,10,ok,320,320,ok,320,ok,0,yes
+towadacity,towadacity_communitybus,十和田市,十和田市コミュニティバス,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,3,5,flag,134,134,ok,134,ok,1,no
+towadakankodentetsu,toutetsu,十和田観光電鉄株式会社,十和田観光電鉄（一般路線）,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,935,935,ok,935,ok,1,no
+towadakankodentetsu,toutetsu_airport_line,十和田観光電鉄株式会社,十和田観光電鉄（八戸～三沢空港線）,2,青森県,CC BY 4.0,2026-11-30,watch,39,flag,ends_60,0,0,0,0,0,n/a,8,8,ok,8,ok,1,no
+tsugarucity,tsugarucity_localtransportation,つがる市,つがる市地域内交通,2,青森県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,3,5,flag,118,118,ok,118,ok,1,no
+tsurutatown,tsuruta-townbus,鶴田町,鶴田町地域巡回バス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,57,57,ok,57,ok,1,no
+yomogitavillage,yomogita-communitybus,蓬田村,蓬田村コミュニティバス,2,青森県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,78,78,ok,78,ok,1,no
+hanamakicity,hanamaki,花巻市,花巻市コミュニティバス,3,岩手県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,201,201,ok,201,ok,1,no
+ichinosekicity,Ichinosekibus,一関市,一関市市営バス,3,岩手県,CC BY 4.0,2027-03-31,census,160,ok,,2,192,189,1,11,flag,573,573,ok,532,ok,1,no
+oshucity,bus-oshucity-iwate-jp,奥州市,奥州市コミュニティバス,3,岩手県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,367,367,ok,367,ok,1,no
+shichigahamatown,Gururinko,七ヶ浜町,七ヶ浜町民バス「ぐるりんこ」,4,宮城県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,156,156,ok,156,ok,1,no
+takeyakoutu,takeyakotsu,株式会社タケヤ交通,株式会社タケヤ交通,4,宮城県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,83,83,ok,83,ok,1,no
+sembokucity,bus-city-semboku,仙北市,仙北市民バス（たっこちゃんバス・スマイルバス）,5,秋田県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,108,108,ok,0,flag,1,no
+ugokotsu,ugokotsu_honjo,羽後交通株式会社,羽後交通（本荘地区）,5,秋田県,CC BY 4.0,2027-03-31,census,160,ok,,5,326,131,0,2,ok,575,575,ok,575,ok,0,yes
+ugokotsu,ugokotsu_tazawako,羽後交通株式会社,羽後交通（田沢湖地区）,5,秋田県,CC BY 4.0,2027-03-31,census,160,ok,,2,186,136,0,2,ok,78,78,ok,78,ok,0,yes
+higashinecity,HigashineCity,東根市,東根市営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,10,flag,176,176,ok,0,flag,1,no
+kahokutown,KahokuTown,河北町,河北町営バス,6,山形県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,3,5,flag,74,74,ok,0,flag,1,no
+kaminoyamacity,KaminoyamaCity,上山市,上山市営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,5,ok,58,58,ok,58,ok,0,yes
+mamurogawatown,MamurogawaTown,真室川町,真室川町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,190,190,ok,0,flag,1,no
+mogamigawakotsu,MOGAMIGAWAKOTSU,最上川交通,最上川交通,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,5,5,ok,0,flag,0,no
+murayamacity,MurayamaCity,村山市,村山市営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,159,159,ok,0,flag,0,no
+nagaicity,NagaiCity,長井市,長井市営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,1,1,1,0,10,ok,302,302,ok,302,ok,0,yes
+nakayamatown,NakayamaTown,中山町,中山町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,3,11,flag,64,64,ok,0,flag,1,no
+nanyocity,NanyoCity,南陽市,南陽市営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,114,114,ok,0,flag,0,no
+nishikawatown,NishikawaTown,西川町,西川町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,221,221,ok,0,flag,0,no
+obanazawacity,ObanazawaCity,尾花沢市,尾花沢市営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,2,11,flag,258,258,ok,258,ok,1,no
+oetown,Oetown,大江町,大江町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,3,11,flag,68,68,ok,0,flag,1,no
+ohkuravillage,OhkuraVillage,大蔵村,大蔵村営バス,6,山形県,CC BY 4.0,2028-01-01,census,436,ok,,0,0,0,0,10,ok,95,95,ok,0,flag,0,no
+sagaecity,SagaeCity,寒河江市,寒河江市営バス,6,山形県,CC BY 4.0,2026-10-31,census,9,ok,,0,0,0,0,10,ok,62,62,ok,53,flag,0,no
+sakatacity,SakataCity,酒田市,酒田市営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,10,flag,252,252,ok,252,ok,1,no
+sakegawavillage,SakegawaVillage,鮭川村,鮭川村営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,129,129,ok,0,flag,0,no
+shinjocity,ShinjoCity,新庄市,新庄市営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,138,138,ok,14,flag,0,no
+shiratakatown,ShiratakaTown,白鷹町,白鷹町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,69,69,ok,0,flag,0,no
+shonaikotsu,SHONAIKOTSU,庄内交通,庄内交通,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,3,174,84,0,11,ok,667,667,ok,667,ok,0,yes
+shonaitown,ShonaiTown,庄内町,庄内町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,1,12,12,2,11,flag,130,130,ok,0,flag,1,no
+tendocity,TendoCity,天童市,天童市営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,66,66,ok,0,flag,0,no
+tozawavillage,tozawavillagebus,戸沢村,戸沢村営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,1,11,flag,97,97,ok,0,flag,1,no
+tsuruokacity,TsuruokaCity,鶴岡市,鶴岡市営バス,6,山形県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,303,303,ok,0,flag,0,no
+yamagata-asahitown,AsahiTown,朝日町,朝日町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,59,59,ok,59,ok,1,no
+yamagata-kaneyamatown,KaneyamaTown,山形県金山町,金山町営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,128,128,ok,0,flag,0,no
+yamagata-ogunitown,OguniTown,山形県小国町,小国町営バス,6,山形県,CC BY 4.0,2027-06-30,census,251,ok,,0,0,0,2,10,flag,133,133,ok,0,flag,1,no
+yamagata-yamagatacity,YamagataCity,山形市,山形市営バス,6,山形県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,225,225,ok,0,flag,0,no
+yamagatatetsudo,flowerliner,山形鉄道株式会社,山形鉄道,6,山形県,CC BY 4.0,2027-03-13,census,142,ok,,0,0,0,0,0,n/a,17,17,ok,0,flag,0,no
+yamakobus,YAMAKOBUS,山形交通,山交バス,6,山形県,CC BY 4.0,2026-11-24,watch,33,flag,ends_60,1,522,522,0,2,ok,1443,1443,ok,1440,ok,1,no
+yamanobetown,YamanobeTown,山辺町,山辺町営バス,6,山形県,CC BY 4.0,2027-03-17,census,146,ok,,0,0,0,2,10,flag,34,34,ok,0,flag,1,no
+yonezawacity,Yonezawa,米沢市,米沢市営バス,6,山形県,CC BY 4.0,2026-11-30,watch,39,flag,ends_60,0,0,0,0,2,ok,145,145,ok,145,ok,1,no
+motomiyacity,motomiyashibus,本宮市,本宮市コミュニティバス,7,福島県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,11,11,flag,108,108,ok,108,ok,1,no
+otamavillage,otamavillage-bus,大玉村,大玉村通勤通学バス,7,福島県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,21,21,ok,0,flag,0,no
+shinjobankotsu,SHINJOBANKOTSU,新常磐交通株式会社,新常磐交通,7,福島県,CC BY 4.0,2027-04-30,census,190,ok,,0,0,0,0,11,ok,1416,1416,ok,1416,ok,0,yes
+yanaizutown,yanaizutown-bus,柳津町,柳津町町民バス”ふれあい号”,7,福島県,CC BY 4.0,2026-12-28,census,67,ok,,0,0,0,0,2,ok,32,32,ok,0,flag,0,no
+hitachinakacity,Hitachinaka-smileaozorabus,ひたちなか市,ひたちなか市スマイルあおぞらバス,8,茨城県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,5,ok,543,541,ok,541,ok,0,yes
+namegatacity,bus-namegata-ibaraki-jp,行方市,行方市営路線バス,8,茨城県,CC BY 4.0,2027-02-25,census,126,ok,,0,0,0,3,9,flag,127,127,ok,0,flag,1,no
+otonekotu,otonekotubus,大利根交通自動車株式会社,大利根交通バス,8,茨城県,CC BY 4.0,2027-04-08,census,168,ok,,0,0,0,0,11,ok,109,109,ok,109,ok,0,yes
+ryugasakicity,Ryugasakishi-communitybus,龍ケ崎市,龍ケ崎市コミュニティバス,8,茨城県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,0,n/a,196,0,flag,0,flag,1,no
+tsuchiuracity,tsuchimarubus,土浦市,つちまるバス,8,茨城県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,2,ok,91,57,flag,91,ok,1,no
+tsukubacity,TSUKUBANEGO,つくば市,つくばね号,8,茨城県,CC BY 4.0,2027-09-30,census,343,ok,,1,29,29,,,n/a,65,0,flag,0,flag,1,no
+tsukubacity,TSUKUBUS,つくば市,つくバス,8,茨城県,CC BY 4.0,2027-12-31,census,435,ok,,0,0,0,,,n/a,417,0,flag,0,flag,1,no
+yukicity,junkaibus,結城市,結城市巡回バス,8,茨城県,CC0 1.0,2028-07-31,census,648,ok,,0,0,0,0,11,ok,127,127,ok,127,ok,0,yes
+ashikagacity,Ashikaga-route-bus,足利市,足利市路線バス,9,栃木県,CC BY 4.0,2027-07-31,census,282,ok,,0,0,0,0,11,ok,398,398,ok,398,ok,0,yes
+mibutown,mibubu,壬生町,壬生町コミュニティバス「みぶーぶ」,9,栃木県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,30,28,ok,30,ok,0,yes
+nasushiobaracity,chiikibasu,那須塩原市,那須塩原市地域バス,9,栃木県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,219,219,ok,7,flag,0,no
+nasutown,nasutown,那須町,那須町町民バス,9,栃木県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,4,11,flag,116,116,ok,0,flag,1,no
+nikkocity,nikkocity,日光市,日光市営バス,9,栃木県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,387,387,ok,0,flag,0,no
+otawaracity,Ohtawaracitybus,大田原市,大田原市営バス,9,栃木県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,508,508,ok,508,ok,0,yes
+yaitacity,chuuou-junkan,矢板市,中央部循環路線,9,栃木県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,16,16,ok,16,ok,1,no
+annakacity,annakashi-rosenbus,安中市,安中市路線バス（あんバス）,10,群馬県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,167,167,ok,0,flag,1,no
+gunma-otacity,ootacitybus,太田市,太田市営バス,10,群馬県,CC BY 4.0,2027-06-04,census,225,ok,,0,0,0,0,10,ok,207,207,ok,207,ok,0,yes
+nagai-unyu,Nagaibus,永井運輸株式会社,永井バス,10,群馬県,CC BY 4.0,2027-09-30,census,343,ok,,2,269,171,0,11,ok,401,401,ok,401,ok,0,yes
+oizumitown,kouikikoukyoubasuaozora,大泉町,広域公共バス「あおぞら」,10,群馬県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,1,ok,61,61,ok,61,ok,0,yes
+hannocity,odekakemuma-haraichiba,飯能市,飯能市乗合ワゴン　原市場,11,埼玉県,CC0 1.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,54,54,ok,54,ok,0,yes
+hannocity,odekakemuma-minamikoma,飯能市,飯能市乗合ワゴン　南高麗,11,埼玉県,CC0 1.0,2026-12-31,census,70,ok,,1,358,358,0,5,ok,41,41,ok,41,ok,0,yes
+hannocity,odekakemuma-seimei-kaji,飯能市,飯能市乗合ワゴン　精明・加治,11,埼玉県,CC0 1.0,2027-03-31,census,160,ok,,1,75,75,0,5,ok,57,57,ok,57,ok,0,yes
+kumagayacity,yuuyuubus,熊谷市,熊谷市ゆうゆうバス,11,埼玉県,CC BY 4.0,2027-12-31,census,435,ok,,1,92,92,9,11,flag,397,0,flag,0,flag,2,no
+saitamacity,ajisaigou,さいたま市,西区指扇地区乗合タクシーあじさい号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,57,57,ok,0,flag,0,no
+saitamacity,iwatsukikucommunitybus,さいたま市,岩槻区コミュニティバス,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,77,77,ok,0,flag,0,no
+saitamacity,kawasemigou,さいたま市,見沼区片柳西地区乗合タクシーカワセミ号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,32,32,ok,0,flag,0,no
+saitamacity,kitakucommunitybus,さいたま市,北区コミュニティバス,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,64,64,ok,0,flag,0,no
+saitamacity,minamikucommunitybus,さいたま市,南区コミュニティバス,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,55,55,ok,0,flag,0,no
+saitamacity,minumagou,さいたま市,見沼区大砂土東地区乗合タクシーみぬま号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,18,18,ok,0,flag,0,no
+saitamacity,minumakucommunitybus,さいたま市,見沼区コミュニティバス,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,76,76,ok,0,flag,0,no
+saitamacity,miyaharanakayoshigou,さいたま市,北区吉野町乗合タクシー宮原なかよし号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,40,40,ok,0,flag,0,no
+saitamacity,musashigou,さいたま市,桜区大久保・中央区西与野地区乗合タクシーむさし号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,52,52,ok,0,flag,0,no
+saitamacity,nisikucommunitybus,さいたま市,西区コミュニティバス,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,66,66,ok,0,flag,0,no
+saitamacity,orizurugou,さいたま市,岩槻区河合地区乗合タクシーおりづる号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,28,28,ok,0,flag,0,no
+saitamacity,rainbowgou,さいたま市,岩槻区和土地区乗合タクシーレインボー号,11,埼玉県,CC BY 4.0,,,,ok,,,,,0,10,ok,41,41,ok,0,flag,0,no
+saitamacity,rakurakugou,さいたま市,岩槻区並木・加倉地区乗合タクシーらくらく号,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,14,14,ok,0,flag,0,no
+saitamacity,sakurakucommunitybus,さいたま市,桜区コミュニティバス,11,埼玉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,62,62,ok,0,flag,0,no
+wakocity,Wako-City-junkanbus,和光市,和光市内循環バス（わこば）,11,埼玉県,CC BY 4.0,2026-12-31,census,70,ok,,1,116,116,0,5,ok,88,88,ok,88,ok,0,yes
+inzaicity,rosenbus,印西市,宗像路線、六合路線,12,千葉県,CC BY 4.0,2028-03-31,census,526,ok,,0,0,0,0,10,ok,97,97,ok,97,ok,0,yes
+katoricity,katori-junkan,香取市,香取市循環バス,12,千葉県,CC0 1.0,2027-04-30,census,190,ok,,0,0,0,0,11,ok,140,140,ok,140,ok,0,yes
+keisei-transitbus,keiseitransitbus,京成バス千葉ウエスト株式会社,京成バス千葉ウエスト　塩浜営業所（市川市コミュニティバス　南部ルート　わくわくバス含む）,12,千葉県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,5,10,flag,233,233,ok,233,ok,1,no
+kimitsucity,Kimitsu_City_Community_Bus,君津市,君津市コミュニティバス,12,千葉県,CC0 1.0,2027-03-31,census,160,ok,,1,61,61,0,10,ok,166,166,ok,166,ok,0,yes
+kimitsucity,Local_buses_via_Kimitsu_City,君津市,君津市経由路線バス,12,千葉県,CC0 1.0,2027-03-31,census,160,ok,,1,123,123,0,11,ok,489,489,ok,489,ok,0,yes
+matsudocity,matsudo,松戸市,松戸市ゆめいろバス,12,千葉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,32,32,ok,0,flag,0,no
+matsudocity,matsudo-takatsuka,松戸市,松戸市ゆめいろワゴンバス,12,千葉県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,20,20,ok,0,flag,0,no
+nagareyamacity,nagareyamagreenbus,流山市,流山ぐりーんバス,12,千葉県,CC BY 4.0,2027-01-10,census,80,ok,,1,2,2,1,6,flag,181,181,ok,181,ok,1,no
+naritacity,narita-community-bus,成田市,成田市コミュニティバス,12,千葉県,CC BY 4.0,2026-12-30,census,69,ok,,0,0,0,1,4,flag,498,498,ok,498,ok,1,no
+yotsukaidocity,yoppii,四街道市,市内循環バス「ヨッピィ」,12,千葉県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,3,10,flag,62,62,ok,62,ok,1,no
+akishimacity,Abus,昭島市,Aバス,13,東京都,CC0 1.0,2027-08-27,census,309,ok,,0,0,0,0,0,n/a,114,114,ok,114,ok,0,no
+arakawacity,sakura,荒川区,コミュニティバスさくら,13,東京都,CC BY 4.0,2027-02-28,census,129,ok,,0,0,0,3,9,flag,32,32,ok,0,flag,1,no
+katsushikacity,sakura,葛飾区,さくら,13,東京都,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,11,11,ok,11,ok,0,yes
+kozushimavillage,kozushimavillagebus,神津島村,神津島村営バス,13,東京都,CC BY 4.0,2027-01-28,census,98,ok,,1,11,11,7,7,flag,18,18,ok,18,ok,1,no
+kunitachicity,aoyagikko,国立市,国立市コミュニティワゴン「あおやぎっこ」,13,東京都,CC BY 4.0,2027-01-12,census,82,ok,,0,0,0,5,8,flag,21,21,ok,21,ok,1,no
+kunitachicity,kunikko,国立市,国立市コミュニティバス「くにっこ」,13,東京都,CC0 1.0,2027-08-31,census,313,ok,,0,0,0,0,3,ok,51,51,ok,51,ok,0,yes
+mizuhotown,DemandResponsiveTransport,瑞穂町,瑞穂町デマンド交通「チョイソコみずほまち」,13,東京都,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,9,flag,125,0,flag,0,flag,2,no
+mizuhotown,communitybus,瑞穂町,瑞穂町コミュニティバス,13,東京都,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,61,61,ok,61,ok,0,yes
+ogasawaravillage,o,小笠原村,小笠原村営バス,13,東京都,CC BY 4.0,2027-02-10,census,111,ok,,0,0,0,0,8,ok,29,29,ok,0,flag,0,no
+tachikawacity,kururinbus,立川市,くるりんバス,13,東京都,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,90,90,ok,90,ok,1,no
+chigasakicity,eboshigou,茅ヶ崎市,コミュニティバスえぼし号,14,神奈川県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,8,10,flag,222,222,ok,0,flag,1,no
+daishinto,Radiant-City,大新東株式会社,レイディアントシティ横濱,14,神奈川県,CC0 1.0,2027-02-28,census,129,ok,,0,0,0,4,10,flag,9,9,ok,9,ok,1,no
+ninomiyatown,Ninomiyatowncommunitybus,二宮町,二宮町コミュニティバス,14,神奈川県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,61,61,ok,61,ok,0,yes
+samukawatown,mokusei-go_eastroute,寒川町,寒川町コミュニティバス「もくせい号」東ルート,14,神奈川県,CC BY 4.0,2026-12-31,census,70,ok,,1,5,5,0,3,ok,26,26,ok,26,ok,0,yes
+samukawatown,mokusei-go_kuramiomuraroute,寒川町,寒川町コミュニティバス「もくせい号」倉見大村ルート,14,神奈川県,CC BY 4.0,2026-12-31,census,70,ok,,1,5,5,0,3,ok,26,26,ok,26,ok,0,yes
+samukawatown,mokusei-go_southroute,寒川町,寒川町コミュニティバス「もくせい号」南ルート,14,神奈川県,CC BY 4.0,2026-12-31,census,70,ok,,1,5,5,0,3,ok,15,15,ok,15,ok,0,yes
+yokosukacity,hamachanbus,横須賀市,ハマちゃんバス,14,神奈川県,CC BY 4.0,2028-03-31,census,526,ok,,0,0,0,1,10,flag,20,18,ok,18,ok,1,no
+itoigawabus,itoigawabus,糸魚川バス株式会社,糸魚川バス,15,新潟県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,586,586,ok,586,ok,0,yes
+joetsucity,joetsu,上越市,上越市市営バス,15,新潟県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,148,148,0,11,ok,137,137,ok,2,flag,0,no
+kamocity,kamonbus,加茂市,加茂市営バス かもんバス,15,新潟県,CC BY 4.0,2027-05-31,census,221,ok,,0,0,0,5,11,flag,128,128,ok,128,ok,1,no
+murakamicity,murakamisicommunitybus,村上市,村上市コミュニティバス,15,新潟県,CC BY 4.0,2027-07-29,census,280,ok,,1,119,119,0,11,ok,314,314,ok,314,ok,0,yes
+tsubamecity,tsubame_bus,燕市,燕市コミュニティバス,15,新潟県,CC BY 4.0,2027-10-05,census,348,ok,,0,0,0,0,10,ok,90,90,ok,90,ok,0,yes
+chitetsu,chitetsubus,富山地方鉄道,富山地方鉄道バス,16,富山県,CC0 1.0,2027-09-30,census,343,ok,,0,0,0,7,10,flag,1043,1043,ok,999,ok,1,no
+chitetsu,chitetsushinaidensha,富山地方鉄道,富山地方鉄道市内電車,16,富山県,CC0 1.0,2027-03-13,census,142,ok,,0,0,0,2,9,flag,39,39,ok,0,flag,1,no
+imizucity,imizushi,射水市,きときとバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,383,383,ok,379,ok,0,yes
+kaetsunou,kaetsunouhimi,加越能バス,加越能バス（氷見市街地周遊バス）,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,5,11,flag,28,28,ok,28,ok,1,no
+kaetsunou,kaetsunouippan,加越能バス,加越能バス（一般路線）,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,5,10,flag,697,697,ok,697,ok,1,no
+kaetsunou,kaetsunousekaiisan,加越能バス,加越能バス（世界遺産バス）,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,1,66,66,4,10,flag,50,50,ok,50,ok,1,no
+kamiichitown,kamiichi,上市町,上市町営バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,75,75,ok,75,ok,0,yes
+kurobecity,shinkansenikuji-ishida-aimoto-minibus,黒部市,新幹線生地、石田三日市、愛本、電動ミニバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,4,10,flag,112,112,ok,110,ok,1,no
+manyosen,manyosen,万葉線,万葉線,16,富山県,CC0 1.0,2027-08-31,census,313,ok,,0,0,0,4,11,flag,47,47,ok,47,ok,1,no
+namerikawacity,norumycar,滑川市,コミュニティバス「のるmycar」,16,富山県,CC0 1.0,2027-09-30,census,343,ok,,2,64,60,2,11,flag,167,167,ok,167,ok,1,no
+nantocity,nanbus,南砺市,南砺市営バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,1,47,47,0,11,ok,301,301,ok,301,ok,0,yes
+nyuzentown,noranmaicar,入善町,のらんマイ・カー,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,1,96,96,7,11,flag,44,44,ok,44,ok,1,no
+oyabecity,oyabecitybus,小矢部市,小矢部市営バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,1,104,104,2,10,flag,105,105,ok,105,ok,1,no
+takaokacity,koueibus,高岡市,高岡市公営バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,1,96,96,3,11,flag,96,96,ok,96,ok,1,no
+tateyamatown,tateyama,立山町,立山町営バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,4,29,11,1,11,flag,52,52,ok,52,ok,1,no
+tonamicity,tonamishieibasu,砺波市,砺波市営バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,135,135,ok,135,ok,0,yes
+toyama-asahitown,asahimachibus,富山県朝日町,あさひまちバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,2,10,flag,102,102,ok,102,ok,1,no
+toyamacity,fuchucommunitybus,富山市,婦中コミュニティバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,2,10,flag,118,118,ok,118,ok,1,no
+toyamacity,horikawaminamicommunitybus,富山市,堀川南地域コミュニティバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,4,10,flag,30,30,ok,30,ok,1,no
+toyamacity,kurehaikiikibus,富山市,呉羽いきいきバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,5,11,flag,83,83,ok,83,ok,1,no
+toyamacity,maidohayabus,富山市,まいどはやバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,70,70,ok,70,ok,0,no
+toyamacity,oyamacommunitybus,富山市,大山コミュニティバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,68,68,ok,68,ok,1,no
+toyamacity,yamadacommunitybus,富山市,山田コミュニティバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,44,44,ok,44,ok,1,no
+toyamacity,yatsuocommunitybus,富山市,八尾コミュニティバス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,153,148,ok,153,ok,1,no
+uozucity,junkai,魚津市,魚津市民バス,16,富山県,CC0 1.0,2027-03-31,census,160,ok,,1,366,366,2,11,flag,315,315,ok,314,ok,1,no
+hakusancity,hakusan_bus_meguru,白山市,白山市コミュニティバス「めぐーる」,17,石川県,CC BY 4.0,2027-03-15,census,144,ok,,0,0,0,0,10,ok,335,335,ok,7,flag,0,no
+komatsucity,blue,小松市,市内循環線北コース,17,石川県,CC0 1.0,2027-03-31,census,160,ok,,1,50,50,0,0,n/a,48,48,ok,48,ok,0,no
+komatsucity,kibagatasen,小松市,木場潟線,17,石川県,CC0 1.0,2027-09-30,census,343,ok,,2,58,50,4,11,flag,28,28,ok,28,ok,1,no
+komatsucity,orange,小松市,市内循環線南コース,17,石川県,CC0 1.0,2027-03-31,census,160,ok,,1,50,50,0,0,n/a,52,52,ok,52,ok,0,no
+nonoichicity,communitybus,野々市市,コミュニティバス,17,石川県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,147,147,ok,147,ok,1,no
+uchinadatown,communitybus,内灘町,コミュニティバス,17,石川県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,5,ok,125,125,ok,125,ok,0,yes
+ichikawamisatotown,ichikawamisatobus,市川三郷町,市川三郷町コミュニティバス,19,山梨県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,32,32,ok,32,ok,0,yes
+kaicity,kaicitybus,甲斐市,甲斐市民バス,19,山梨県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,166,166,ok,166,ok,0,yes
+kosugevillage,kosugesoneibus,小菅村,小菅村営バス,19,山梨県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,26,26,ok,26,ok,0,yes
+yamanashi-hokutocity,hokuto-bus,北杜市,北杜市民バス,19,山梨県,CC BY 4.0,2027-03-31,census,160,ok,,1,16,16,3,11,flag,205,205,ok,205,ok,1,no
+yamanashi-nanbutown,nanbucyoueibasu,南部町,南部町営バス,19,山梨県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,117,117,ok,117,ok,0,no
+agematsutown,agematu,上松町,上松町公共交通,20,長野県,CC0 1.0,2027-09-30,census,343,ok,,1,174,174,0,10,ok,40,40,ok,40,ok,0,yes
+aokivillage,aokisoneibus,青木村,青木村営バス,20,長野県,CC BY 4.0,2027-09-30,census,343,ok,,1,483,483,0,10,ok,92,92,ok,0,flag,0,no
+chikuma-bus,rosenbus,千曲バス株式会社,路線バス,20,長野県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,407,407,ok,0,flag,0,no
+chikumacity,chikumajunkanbus,千曲市,千曲市循環バス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,270,270,ok,0,flag,0,no
+iiyamacity,nanohanabus,飯山市,菜の花バス市街地循環線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,1,21,21,0,10,ok,39,39,ok,39,ok,0,yes
+karuizawatown,junkan-bus,軽井沢町,軽井沢町町内循環バス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,133,133,ok,0,flag,0,no
+kisokoikirengo,kiso-bus,木曽広域連合,きそバス,20,長野県,CC BY 2.1 JP,2027-09-30,census,343,ok,,0,0,0,0,11,ok,304,304,ok,304,ok,0,yes
+kisotown,kisotown,木曽町,木曽町公共交通,20,長野県,CC BY 2.1 JP,2027-09-30,census,343,ok,,1,174,174,0,10,ok,172,172,ok,171,ok,0,yes
+kisovillage,kisovill,木祖村,木祖村公共交通,20,長野県,CC BY 2.1 JP,2027-09-30,census,343,ok,,0,0,0,0,10,ok,42,42,ok,42,ok,0,yes
+kusakarukotsu,kusakarubus,草軽交通株式会社,軽井沢草津長野原草津口バス,20,長野県,CC BY 4.0,2027-10-31,census,374,ok,,0,0,0,9,11,flag,111,111,ok,111,ok,1,no
+matsumotocity,guruttomatsumotobus1,松本市,松本駅・バスターミナル発着バス,20,長野県,CC BY 4.0,2028-03-31,census,526,ok,,0,0,0,3,10,flag,462,462,ok,462,ok,1,no
+matsumotocity,guruttomatsumotobus2,松本市,地域連携バス,20,長野県,CC BY 4.0,2028-03-31,census,526,ok,,0,0,0,4,11,flag,561,561,ok,561,ok,1,no
+minamishinshu,Minamishinshu-Iidacity-1,南信州地域交通問題協議会（南信州広域連合）, 【飯田市】L1市民バス循環線/C2市民バス久堅線/C3市民バス千代線/C4市民バス三穂線/C5市民バス大休線/E2平岡線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,1,139,139,2,11,flag,284,284,ok,284,ok,1,no
+minamishinshu,Minamishinshu-Matsukawa-1,南信州地域交通問題協議会（南信州広域連合）,【松川町】M3まつかわフルーツバス部奈線/M6 まつかわフルーツバス 上片桐・大島通学便/M7 まつかわフルーツバス 生田線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,53,53,ok,0,flag,0,no
+minamishinshu,Minamishinshu-Nanbu-1,南信州地域交通問題協議会（南信州広域連合）,S0南部公共バス阿南線/S1南部公共バス温田線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,1,26,26,0,10,ok,145,145,ok,145,ok,0,yes
+minamishinshu,Minamishinshu-Ooshika-1,南信州地域交通問題協議会（南信州広域連合）,【大鹿村】M1　大鹿線,20,長野県,CC BY 4.0,,,,ok,,,,,1,11,flag,34,34,ok,0,flag,1,no
+minamishinshu,Minamishinshu-Shinnan-1,南信州地域交通問題協議会（南信州広域連合）,【信南交通㈱】W0駒場線/E0 阿島線/E1遠山郷線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,288,288,ok,288,ok,1,no
+minamishinshu,Minamishinshu-achi-1,南信州地域交通問題協議会（南信州広域連合）,【阿智村】W2巡回バス伍和線/W3巡回バス春日・智里線/W4巡回バス浪合線/W5巡回バス清内路線/W6巡回バス智里東線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,162,162,ok,0,flag,0,no
+minamishinshu,Minamishinshu-iida-2,南信州地域交通問題協議会（南信州広域連合）,電気小型バス「プッチー」（飯田市内）,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,9,9,ok,9,ok,0,no
+minamishinshu,Minamishinshu-iidacity-3,南信州地域交通問題協議会（南信州広域連合）,【飯田市】飯田☆中津川線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,8,8,ok,8,ok,0,no
+minamishinshu,Minamishinshu-seibu-1,南信州地域交通問題協議会（南信州広域連合）,【阿智村・根羽村・平谷村】W1　西部コミュニティバス,20,長野県,CC BY 4.0,2027-04-02,census,162,ok,,1,1,1,0,11,ok,87,87,ok,0,flag,0,no
+minamishinshu,Minamishinshu-takagi-1,南信州地域交通問題協議会（南信州広域連合）,【喬木村】E3喬木大島線せせらぎ/E4氏乗線そよかぜ/E5 たかぎコミュニティバス阿島線/E6 たかぎコミュニティバス伊久間線/E7たかぎコミュニティバス厚生病院線/E8上平線/E9富田線,20,長野県,CC BY 4.0,2026-12-15,watch,54,flag,ends_60,0,0,0,0,2,ok,197,197,ok,197,ok,1,no
+minamishinshu,Minamishinshu-takamori-1,南信州地域交通問題協議会（南信州広域連合）,【高森町】K1 柿丸あったかバス山吹エリア/K2柿丸あったかバス市田エリア/K3おはようバス山吹回り/K4おはようバス市田回り,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,10,flag,72,72,ok,6,flag,1,no
+minamishinshu,Minamishinshu-toyooka-1,南信州地域交通問題協議会（南信州広域連合）,【豊丘村】T3豊丘村村営バス堀越線/T4豊丘村村営バス佐原線/T5豊丘村村営バス福島線/T6豊丘村村営バス壬生沢福島線/T7豊丘村村営バス壬生沢線/T2豊丘村村営バス滝川阿島北県道線,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,114,114,ok,0,flag,1,no
+nagadenbus,nagadenbus-exp,長電バス株式会社,長電バス急行,20,長野県,CC BY 4.0,2026-12-04,watch,43,flag,ends_60,0,0,0,1,2,flag,137,136,ok,136,ok,2,no
+nagadenbus,nagadenbus-iizuna,長電バス株式会社,長電バス飯綱営業所管内,20,長野県,CC BY 4.0,2027-04-14,census,174,ok,,0,0,0,10,10,flag,69,69,ok,0,flag,1,no
+nagadenbus,nagadenbus-nagano,長電バス株式会社,長電バス長野営業所管内,20,長野県,CC BY 4.0,2027-03-29,census,158,ok,,0,0,0,1,11,flag,420,420,ok,412,ok,1,no
+nagadenbus,nagadenbus-nakano,長電バス株式会社,長電バス中野３路線,20,長野県,CC BY 4.0,2027-04-14,census,174,ok,,0,0,0,0,10,ok,91,91,ok,30,flag,0,no
+nagadenbus,obuse-romango,長電バス株式会社,おぶせロマン号,20,長野県,CC BY 4.0,2026-11-23,watch,32,flag,ends_60,0,0,0,0,2,ok,7,7,ok,7,ok,1,no
+nagano-ikedatown,IkedaTownBus,池田町,池田町営バス,20,長野県,CC BY 4.0,2027-03-17,census,146,ok,,0,0,0,0,10,ok,118,118,ok,0,flag,0,no
+nagano-kawakamivillage,kawakamibus,川上村,川上村営バス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,44,44,ok,44,ok,0,yes
+naganocity,noriai,長野市,乗合タクシー（RT非対応）,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,718,718,ok,0,flag,0,no
+naganocity,shiei_noriaibus,長野市,長野市営バス・循環バス（RT対応）,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,243,243,ok,0,flag,0,no
+nagisotown,communitybus,南木曽町,南木曽町地域バス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,60,60,ok,60,ok,1,no
+okuwavillage,kuwachan-bus,大桑村,くわちゃんバス,20,長野県,CC0 1.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,29,29,ok,29,ok,0,yes
+omachicity,omachiraicholiner,大町市,特急バス「雷鳥ライナー」,20,長野県,CC BY 4.0,2026-11-30,watch,39,flag,ends_60,0,0,0,0,0,n/a,15,15,ok,15,ok,1,no
+omachicity,omachisiminbus,大町市,大町市民バス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,1,71,71,0,10,ok,469,469,ok,469,ok,0,yes
+otakivillage,otaki-village,王滝村,王滝村,20,長野県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,29,29,ok,28,ok,0,no
+shiojiricity,suteppukunn,塩尻市,塩尻市地域振興バス「すてっぷくん」,20,長野県,CC BY 4.0,2028-04-01,census,527,ok,,0,0,0,1,11,flag,363,363,ok,363,ok,1,no
+suwacity,karinchanbas,諏訪市,かりんちゃんバス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,169,169,ok,6,flag,0,no
+suzakicity,suzakashiminbus,須坂市,すざか市民バス,20,長野県,CC BY 2.1 JP,2027-04-30,census,190,ok,,1,19,19,0,11,ok,172,172,ok,172,ok,0,yes
+toshinkanko-bus,rosenbus,東信観光バス株式会社,路線バス,20,長野県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,79,79,ok,0,flag,0,no
+uedabus,noriai_bus,上田バス株式会社,路線バス,20,長野県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,2,11,flag,360,360,ok,326,ok,1,no
+uedacity,uedashigaitizyunkanbus,上田市,上田市街地循環バス・オレンジバス,20,長野県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,324,319,ok,15,flag,0,no
+aketetsu,akechirailway,明知鉄道,明知鉄道,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,3,ok,11,11,ok,11,ok,0,yes
+enacity,communitybus,恵那市,恵那市自主運行バス（コミュニティバス）,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,364,364,ok,364,ok,0,yes
+gerocity,gerobus,下呂市,下呂市　げろバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,188,188,ok,188,ok,0,yes
+gifu-yamagatacity,communitybus,山県市,山県市自主運行バス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,136,136,ok,136,ok,0,yes
+gifucity,communitybus,岐阜市,岐阜市コミュニティバス,21,岐阜県,CC BY 4.0,2027-08-31,census,313,ok,,0,0,0,4,11,flag,1032,1032,ok,1032,ok,1,no
+gujocity,citybus,郡上市,郡上市自主運行バス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,1,6,6,0,11,ok,500,500,ok,500,ok,0,yes
+hachikanbus,hachimanbus,八幡観光バス,八幡バス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,132,132,ok,132,ok,0,yes
+hashimacity,HashimaCityCommunityBus,羽島市,羽島市コミュニティバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,1,2,2,0,11,ok,105,105,ok,105,ok,0,yes
+hichisotown,choeibus,七宗町,七宗町営バス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,62,62,ok,62,ok,0,yes
+hidacity,communitybus,飛騨市,飛騨市営バス「ひだまる」,21,岐阜県,CC BY 4.0,2027-09-30,census,343,ok,,1,25,25,2,11,flag,196,196,ok,196,ok,1,no
+ibigawatown,communitybus,揖斐川町,揖斐川町ふれあいバス,21,岐阜県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,174,174,ok,174,ok,0,yes
+kaizucity,communitybus,海津市,海津市コミュニティバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,55,55,ok,55,ok,0,yes
+kanicity,satsukibus,可児市,さつきバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,114,114,ok,114,ok,0,yes
+kasamatsutown,communitybus,笠松町,笠松町公共施設巡回町民バス,21,岐阜県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,71,71,ok,0,flag,0,no
+kitaena,kitaena,北恵那交通,北恵那交通,21,岐阜県,CC BY 4.0,2027-10-08,census,351,ok,,0,0,0,1,9,flag,315,315,ok,315,ok,1,no
+minokamocity,communitybus,美濃加茂市,美濃加茂市コミュニティバス「あい愛バス」,21,岐阜県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,241,241,ok,241,ok,0,yes
+mitaketown,communitybus,御嵩町,御嵩町コミュニティバス「ふれあいバス」,21,岐阜県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,1,10,flag,29,29,ok,0,flag,1,no
+mizunamicity,communitybus,瑞浪市,瑞浪市コミュニティバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,202,202,ok,0,flag,0,no
+motosucity,shieibus,本巣市,本巣市営バス,21,岐阜県,CC BY 4.0,2027-06-30,census,251,ok,,1,45,45,0,11,ok,161,161,ok,161,ok,0,yes
+nakatsugawacity,communitybus,中津川市,中津川市コミュニティバス,21,岐阜県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,193,193,ok,193,ok,0,yes
+nouhibus,nouhibus,濃飛乗合自動車（濃飛バス）,濃飛バス（一般路線）,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,889,889,ok,889,ok,0,yes
+nouhibus,nouhibus_kanko,濃飛乗合自動車（濃飛バス）,濃飛バス（観光路線）,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,1,ok,20,20,ok,20,ok,0,yes
+nouhibus,takayama_shuyu,濃飛乗合自動車（濃飛バス）,飛騨高山周遊バス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,1,1,1,3,10,flag,76,76,ok,76,ok,1,no
+ogakicity,meihankintetsubus,大垣市,名阪近鉄バス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,459,459,ok,459,ok,0,yes
+sekicity,itadorifureaibus,関市,板取ふれあいバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,49,49,ok,49,ok,0,yes
+shirotori-kotsu,shirotorikotsu,白鳥交通,白鳥交通,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,166,166,ok,166,ok,0,yes
+tajimicity,kikyobus,多治見市,ききょうバス,21,岐阜県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,61,61,ok,0,flag,0,no
+takayamacity,noramaicar,高山市,のらマイカー,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,1,1,1,3,10,flag,655,655,ok,655,ok,1,no
+takayamacity,takanego,高山市,たかね号,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,41,41,ok,41,ok,0,yes
+tohtetsu,tohtetsu_ena,東濃鉄道,東濃鉄道（東鉄バス）恵那営業所管内,21,岐阜県,CC BY 4.0,2027-09-04,census,317,ok,,1,91,91,0,10,ok,32,32,ok,1,flag,0,no
+tohtetsu,tohtetsu_kani,東濃鉄道,東濃鉄道（東鉄バス）可児営業所管内,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,190,190,ok,189,ok,0,yes
+tohtetsu,tohtetsu_tajimi,東濃鉄道,東濃鉄道（東鉄バス）多治見営業所管内,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,275,275,ok,275,ok,0,yes
+tokicity,communitybus,土岐市,土岐市民バス,21,岐阜県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,1,5,flag,173,173,ok,173,ok,1,no
+yaotsutown,communitybus,八百津町,八百津町コミュニティバス,21,岐阜県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,59,59,ok,59,ok,0,yes
+yaotsutown,yaobus,八百津町,YAOバス,21,岐阜県,CC BY 4.0,2027-07-21,census,272,ok,,0,0,0,0,11,ok,37,37,ok,37,ok,0,yes
+fujiedacity,gtfsfjed,藤枝市,藤枝市自主運行バス（駅南循環+アクセスバス）,22,静岡県,CC BY 4.0,2027-03-27,census,156,ok,,0,0,0,0,0,n/a,201,201,ok,201,ok,0,no
+kakegawacity,kakegawa6,掛川市,桜木、居尻、倉真、東山、粟本線、市街地循環線南回り、市街地循環線北回り,22,静岡県,CC-BY,2027-10-18,census,361,ok,,1,51,51,0,10,ok,309,309,ok,0,flag,0,no
+kakegawacity,kakegawaosuka,掛川市,掛川大須賀線,22,静岡県,CC-BY,2027-03-31,census,160,ok,,0,0,0,1,10,flag,26,26,ok,26,ok,1,no
+shimadacity,shimada_combus,島田市,島田市コミュニティバス,22,静岡県,CC BY 4.0,2027-03-31,census,160,ok,,2,213,133,0,11,ok,455,455,ok,455,ok,0,yes
+shizuokacity,ikawa,静岡市,葵区井川地区：井川地区自主運行バス,22,静岡県,CC BY 4.0,2027-06-30,census,251,ok,,0,0,0,0,10,ok,20,20,ok,20,ok,0,yes
+shizuokacity,ryougouchi,静岡市,清水区両河内地区：両河内線但沼系統、大平系統、板井沢系統（ココバス）,22,静岡県,CC BY 4.0,2027-06-30,census,251,ok,,0,0,0,0,11,ok,39,39,ok,39,ok,0,yes
+shizuokacity,yui,静岡市,清水区由比地区：ゆいばす,22,静岡県,CC BY 4.0,2027-06-30,census,251,ok,,1,8,8,0,10,ok,48,48,ok,48,ok,0,yes
+shizuokacity,yui-kanbara,静岡市,清水区由比・蒲原地区：由比・蒲原病院線,22,静岡県,CC BY 4.0,2027-06-30,census,251,ok,,0,0,0,0,11,ok,42,42,ok,42,ok,0,yes
+aichi-miyoshicity,sansanbus,みよし市,みよし市さんさんバス,23,愛知県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,137,137,ok,137,ok,0,no
+amacity,amashijunkaibasu,あま市,あま市巡回バス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,5,5,flag,154,0,flag,0,flag,2,no
+anjocity,AnkuruBus,安城市,あんくるバス,23,愛知県,CC BY 4.0,2027-05-31,census,221,ok,,0,0,0,0,4,ok,282,282,ok,282,ok,0,yes
+aoi-komaki,aoikotsu,あおい交通,あおい交通,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,87,87,ok,87,ok,0,yes
+chiryucity,communitybus,知立市,知立市「ミニバス」（コミュニティバス）,23,愛知県,CC BY 2.1 JP,2026-12-31,census,70,ok,,0,0,0,1,5,flag,106,106,ok,106,ok,1,no
+chitabus,chitabus,知多乗合（知多バス）,知多バス,23,愛知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,293,293,ok,293,ok,0,yes
+chitacity,chita-aiaibus,知多市,知多市コミュニティバス「あいあいバス」,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,119,119,ok,0,flag,0,no
+gamagoricity,communitybus,蒲郡市,蒲郡市コミュニティバス,23,愛知県,CC BY 4.0,2027-08-31,census,313,ok,,0,0,0,4,7,flag,228,228,ok,29,flag,1,no
+hekinancity,kurukuru-bus,碧南市,くるくるバス,23,愛知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,5,ok,227,227,ok,227,ok,0,yes
+higashiuratown,communitybus,東浦町,東浦町運行バス　う・ら・ら,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,156,156,ok,156,ok,0,yes
+kariyacity,communitybus,刈谷市,刈谷市コミュニティバス「かりまる」,23,愛知県,CC BY 4.0,2027-06-15,census,236,ok,,0,0,0,3,11,flag,227,227,ok,227,ok,1,no
+kasugaicity,kasugaicitybus,春日井市,かすがいシティバス,23,愛知県,CC0 1.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,263,263,ok,263,ok,0,yes
+kitanagoyacity,communitybus,北名古屋市,北名古屋市　市内循環バス「きたバス」,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,145,145,ok,145,ok,0,yes
+kitashitara,odekakehokusetsu,北設楽郡公共交通活性化協議会,おでかけ北設（設楽町・東栄町・豊根村）,23,愛知県,CC BY 4.0,2027-10-31,census,374,ok,,0,0,0,0,11,ok,180,180,ok,180,ok,0,yes
+meikaijo,ship,名鉄海上観光船株式会社,高速船,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,6,6,ok,6,ok,0,yes
+minamichitatown,communitybus,南知多町,南知多町海っ子バス,23,愛知県,CC BY 4.0,2027-09-30,census,343,ok,,1,15,15,0,8,ok,108,108,ok,108,ok,0,yes
+nagakutecity,communitybus,長久手市,長久手市N-バス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,164,164,ok,164,ok,1,no
+nishiocity,meitestu_tobu,西尾市,名鉄東部交通バス,23,愛知県,CC0 1.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,144,144,ok,144,ok,0,yes
+nishiocity,rokumangokukururinbus,西尾市,六万石くるりんバス,23,愛知県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,5,ok,227,227,ok,227,ok,0,yes
+nishiocity,tosen,西尾市,佐久島渡船,23,愛知県,CC0 1.0,2027-09-30,census,343,ok,,0,0,0,0,0,n/a,3,3,ok,3,ok,0,no
+nisshincity,communitybus,日進市,くるりんばす（日進市巡回バス）,23,愛知県,CC BY 4.0,2027-01-10,census,80,ok,,0,0,0,2,7,flag,256,256,ok,256,ok,1,no
+oguchitown,communitybus,大口町,大口町コミュニティバス,23,愛知県,CC BY 4.0,2027-05-31,census,221,ok,,0,0,0,0,11,ok,151,151,ok,151,ok,0,yes
+owariasahicity,communitybus,尾張旭市,尾張旭市あさぴー号,23,愛知県,CC BY 4.0,2026-11-30,watch,39,flag,ends_60,0,0,0,0,2,ok,169,169,ok,169,ok,1,no
+setocity,setocitybus,瀬戸市,瀬戸市コミュニティバス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,231,231,ok,0,flag,0,no
+shinshirocity,sbus,新城市,新城市Ｓバス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,1,133,133,0,11,ok,156,156,ok,156,ok,0,yes
+taketoyotown,communitybus,武豊町,武豊町コミュニティバス「ゆめころん」,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,47,47,ok,47,ok,0,no
+tokaicity,tokai-ranranbus,東海市,東海市らんらんバス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,251,251,ok,251,ok,0,yes
+tokonamecity,Gruun,常滑市,コミュニティバスグルーン,23,愛知県,CC0 1.0,2026-12-31,census,70,ok,,0,0,0,0,0,n/a,90,90,ok,0,flag,0,no
+toyoakecity,himawaribus,豊明市,豊明市ひまわりバス,23,愛知県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,5,ok,78,78,ok,78,ok,0,yes
+toyotacity,chiikibus,豊田市,豊田市　地域バス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,499,498,ok,498,ok,0,yes
+toyotacity,kikanbus,豊田市,とよたおいでんバス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,498,498,ok,498,ok,0,yes
+toyoyamatown,communitybus,豊山町,とよやまタウンバス,23,愛知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,49,49,ok,49,ok,0,yes
+busnet-tsu,guruttotsubus,バスネット津,ぐるっと・つーバス,24,三重県,CC BY 4.0,2027-01-05,census,75,ok,,0,0,0,1,6,flag,25,25,ok,25,ok,1,no
+igacity,communitybus,伊賀市,伊賀市行政バス・コミュニティバス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,354,354,ok,354,ok,0,yes
+inabecity,fukushibus,いなべ市,いなべ市福祉バス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,438,438,ok,438,ok,0,yes
+isecity,communitybus,伊勢市,伊勢市コミュニティバス「おかげバス」,24,三重県,CC BY 4.0,2026-11-30,watch,39,flag,ends_60,,,,0,2,ok,205,205,ok,205,ok,1,no
+isecity,numakibus,伊勢市,伊勢市沼木地区自主運行バス「沼木バス」,24,三重県,CC BY 4.0,2027-01-10,census,80,ok,,0,0,0,5,7,flag,42,42,ok,42,ok,1,no
+isetetu,iserailway,伊勢鉄道,伊勢鉄道,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,17,17,ok,17,ok,1,no
+kameyamacity,communitybus,亀山市,亀山市コミュニティバス,24,三重県,CC BY 4.0,2027-01-31,census,101,ok,,0,0,0,1,8,flag,200,200,ok,200,ok,1,no
+kawagoetown,fureaibus,川越町,川越町ふれあいバス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,32,32,ok,32,ok,0,yes
+kihotown,chominbus,紀宝町,紀宝町民バス,24,三重県,CC BY 4.0,2027-01-31,census,101,ok,,0,0,0,1,7,flag,168,168,ok,168,ok,1,no
+kisosakitown,communitybus,木曽岬町,木曽岬町自主運行バス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,69,69,ok,69,ok,0,no
+komonotown,communitybus,菰野町,菰野町「かもしか号」,24,三重県,CC BY 4.0,2026-11-30,watch,39,flag,ends_60,2,329,224,0,2,ok,99,99,ok,99,ok,1,no
+kumanocity,communitybus,熊野市,熊野市バス、御浜町自主運行バス,24,三重県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,1,11,flag,236,236,ok,236,ok,1,no
+kumanocity,shuyubus,熊野市,熊野市市街地周遊バス,24,三重県,CC BY 4.0,2027-01-31,census,101,ok,,0,0,0,0,0,n/a,10,10,ok,10,ok,0,no
+kuwanacity,communitybus,桑名市,桑名市コミュニティバス「Ｋ－バス」,24,三重県,CC BY 4.0,2027-06-30,census,251,ok,,1,352,352,6,11,flag,312,312,ok,312,ok,1,no
+matsusakacity,communitybus,松阪市,松阪市コミュニティ交通,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,229,229,ok,229,ok,1,no
+mie-kotsu,sancochusei,三重交通,中勢営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,1,8,flag,923,923,ok,923,ok,1,no
+mie-kotsu,sancoiga,三重交通,伊賀営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,6,8,flag,580,580,ok,580,ok,1,no
+mie-kotsu,sancoinanki,三重交通,南紀営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,3,7,flag,254,254,ok,250,ok,1,no
+mie-kotsu,sancoise,三重交通,伊勢営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,4,8,flag,445,445,ok,445,ok,1,no
+mie-kotsu,sancokuwana,三重交通,桑名営業所,24,三重県,CC BY 4.0,2027-01-18,census,88,ok,,0,0,0,4,8,flag,439,439,ok,439,ok,1,no
+mie-kotsu,sancomatsusaka,三重交通,松阪営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,8,8,flag,370,370,ok,370,ok,1,no
+mie-kotsu,sancoshima,三重交通,志摩営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,3,7,flag,367,367,ok,367,ok,1,no
+mie-kotsu,sancoyokkaichi,三重交通,四日市営業所,24,三重県,CC BY 4.0,2027-01-14,census,84,ok,,0,0,0,8,8,flag,603,603,ok,603,ok,1,no
+mie-meiwatown,chominbus,明和町,明和町町民バス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,2,ok,36,36,ok,36,ok,0,yes
+minamiisetown,choeibus,南伊勢町,南伊勢町営バス,24,三重県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,1,10,flag,163,163,ok,163,ok,1,no
+nabaricity,communitybus,名張市,名張市コミュニティバス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,176,176,ok,176,ok,0,yes
+odaitown,choeibus,大台町,大台町営バス,24,三重県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,103,103,ok,103,ok,0,yes
+owasecity,fureaibus,尾鷲市,尾鷲市ふれあいバス,24,三重県,CC BY 4.0,2027-01-31,census,101,ok,,0,0,0,4,8,flag,146,146,ok,146,ok,1,no
+seikatsubus-yokkaichi,sbusyokkaichi,生活バス四日市,生活バスよっかいち,24,三重県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,10,10,flag,40,40,ok,40,ok,1,no
+shimacity,agowanteikisen,志摩市,あご湾定期船,24,三重県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,9,ok,3,3,ok,3,ok,0,yes
+shimacity,anori,志摩市,安乗線代替バス,24,三重県,CC BY 4.0,2027-03-28,census,157,ok,,0,0,0,0,0,n/a,27,27,ok,27,ok,0,no
+suzukacity,communitybus,鈴鹿市,鈴鹿市コミュニティバスC-BUS,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,10,flag,248,248,ok,248,ok,1,no
+takitown,choeibus,多気町,多気町営バス,24,三重県,CC BY 4.0,2027-01-31,census,101,ok,,0,0,0,1,7,flag,51,51,ok,51,ok,1,no
+tobacity,communitybus,鳥羽市,鳥羽市　かもめバス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,135,135,ok,135,ok,1,no
+tobacity,teikisen,鳥羽市,鳥羽市営定期船,24,三重県,CC BY 4.0,2028-01-31,census,466,ok,,0,0,0,0,0,n/a,7,7,ok,7,ok,0,no
+tointown,communitybus,東員町,東員町「オレンジバス」,24,三重県,CC BY 4.0,2027-09-30,census,343,ok,,1,21,21,0,3,ok,159,159,ok,159,ok,0,yes
+tsu-airportline,airportline,津エアポートライン,津ベルライン・津エアポートライン,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,2,2,ok,2,ok,0,no
+tsucity,communitybus,津市,津市コミュニティバス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,5,11,flag,373,373,ok,373,ok,1,no
+wataraitown,choeibus,度会町,度会町営バス,24,三重県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,5,7,flag,91,91,ok,91,ok,1,no
+yokkaichicity,communitybus,四日市市,四日市市自主運行バス,24,三重県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,0,n/a,37,37,ok,37,ok,0,no
+kokacity,sinaicommunitybus,甲賀市,甲賀市コミュニティバス,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,1,56,56,1,11,flag,436,436,ok,436,ok,1,no
+kusatsucity,kusatsusimamebus,草津市,草津市コミュニティバス　まめバス,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,2,112,71,0,11,ok,138,138,ok,138,ok,0,yes
+moriyamacity,kuruttobus,守山市,草津市、守山市、栗東市　くるっとバス,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,2,77,71,0,11,ok,135,135,ok,135,ok,0,yes
+nagahamacity,nishiazaiodekakewagon,長浜市,長浜市コミュニティバス　西浅井おでかけワゴン　,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,2,63,57,6,11,flag,35,35,ok,35,ok,1,no
+omihachimancity,akakonbus,近江八幡市,近江八幡市　あかこんバス　,25,滋賀県,CC BY 4.0,2027-05-31,census,221,ok,,1,1,1,11,11,flag,449,447,ok,449,ok,1,no
+shiga-hinotown,choueibus,日野町,日野町営バス,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,1,48,48,1,11,flag,106,106,ok,106,ok,1,no
+shiga-konancity,konansimegurukun,湖南市,湖南市コミバスめぐるくん,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,1,48,48,0,11,ok,224,224,ok,224,ok,0,yes
+takashimacity,takasimasicommunitybus,高島市,高島市コミュニティバス,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,1,42,42,5,10,flag,305,305,ok,305,ok,1,no
+yasucity,onoriyasu,野洲市,野洲市コミバスおのりやす,25,滋賀県,CC BY 4.0,2027-03-31,census,160,ok,,1,56,56,0,11,ok,160,160,ok,160,ok,0,yes
+shinkikanko,limonbus,神姫観光,Limon Bus,27,大阪府,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,11,11,ok,11,ok,0,no
+akashicity,tacobustacobusmini,明石市,たこバス/たこバスミニ,28,兵庫県,CC BY 4.0,2027-11-30,census,404,ok,,0,0,0,0,10,ok,260,260,ok,260,ok,0,yes
+akocity,teijuurou,赤穂市,ていじゅうろう,28,兵庫県,CC BY 2.1 JP,2027-04-30,census,190,ok,,0,0,0,6,11,flag,154,154,ok,154,ok,1,no
+akocity,yuranosuke,赤穂市,ゆらのすけ,28,兵庫県,CC BY 2.1 JP,2027-04-30,census,190,ok,,1,760,760,3,11,flag,254,254,ok,254,ok,1,no
+awajicity,awaji-jenova-line-akashi-iwaya,淡路市,淡路ジェノバライン明石岩屋航路,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,2,2,3,10,flag,2,2,ok,2,ok,1,no
+awajicity,awajinawahimebus,淡路市,あわ神あわ姫バス,28,兵庫県,CC BY 2.1 JP,2027-03-11,census,140,ok,,1,10,10,2,9,flag,223,223,ok,223,ok,1,no
+fukusakitown,junkai-fukuhime-fukusakikasairenkei,福崎町,巡回バス/ふくひめ号/福崎町・加西市連携コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,0,0,0,2,11,flag,196,196,ok,196,ok,1,no
+himejicity,ieshima-boze-yukihiko,姫路市,家島コミュニティバス/坊勢コミュニティバス/コミュニティバス雪彦,28,兵庫県,CC BY 2.1 JP,2027-09-30,census,343,ok,,2,499,304,0,11,ok,110,110,ok,110,ok,0,yes
+hyogo-kamikawatown,communitybus,神河町,コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,181,181,2,11,flag,241,241,ok,241,ok,1,no
+hyogo-ono,ranranbus,小野市,らんらんバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,0,0,0,9,11,flag,308,308,ok,308,ok,1,no
+ichikawatown,communitybus,市川町,コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-04-30,census,190,ok,,2,77,45,8,10,flag,114,114,ok,114,ok,1,no
+inagawatown,fureaibus,猪名川町,ふれあいバス,28,兵庫県,CC BY 2.1 JP,2027-09-30,census,343,ok,,0,0,0,7,10,flag,136,136,ok,136,ok,1,no
+kakogawacity,kakobuskakobusmini,加古川市,かこバス/かこバスミニ,28,兵庫県,CC BY 2.1 JP,2027-09-30,census,343,ok,,1,45,45,0,11,ok,404,404,ok,404,ok,0,yes
+kamigoritown,ainorigo,上郡町,愛のり号,28,兵庫県,CC BY 2.1 JP,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,133,133,ok,133,ok,1,no
+kasaicity,kasaineppihappybus,加西市,KASAIねっぴー号/はっぴーバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,8,8,0,11,ok,199,199,ok,199,ok,0,yes
+kasaicity,unifureaitomi,加西市,宇仁ふれあいバス/とみバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,8,8,0,10,ok,125,125,ok,0,flag,0,no
+kobecity,kobe-satoyama,神戸市,北区青葉台・柏尾台地区「さとやま」,28,兵庫県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,16,16,ok,16,ok,0,yes
+kobecity,kobe-shiokaze,神戸市,神戸市コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-09-30,census,343,ok,,1,30,30,0,11,ok,126,126,ok,126,ok,0,yes
+minamiawajicity,lanrunbus,南あわじ市,らん・らんバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,1,1,0,0,n/a,274,274,ok,274,ok,0,no
+nishinomiyacity,guruttonamaze,西宮市,ぐるっと生瀬,28,兵庫県,CC BY 2.1 JP,2027-05-31,census,221,ok,,0,0,0,3,11,flag,56,56,ok,56,ok,1,no
+nishinomiyacity,koyoen,西宮市,甲陽地区コミュニティバス（こよたんバス）,28,兵庫県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,29,29,ok,29,ok,1,no
+nishinomiyacity,najio-ikunokogen,西宮市,名塩・生野高原ふれあいバス,28,兵庫県,CC BY 4.0,2027-04-30,census,190,ok,,2,304,280,3,10,flag,31,31,ok,31,ok,1,no
+nishinomiyacity,sakurayamanami,西宮市,さくらやまなみバス,28,兵庫県,CC BY 2.1 JP,2026-10-31,watch,9,flag,ends_30,1,27,27,0,0,n/a,76,76,ok,76,ok,1,no
+nishiwakicity,loopbus-orihimebus,西脇市,ループバス/おりひめバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,45,45,0,0,n/a,120,120,ok,120,ok,0,no
+sayotown,communitybus,佐用町,コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-04-30,census,190,ok,,2,133,129,0,10,ok,72,72,ok,72,ok,0,yes
+shinonsentown,yumetsubame,新温泉町,町民バス夢つばめ,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,2,449,395,,,n/a,169,169,ok,169,ok,0,no
+shisocity,shitanbus,宍粟市,しーたんバス（蔦沢線・大谷線）,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,0,0,0,0,10,ok,104,104,ok,104,ok,0,yes
+shisocity,shitanbus-wingshinki,宍粟市,しーたんバス（蔦沢線・大谷線以外）,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,0,0,0,0,11,ok,441,441,ok,441,ok,0,yes
+sumotocity,communitybus,洲本市,コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,0,0,0,0,5,ok,62,62,ok,62,ok,0,yes
+takarazukacity,runrunbus,宝塚市,ランランバス,28,兵庫県,CC BY 2.1 JP,2027-09-30,census,343,ok,,0,0,0,0,11,ok,10,10,ok,10,ok,0,yes
+takasagocity,jotonbus,高砂市,じょうとんバス,28,兵庫県,CC BY 2.1 JP,2027-09-30,census,343,ok,,0,0,0,0,11,ok,119,119,ok,119,ok,0,yes
+tatsunocity,communitybus,たつの市,コミュニティバス,28,兵庫県,CC BY 2.1 JP,2027-04-30,census,190,ok,,1,4,4,0,11,ok,140,140,ok,140,ok,0,yes
+toyookacity,inacar,豊岡市,イナカー,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,13,13,2,11,flag,170,170,ok,0,flag,1,no
+toyookacity,kobus,豊岡市,コバス,28,兵庫県,CC BY 2.1 JP,2027-03-31,census,160,ok,,1,45,45,2,10,flag,45,45,ok,0,flag,1,no
+yamatokoriyamacity,kingyobus,大和郡山市,大和郡山市コミュニティバス,29,奈良県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,75,75,ok,0,flag,0,no
+yamatotakadacity,communitybuskibougou,大和高田市,コミュニティバスきぼう号,29,奈良県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,4,ok,62,62,ok,0,flag,0,no
+aridagawatown,aridagawatownbus,有田川町,有田川町コミュニティバス,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,6,10,flag,164,164,ok,164,ok,1,no
+chukibus,chukibus,中紀バス,中紀バス,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,1,169,169,4,11,flag,148,148,ok,148,ok,1,no
+iwadecity,junkaibus,岩出市,岩出市巡回バス,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,1,6,6,0,2,ok,177,177,ok,177,ok,0,yes
+katsuragitown,community-bus,かつらぎ町,かつらぎ町コミュニティバス,30,和歌山県,CC0 1.0,2027-05-17,census,207,ok,,0,0,0,2,11,flag,77,77,ok,77,ok,1,no
+kinokawacity,kinokawa_bus,紀の川市,紀の川市地域巡回バス・紀の川コミュニティバス,30,和歌山県,CC BY 4.0,2028-03-31,census,526,ok,,0,0,0,1,11,flag,367,367,ok,367,ok,1,no
+kumanogobobus,kumanogobobus_gobo,熊野御坊南海バス株式会社,熊野御坊南海バス 御坊エリア,30,和歌山県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,1,101,101,0,0,n/a,361,361,ok,361,ok,1,no
+kumanogobobus,kumanogobobus_kumano,熊野御坊南海バス株式会社,熊野御坊南海バス 熊野エリア,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,329,329,ok,329,ok,1,no
+kushimoto,bus-kushimotokankoshuyu-wakayama-jp,くしもと観光周遊バス推進協議会（事務局：和歌山県立南紀熊野ジオパークセンター））,くしもと観光周遊バス　まぐトル号,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,7,7,ok,7,ok,0,no
+meikobus,meikobus,明光バス株式会社,明光バス,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,434,433,ok,434,ok,1,no
+rinkan,hashimoto-rinkandenentoshi,南海りんかんバス株式会社,南海りんかんバス橋本・林間田園都市エリア,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,77,77,ok,77,ok,0,yes
+rinkan,koyasan,南海りんかんバス株式会社,南海りんかんバス高野山エリア,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,68,68,ok,68,ok,0,yes
+ryujinbus,ryujinbus,龍神自動車株式会社,龍神自動車,30,和歌山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,446,446,ok,446,ok,1,no
+tanabecity,Jumin-Bus,田辺市,田辺市住民バス,30,和歌山県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,10,ok,249,249,ok,249,ok,0,yes
+masudacity,noriai,益田市,益田市乗合タクシー,32,島根県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,5,10,flag,109,109,ok,109,ok,1,no
+hayashimatown,hayashimatowncommunitybus,早島町,早島町コミュニティバス,33,岡山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,3,10,flag,76,76,ok,76,ok,1,no
+hokushin-bus,hokushinbus,北振バス株式会社,北振バス,33,岡山県,CC0 1.0,2027-03-08,census,137,ok,,0,0,0,8,10,flag,213,213,ok,209,ok,1,no
+hokushin-bus,ibaraaiaibus,北振バス株式会社,井原あいあいバス,33,岡山県,CC0 1.0,2027-05-12,census,202,ok,,0,0,0,6,11,flag,135,135,ok,0,flag,1,no
+kagaminotown,kagaminotownbus,鏡野町,鏡野町営バス,33,岡山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,4,11,flag,248,248,ok,248,ok,1,no
+maniwacity,maniwakun,真庭市,真庭市コミュニティバス「まにわくん」,33,岡山県,CC0 1.0,2027-03-31,census,160,ok,,1,247,247,2,11,flag,337,337,ok,337,ok,1,no
+nagitown,nagibus,奈義町,なぎバス,33,岡山県,CC BY 4.0,2027-03-01,census,130,ok,,0,0,0,1,10,flag,54,54,ok,54,ok,1,no
+niimicity,niimishieibus,新見市,新見市営バス,33,岡山県,CC BY 4.0,2027-06-29,census,250,ok,,0,0,0,4,11,flag,295,295,ok,295,ok,1,no
+setouchicity,setouchicitybus,瀬戸内市,瀬戸内市営バス,33,岡山県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,246,246,ok,246,ok,0,yes
+setouchicity,setouchicitykankobus,瀬戸内市,長船だがし線,33,岡山県,CC0 1.0,2027-01-31,census,101,ok,,0,0,0,0,1,ok,6,6,ok,0,flag,0,no
+shootown,shoochofureaibus,勝央町,勝央町ふれあいバス,33,岡山県,CC0 1.0,,,,ok,,,,,3,10,flag,96,96,ok,95,ok,1,no
+asatetu,asakaigantetsudo,阿佐海岸鉄道株式会社,阿佐海岸鉄道株式会社【DMV】,36,徳島県,CC BY 4.0,2027-06-10,census,231,ok,,2,95,88,3,10,flag,16,16,ok,16,ok,1,no
+higashimiyoshitown,higashimiyoshitownbus,東みよし町,東みよし町営バス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,63,63,ok,63,ok,1,no
+kaiyotown,kaiyotownbus,海陽町,海陽町営バス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,9,11,flag,68,68,ok,68,ok,1,no
+kitajimatown,kitajimatownfukushibus,北島町,北島町福祉バス,36,徳島県,CC BY 4.0,2027-02-18,census,119,ok,,1,1,1,4,8,flag,80,80,ok,80,ok,1,no
+matsushigetown,matsushigetownbus,松茂町,松茂町地域コミュニティバス,36,徳島県,CC BY 4.0,2027-12-31,census,435,ok,,0,0,0,0,11,ok,59,59,ok,59,ok,0,yes
+nakatown,nakatownbus,那賀町,那賀町営バス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,1,407,407,3,10,flag,99,99,ok,99,ok,1,no
+narutocity,narutocitychiikibus,鳴門市,鳴門市地域バス,36,徳島県,CC BY 4.0,2027-04-06,census,166,ok,,3,357,278,0,10,ok,69,69,ok,69,ok,0,yes
+narutocity,narutocitytosen,鳴門市,鳴門市営渡船,36,徳島県,CC BY 4.0,2027-04-06,census,166,ok,,3,387,372,3,10,flag,6,6,ok,6,ok,1,no
+tokubus,tokushimabus,徳島バス株式会社,徳島バス株式会社,36,徳島県,CC BY 4.0,2027-12-31,census,435,ok,,0,0,0,0,10,ok,1626,1626,ok,1626,ok,0,yes
+tokubus-nanbu,tokushimabusnanbu,徳島バス南部株式会社,徳島バス南部株式会社,36,徳島県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,0,n/a,376,376,ok,376,ok,0,no
+tokushima-miyoshicity,miyoshicitybus,三好市,三好市営バス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,2,10,6,2,11,flag,548,548,ok,548,ok,1,no
+tokushima-shiei,tokushimacitybus,徳島市交通局,徳島市営バス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,106,106,ok,106,ok,0,yes
+tokushimacity,kamihachimanbus,徳島市,上八万コミュニティバス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,1,460,460,2,5,flag,31,31,ok,31,ok,1,no
+tokushimacity,oujinfureaibus,徳島市,応神ふれあいバス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,1,344,344,1,6,flag,38,38,ok,38,ok,1,no
+tsurugitown,tsurugitownbus,つるぎ町,つるぎ町コミュニティーバス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,120,120,ok,120,ok,0,yes
+yoshinogawacity,yoshinogawacitybus,吉野川市,吉野川市代替バス,36,徳島県,CC BY 4.0,2027-03-31,census,160,ok,,1,349,349,0,1,ok,29,29,ok,29,ok,0,yes
+kanonjicity,kanonjishi-noriaibus,観音寺市,観音寺市のりあいバス,37,香川県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,77,77,ok,0,flag,0,no
+kotosan,marugame-community,琴参バス株式会社,丸亀コミュニティバス,37,香川県,CC BY 4.0,2027-09-05,census,318,ok,,1,148,148,0,11,ok,311,311,ok,3,flag,0,no
+kotosan,sakaide-local,琴参バス株式会社,坂出路線,37,香川県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,11,ok,295,295,ok,15,flag,0,no
+mitoyocity,mitoyocommunitybus,三豊市,三豊市コミュニティバス,37,香川県,CC BY 4.0,2027-03-31,census,160,ok,,1,22,22,1,11,flag,372,372,ok,372,ok,1,no
+naoshimatown,naoshima,直島町,直島町,37,香川県,CC BY 4.0,2027-05-31,census,221,ok,,0,0,0,0,8,ok,39,39,ok,39,ok,0,yes
+seisan-kanko,seisankanko_limousine,西讃観光,西讃観光（高松空港リムジンバス）,37,香川県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,12,12,ok,12,ok,0,no
+akicity,GTFS-Akicity_Bus,安芸市,安芸市「元気バス」,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,100,100,ok,0,flag,0,no
+geiseivillage,GTFS-Geiseivill_Bus,芸西村,芸西村「おでかけバス」,39,高知県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,4,11,flag,43,43,ok,2,flag,1,no
+hidakavillage,GTFS-Hidakavill_Bus,日高村,日高村「周遊バス」,39,高知県,CC BY 4.0,,,,ok,,,,,10,10,flag,66,66,ok,0,flag,1,no
+inotown,GTFS-Inotown_HongawaArea,いの町,いの町営バス「本川地区」,39,高知県,CC BY 4.0,2027-01-05,census,75,ok,,0,0,0,0,7,ok,19,19,ok,0,flag,0,no
+inotown,GTFS-Inotown_Loopbus,いの町,いの町営バス「伊野循環線」,39,高知県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,1,5,flag,67,67,ok,1,flag,1,no
+jr-shikoku-bus-kochi,GTFS-JRbus_Otochi,ジェイアール四国バス株式会社 高知支店,路線バス,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,58,58,ok,0,flag,0,no
+kamicity,GTFS-Kamicity_Bus,香美市,香美市営バス,39,高知県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,3,11,flag,313,313,ok,0,flag,1,no
+kamicity,GTFS-Kamicity_Demandbus,香美市,香美市営バス デマンド,39,高知県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,2,8,flag,49,49,ok,0,flag,1,no
+khkhokubu-kotsu,GTFS-Hokubutraffic_Localbus,株式会社県交北部交通,路線バス,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,1,11,flag,437,437,ok,0,flag,1,no
+kitagawavillage,GTFS-Kitagawavill_Bus,北川村,北川村営バス,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,42,42,ok,0,flag,0,no
+kochi-ekimae-kanko,GTFS-Ekimae_Airportbus,株式会社高知駅前観光,空港連絡バス,39,高知県,CC BY 4.0,2026-10-31,census,9,ok,,0,0,0,0,0,n/a,19,19,ok,19,ok,0,no
+kochi-ekimae-kanko,GTFS-Ekimae_Expressbus,株式会社高知駅前観光,高速バス,39,高知県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,2,2,flag,16,16,ok,16,ok,1,no
+kochi-kanko-convention,GTFS-KVCA_MY-YUbus,公益財団法人高知県観光コンベンション協会,MY遊バス,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,3,11,flag,16,16,ok,16,ok,1,no
+kochi-konancity,GTFS-Konancity_Bus,香南市,香南市営バス,39,高知県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,2,11,flag,202,202,ok,0,flag,1,no
+kochi-koryo-kotsu,GTFS-Koryotraffic_Localbus,高知高陵交通株式会社,路線バス,39,高知県,CC BY 4.0,2026-12-29,census,68,ok,,0,0,0,1,3,flag,583,583,ok,0,flag,1,no
+kochi-seinan-kotsu,GTFS-Seinan_Expressbus,高知西南交通株式会社,高速バス,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,0,0,n/a,20,20,ok,18,ok,0,no
+kochi-seinan-kotsu,GTFS-Seinantraffic_Akamego,高知西南交通株式会社,まちなかぐるっと循環周遊バス,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,11,11,ok,11,ok,0,no
+kochi-seinan-kotsu,GTFS-Seinantraffic_Localbus,高知西南交通株式会社,路線バス,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,1009,1009,ok,20,flag,0,no
+kochi-seinan-kotsu,GTFS-Seinantraffic_Riverbus,高知西南交通株式会社,四万十川バス,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,17,17,ok,17,ok,0,no
+kochi-seinan-kotsu,GTFS-Seinantraffic_Shimaashi,高知西南交通株式会社,しまんと・あしずり号,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,3,flag,17,17,ok,17,ok,1,no
+kochi-suzakicity,GTFS-Susakicity_Bus,須崎市,須崎市営バス,39,高知県,CC BY 4.0,2027-01-04,census,74,ok,,0,0,0,0,0,n/a,47,47,ok,0,flag,0,no
+kochi-suzakicity,GTFS-Susakicity_Ferry,須崎市,須崎市営巡航船,39,高知県,CC BY 4.0,2027-01-04,census,74,ok,,0,0,0,0,7,ok,9,9,ok,9,ok,0,yes
+kochi-tobu-kotsu,GTFS-Tobutraffic_Localbus,高知東部交通株式会社,路線バス,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,1,10,flag,603,603,ok,0,flag,1,no
+kochi-tsunotown,GTFS-Tsunotown_Bus,津野町,津野町コミュニティバス「つのバス」,39,高知県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,8,9,flag,283,283,ok,0,flag,1,no
+kochi_pref,GTFS-Kochipref_Ferry,高知県,高知県営渡船,39,高知県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,11,11,flag,2,2,ok,2,ok,1,no
+kochiap,GTFS-KochIAP_AirportShare,高知県航空利用促進協議会,高知県航空利用促進協議会「空港乗合タクシー」,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,3,3,ok,3,ok,0,no
+kuroiwa-kanko,GTFS-Kuroiwakanko_Localbus,有限会社黒岩観光,路線バス,39,高知県,CC BY 4.0,2026-12-25,census,64,ok,,0,0,0,0,2,ok,181,181,ok,0,flag,0,no
+miharavillage,GTFS-Miharavill_Bus,三原村,三原村「三原バス」,39,高知県,CC BY 4.0,2026-12-31,census,70,ok,,0,0,0,0,0,n/a,44,44,ok,0,flag,0,no
+motoyamatown,GTFS-Motoyamatown_Bus,本山町,本山町コミュニティバス「さくらバス」,39,高知県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,3,7,flag,93,93,ok,0,flag,1,no
+murotocity,GTFS-Murotocity_Bus,室戸市,室戸市コミュニティバス「むろはぴ号」,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,6,9,flag,193,193,ok,0,flag,1,no
+nakatosatown,GTFS-Nakatosatown_Bus,中土佐町,中土佐町コミュニティバス,39,高知県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,9,11,flag,125,125,ok,0,flag,1,no
+nangokucity,GTFS-Nankokucity_AirportShare,南国市,南国市「空港乗合タクシー」,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,1,6,6,0,0,n/a,6,6,ok,6,ok,0,no
+nangokucity,GTFS-Nankokucity_Bus,南国市,南国市コミュニティバス「NACOバス」,39,高知県,CC BY 4.0,2027-02-20,census,121,ok,,0,0,0,0,0,n/a,241,241,ok,0,flag,0,no
+niyodogawatown,GTFS-Niyodogawatown_Townsbus,仁淀川町,仁淀川町町民バス,39,高知県,CC BY 4.0,2026-12-27,census,66,ok,,0,0,0,0,2,ok,210,210,ok,3,flag,0,no
+otsukitown,GTFS-Otsukitown_Bus,大月町,大月町「まちなか循環線」,39,高知県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,2,10,flag,22,22,ok,0,flag,1,no
+reihoku-kanko,GTFS-Reihokukanko_Localbus,有限会社嶺北観光自動車,路線バス,39,高知県,CC BY 4.0,2026-12-27,census,66,ok,,0,0,0,0,2,ok,468,468,ok,0,flag,0,no
+sakawatown,GTFS-Sakawatown_Bus,佐川町,佐川町コミュニティバス「さかわぐるぐるバス」,39,高知県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,6,10,flag,167,167,ok,0,flag,1,no
+shimanto-kotsu,GTFS-Shimantotraffic_Feederbus,株式会社四万十交通,路線バス フィーダー線,39,高知県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,4,5,flag,40,40,ok,0,flag,1,no
+shimanto-kotsu,GTFS-Shimantotraffic_Localbus,株式会社四万十交通,路線バス,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,4,11,flag,505,505,ok,12,flag,1,no
+shimantocity,GTFS-Shimantocity_Bus,四万十市,四万十市営バス,39,高知県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,3,11,flag,149,149,ok,0,flag,1,no
+shimantotown,GTFS-Shimantotown_Bus,四万十町,四万十町コミュニティバス,39,高知県,CC BY 4.0,2027-04-01,census,161,ok,,0,0,0,9,10,flag,485,485,ok,0,flag,1,no
+sukumocity,GTFS-Sukumocity_Ferry,宿毛市,宿毛市営定期船航路「沖の島航路」,39,高知県,CC BY 4.0,2027-08-10,census,292,ok,,0,0,0,0,0,n/a,4,4,ok,4,ok,0,no
+sukumocity,GTFS-Sukumocity_Hanabus,宿毛市,宿毛市コミュニティバス「はなちゃんバス」,39,高知県,CC BY 4.0,2027-04-10,census,170,ok,,0,0,0,6,10,flag,57,57,ok,0,flag,1,no
+sukumocity,GTFS-Sukumocity_Yururinbus,宿毛市,宿毛市「ゆるりんバス」,39,高知県,CC BY 4.0,2027-04-30,census,190,ok,,0,0,0,0,10,ok,8,8,ok,8,ok,0,yes
+tanotown,GTFS-Tanotown_Bus,田野町,田野町コミュニティーバス「たのくるバス」,39,高知県,CC BY 4.0,2027-10-01,census,344,ok,,0,0,0,7,8,flag,37,37,ok,0,flag,1,no
+tosacity,GTFS-Tosacity_Bus,土佐市,土佐市コミュニティバス「ドラゴンバス」,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,1,19,19,1,11,flag,177,177,ok,4,flag,1,no
+tosaden-kotsu,GTFS-Tosadentraffic_Airportbus,とさでん交通株式会社,空港連絡バス,39,高知県,CC BY 4.0,2026-10-25,watch,3,flag,ends_7,0,0,0,0,0,n/a,27,27,ok,4,flag,1,no
+tosaden-kotsu,GTFS-Tosadentraffic_Regularbus,とさでん交通株式会社,路線バス,39,高知県,CC BY 4.0,2027-10-03,census,346,ok,,0,0,0,1,10,flag,820,820,ok,6,flag,1,no
+tosaden-kotsu,GTFS-Tosadentraffic_Streetcar,とさでん交通株式会社,路面電車,39,高知県,CC BY 4.0,2027-04-30,census,190,ok,,0,0,0,0,10,ok,152,152,ok,0,flag,0,no
+tosashimizucity,GTFS-Tosashimizucity_Bus,土佐清水市,土佐清水市デマンド交通「おでかけ号」,39,高知県,CC BY 4.0,2027-09-30,census,343,ok,,0,0,0,7,11,flag,36,36,ok,35,ok,1,no
+yasudatown,GTFS-Yasudatown_Bus,安田町,安田町コミュニティバス「やすら号」,39,高知県,CC BY 4.0,2027-10-02,census,345,ok,,0,0,0,4,5,flag,44,44,ok,0,flag,1,no
+amagikankobus,AmagiKankoBus,株式会社甘木観光バス,株式会社甘木観光バス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,68,68,ok,68,ok,0,yes
+ashiyatown,AshiyaTownBus,芦屋町,芦屋町コミュニティバス 芦屋タウンバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,60,60,ok,60,ok,0,yes
+buzencity,BuzenCityBus,豊前市,豊前市バス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,128,128,ok,128,ok,1,no
+chikugocity,HainuzukaStationAreaLoopBus,筑後市,羽犬塚駅周辺循環バス（はねバス）,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,153,153,1,11,flag,47,46,ok,46,ok,1,no
+chikujotown,ChikujoTownCommunityBus,築上町,築上町コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,75,75,ok,75,ok,1,no
+dazaifucity,DazaifuCityCommunityBus,太宰府市,太宰府市コミュニティバスまほろば号,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,46,46,ok,46,ok,0,yes
+fukuoka-kawasakitown,KawasakiTownFureaiBus,川崎町,川崎町ふれあいバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,141,141,2,11,flag,106,106,ok,106,ok,1,no
+fukuoka-kogacity,KogaBus,古賀市,コガバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,2,309,168,0,10,ok,26,25,ok,25,ok,0,yes
+fukuokacity,ImajukuMeinohamaLine,福岡市,今宿姪浜線乗合バス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,38,38,ok,38,ok,1,no
+fukutsucity,minibus,福津市,ふくつミニバス・ふくつ乗合タクシー,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,241,241,ok,241,ok,1,no
+hisayamatown,HisayamaIkoBus,久山町,久山町コミュニティバス イコバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,2,287,280,0,11,ok,87,87,ok,87,ok,0,yes
+kamacity,KamaCityBus,嘉麻市,嘉麻市バス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,175,175,0,11,ok,257,257,ok,257,ok,0,yes
+kandatown,KandaTownCommunityBus,苅田町,苅田町コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,150,150,ok,150,ok,0,yes
+kasugacity,yayoi_kasuga,春日市,春日市コミュニティバスやよい,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,0,n/a,271,271,ok,271,ok,0,no
+kitakyushucity,edamitsu,北九州市,八幡東区枝光地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,63,63,ok,0,flag,1,no
+kitakyushucity,higashitani,北九州市,小倉南区東谷地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,185,185,0,11,ok,38,38,ok,0,flag,0,no
+kitakyushucity,hiraodai,北九州市,小倉南区平尾台地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,185,185,0,0,n/a,16,16,ok,0,flag,0,no
+kitakyushucity,koyanose-kusubashi-hoshigaoka,北九州市,八幡西区木屋瀬・楠橋・星ヶ丘地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,185,185,2,10,flag,42,42,ok,0,flag,1,no
+kitakyushucity,okura,北九州市,八幡東区大蔵地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,185,185,3,10,flag,25,25,ok,0,flag,1,no
+kitakyushucity,oma-dobaru,北九州市,小倉南区合馬・道原地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,268,268,3,10,flag,44,44,ok,0,flag,1,no
+kitakyushucity,tashiro-kawachi,北九州市,八幡東区田代・河内地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,10,flag,11,11,ok,11,ok,1,no
+kitakyushucity,tsunemi-kitaku,北九州市,門司区恒見・喜多久地区,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,268,268,2,11,flag,22,22,ok,0,flag,1,no
+kuratetown,KurateTownSmileBusMiyawakaLine,鞍手町,すまいるバスみやわか線,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,58,58,ok,58,ok,1,no
+miyamacity,MiyamaCityCommunityBus,みやま市,みやま市コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,6,11,flag,76,76,ok,76,ok,1,no
+miyawakacity,MiyawakaMunakataLine,宮若市,宮田・百合野線,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,52,52,ok,52,ok,0,yes
+mizumakitown,MizumakiTownBus,水巻町,町内巡回バス・通勤通学バス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,114,114,ok,114,ok,0,yes
+munakatacity,MiyawakaMunakataLine,宗像市,宮若・宗像線,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,172,172,0,10,ok,34,34,ok,34,ok,0,yes
+munakatacity,MunakataCityCommunityBus,宗像市,宗像市コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,8,11,flag,261,261,ok,261,ok,1,no
+munakatacity,MunakataCityFureaiBus,宗像市,宗像市ふれあいバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,180,180,ok,180,ok,1,no
+munakatacity,MunakataCityJinoshimaFerry,宗像市,宗像市営渡船地島航路,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,3,ok,3,3,ok,3,ok,0,yes
+munakatacity,MunakataCityOshimaFerry,宗像市,宗像市営渡船大島航路,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,3,ok,2,2,ok,2,ok,0,yes
+nogatacity,NogataCityCommunityBus,直方市,直方市コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,8,11,flag,154,154,ok,154,ok,1,no
+ongatown,OngaTownCommunityBus,遠賀町,遠賀町コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,80,80,ok,80,ok,1,no
+shingutown,ShinguTownCommunityBus,新宮町,新宮町コミュニティバス マリンクス,40,福岡県,CC BY 4.0,2027-02-28,census,129,ok,,1,38,38,1,10,flag,90,90,ok,90,ok,1,no
+shingutown,TownFerryShingu,新宮町,町営渡船しんぐう,40,福岡県,CC BY 4.0,2027-02-28,census,129,ok,,0,0,0,0,1,ok,2,2,ok,2,ok,0,yes
+soedatown,soedamachibus,添田町,添田町バス,40,福岡県,CC BY 4.0,,,,ok,,,,,0,11,ok,70,70,ok,70,ok,0,yes
+suetown,SueTownCommunityBus,須恵町,須恵町コミュニティバス,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,1,278,278,0,11,ok,107,107,ok,107,ok,0,yes
+tagawacity,TagawaCityCommunityBus,田川市,田川市コミュニティバス,40,福岡県,CC BY 4.0,2027-09-30,census,343,ok,,1,237,237,1,11,flag,199,199,ok,199,ok,1,no
+taiyo-koutu,taiyo-koutu,太陽交通株式会社,太陽交通株式会社,40,福岡県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,320,320,ok,320,ok,0,yes
+yanagawacity,YanagawaCityCommunityBus,柳川市,柳川市コミュニティバス,40,福岡県,CC BY 4.0,2027-09-30,census,343,ok,,2,300,152,6,11,flag,175,174,ok,174,ok,1,no
+imaricity,imarinbus,伊万里市,いまりんバス,41,佐賀県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,2,11,flag,148,148,ok,148,ok,1,no
+hiradocity,fureaibus,平戸市,ふれあいバス,42,長崎県,CC BY 4.0,2027-09-30,census,343,ok,,1,60,60,0,11,ok,155,155,ok,155,ok,0,yes
+kuma-bus,kuma-bus,熊本バス,熊本バス,43,熊本県,CC BY 4.0,2027-01-15,census,85,ok,,0,0,0,1,8,flag,541,541,ok,541,ok,1,no
+kumamoto-shiden,kumamotoshiden,熊本市交通局,熊本市電,43,熊本県,CC BY 2.1 JP,2027-03-31,census,160,ok,,0,0,0,3,11,flag,69,69,ok,69,ok,1,no
+kumamoto-toshibus,kumamoto-toshibus,熊本都市バス,熊本都市バス,43,熊本県,CC BY 4.0,2027-01-15,census,85,ok,,0,0,0,6,8,flag,819,819,ok,819,ok,1,no
+kumamotodentetsu,kumamotodentetsu,熊本電鉄,熊本電鉄電車,43,熊本県,CC0 1.0,2026-12-28,census,67,ok,,0,0,0,0,2,ok,18,18,ok,18,ok,0,yes
+kumamotodentetsu,kumamotodentetsu-bus,熊本電鉄,熊本電鉄バス,43,熊本県,CC BY 4.0,2027-01-15,census,85,ok,,0,0,0,4,8,flag,618,618,ok,618,ok,1,no
+sankobus,sankobus,産交バス,産交バス,43,熊本県,CC BY 4.0,2027-01-15,census,85,ok,,0,0,0,6,8,flag,4647,4647,ok,4647,ok,1,no
+kusutown,kusucommunity-bus,玖珠町,玖珠町コミュニティバス,44,大分県,CC0 1.0,2027-03-31,census,160,ok,,0,0,0,1,11,flag,196,196,ok,0,flag,1,no
+nakatsucity,BuzenNakatsu,中津市,豊前・中津線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,45,45,ok,45,ok,0,yes
+nakatsucity,Higashitani,中津市,東谷線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,3,4,flag,63,63,ok,63,ok,1,no
+nakatsucity,HiyamajiKamagi,中津市,樋山路鎌城線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,28,28,ok,28,ok,1,no
+nakatsucity,Kawaraguchi,中津市,川原口線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,53,53,ok,53,ok,1,no
+nakatsucity,Kii,中津市,城井線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,48,48,ok,48,ok,1,no
+nakatsucity,Miho,中津市,三保線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,11,ok,19,19,ok,19,ok,0,yes
+nakatsucity,Nishimakusa,中津市,西秣線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,1,4,flag,23,23,ok,23,ok,1,no
+nakatsucity,Nishitani,中津市,西谷線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,5,5,flag,65,65,ok,65,ok,1,no
+nakatsucity,OshimaIfuku,中津市,大島伊福線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,35,35,ok,35,ok,1,no
+nakatsucity,OshimadaiKanayoshi,中津市,大島台金吉線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,23,23,ok,23,ok,1,no
+nakatsucity,ShinyabaHigashi,中津市,深耶馬東線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,31,31,ok,31,ok,1,no
+nakatsucity,ShinyabaNishi,中津市,深耶馬西線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,27,27,ok,27,ok,1,no
+nakatsucity,Tsutami,中津市,津民線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,57,57,ok,57,ok,0,yes
+nakatsucity,UenokawauchiMasaki,中津市,上ノ川内柾木線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,43,43,ok,43,ok,1,no
+nakatsucity,UraYabakei,中津市,裏耶馬溪線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,0,10,ok,46,46,ok,46,ok,0,yes
+nakatsucity,Yakata,中津市,屋形線,44,大分県,CC BY 4.0,2027-03-31,census,160,ok,,0,0,0,3,4,flag,79,79,ok,79,ok,1,no
+nakatsucity,YamautsuriKita,中津市,山移北線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,19,19,ok,19,ok,1,no
+nakatsucity,YamautsuriMinami,中津市,山移南線,44,大分県,CC BY 4.0,2026-10-31,watch,9,flag,ends_30,0,0,0,0,0,n/a,27,27,ok,27,ok,1,no
+kagoshimacity,aibus,鹿児島市,鹿児島市コミュニティバス「あいばす」,46,鹿児島県,CC BY 4.0,2027-03-31,census,160,ok,,2,52,49,5,11,flag,1180,542,flag,542,flag,2,no
+yaesetown,yaese-town-bus,八重瀬町,八重瀬町バス,47,沖縄県,CC BY 4.0,2027-04-30,census,190,ok,,0,0,0,0,11,ok,108,108,ok,108,ok,0,yes
+yanbaru-expressbus,yanbaru-express-bus,合同会社やんばる急行バス,やんばる急行バス,47,沖縄県,CC BY 4.0,2026-12-31,census,70,ok,,2,117,113,3,5,flag,89,82,ok,82,ok,1,no
