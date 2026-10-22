@@ -1,0 +1,22 @@
+﻿date,weekday,name_ja,name_en,kind,feeds,covered,applicable,ordinary,ordinary_std,no_service,sunday,saturday,special,same_as_weekend,no_ordinary_service,no_reference,share_shown,share_shown_nonstandard
+2026-04-29,Wed,昭和の日,Showa Day,holiday,550,318,268,25,0,102,123,4,14,31,19,0,0.093,0.093
+2026-05-04,Mon,みどりの日,Greenery Day,holiday,550,326,275,25,0,104,124,6,16,32,19,0,0.091,0.091
+2026-05-05,Tue,こどもの日,Children's Day,holiday,550,326,277,27,0,105,121,7,17,34,15,0,0.097,0.097
+2026-05-06,Wed,休日（振替休日）,substitute holiday,holiday,550,326,275,27,0,103,125,3,17,32,19,0,0.098,0.098
+2026-07-20,Mon,海の日,Marine Day,holiday,550,366,307,27,0,116,145,4,15,37,22,0,0.088,0.088
+2026-08-11,Tue,山の日,Mountain Day,holiday,550,386,325,31,0,122,152,4,16,43,18,0,0.095,0.095
+2026-09-21,Mon,敬老の日,Respect for the Aged Day,holiday,550,421,352,30,0,123,174,4,21,45,24,0,0.085,0.085
+2026-09-22,Tue,休日（国民の休日）,day between two holidays,holiday,550,421,356,36,1,124,169,5,21,47,18,0,0.104,0.101
+2026-09-23,Wed,秋分の日,Autumnal Equinox Day,holiday,550,421,354,30,0,124,174,4,22,44,23,0,0.085,0.085
+2026-10-12,Mon,スポーツの日,Sports Day,holiday,550,525,446,40,1,141,230,4,30,57,22,0,0.092,0.09
+2026-11-03,Tue,文化の日,Culture Day,holiday,550,527,457,46,1,144,229,8,29,55,15,0,0.103,0.101
+2026-11-23,Mon,勤労感謝の日,Labour Thanksgiving Day,holiday,550,527,452,41,1,144,232,4,30,54,21,0,0.093,0.091
+2026-12-29,Tue,年末年始,New Year break,year_end,550,510,450,183,4,142,66,4,51,45,15,0,0.416,0.407
+2026-12-30,Wed,年末年始,New Year break,year_end,550,509,446,122,3,163,97,4,57,41,22,0,0.28,0.274
+2026-12-31,Thu,年末年始,New Year break,year_end,550,508,445,74,0,218,96,3,54,41,22,0,0.166,0.166
+2027-01-01,Fri,元日,New Year's Day,holiday,550,482,437,24,1,282,84,1,45,31,14,0,0.057,0.055
+2027-01-02,Sat,年末年始,New Year break,year_end,550,482,256,28,6,154,21,0,47,109,117,0,0.133,0.109
+2027-01-11,Mon,成人の日,Coming of Age Day,holiday,550,475,411,67,2,130,185,4,23,43,21,0,0.168,0.163
+2027-02-11,Thu,建国記念の日,National Foundation Day,holiday,550,454,388,50,2,126,180,6,24,46,20,0,0.134,0.129
+2027-02-23,Tue,天皇誕生日,Emperor's Birthday,holiday,550,452,395,56,2,129,179,7,22,45,12,0,0.147,0.142
+2027-03-22,Mon,休日（振替休日）,substitute holiday,holiday,550,437,378,52,2,124,171,4,25,40,19,0,0.143,0.138

@@ -1,0 +1,51 @@
+{
+ "as_of": "2026-10-22",
+ "feeds_listed": 608,
+ "feeds_checked": 550,
+ "skipped_by_reason": {
+  "discontinued": 28,
+  "no_trips": 3,
+  "ended": 27
+ },
+ "feeds_with_calendar_dates": 513,
+ "feeds_all_standard_ids": 5,
+ "feeds_upcoming_shown": 236,
+ "predictions": {
+  "P1": {
+   "shown": 47,
+   "applicable": 457,
+   "share": 0.103,
+   "held": true,
+   "text": "On 2026-11-03, between 5% and 30% of applicable feeds show the ordinary weekday timetable."
+  },
+  "P2": {
+   "feeds": 345,
+   "shown": {
+    "2026-09-21": 28,
+    "2026-09-22": 30,
+    "2026-09-23": 26
+   },
+   "held": true,
+   "text": "Among feeds applicable on all three of 2026-09-21, 09-22 and 09-23, more show the ordinary timetable on 09-22 (the day between two holidays) than on 09-21 or on 09-23."
+  },
+  "P3": {
+   "feeds": 368,
+   "consistent": 335,
+   "share": 0.91,
+   "held": true,
+   "text": "Of the feeds applicable on all six upcoming weekday holidays (2026-11-03 to 2027-03-22), at least 80% treat all six the same way (all ordinary or all handled)."
+  },
+  "P4": {
+   "shown": 125,
+   "applicable": 446,
+   "share": 0.28,
+   "share_2026_11_03": 0.103,
+   "difference": 0.177,
+   "held": true,
+   "text": "The share showing the ordinary timetable on 2026-12-30 is at least 15 points higher than on 2026-11-03."
+  }
+ },
+ "source": "https://api.gtfs-data.jp/v2/feeds and each feed's files/feed.zip?rid=current",
+ "generated_at": "2026-10-22T06:14:06Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

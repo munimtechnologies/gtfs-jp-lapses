@@ -11,7 +11,8 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 まとまりを考えた幅と過去の検証 / Clustering and back-test: [forecast/2027-04-01/cluster_band.md](forecast/2027-04-01/cluster_band.md) ・
 割合の伸びを入れた予測 / Trend check: [forecast/2027-04-01/trend_band.md](forecast/2027-04-01/trend_band.md) ・
 空白はどれだけ続くか / How long lapses last: [data/2026-10-16/lapse_survival.md](data/2026-10-16/lapse_survival.md) ・
-続いている空白はいつ終わるか / When the open lapses end: [forecast/recovery/2026-10-16/recovery.md](forecast/recovery/2026-10-16/recovery.md)
+続いている空白はいつ終わるか / When the open lapses end: [forecast/recovery/2026-10-16/recovery.md](forecast/recovery/2026-10-16/recovery.md) ・
+祝日・年末年始の扱い / Holidays and the New Year break: [holidays/2026-10-22/holidays.md](holidays/2026-10-22/holidays.md)
 
 ---
 
@@ -116,6 +117,32 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 限界: 同じ提供者のデータはまとめて戻ることが多いので、幅は実際より狭めです。曲線の後ろの方は空白が少なく揺れが大きい
   （381日続く1回の30日以内の確率14%が、199日の空白の3%より高く出るなど）。
 
+### 祝日・年末年始の扱い（2026年10月22日、予測は事前登録）
+`tools/holiday_check.py` で、有効でオープンライセンスのデータ550件の現行ファイルについて、2026年4月〜2027年3月の祝日（日曜を除く）と
+年末年始（12月29日〜1月2日）の各日に走る運行（service_id）を、同じ曜日のふだんの日（祝日・年末年始・お盆を除く最も近い日）と、
+近くの日曜・土曜と比べました（`holidays/2026-10-22/holidays.md`）。日曜の運行が平日と違うデータなのに、祝日にふだんの平日（土曜なら土曜）の
+運行がそのまま入っているものを「ふだんどおり」と数えます。日本全国のデータについてこの集計をした例は見つかりませんでした
+（2026年10月22日に検索。カリフォルニアのデータを調べたCal-ITPの2023年の例や、1件ずつ確かめるツールはあります）。
+- 祝日にふだんどおりの運行が入っている割合: 2026年の祝日は8.5〜10.4%（文化の日・11月3日は457件中47件、10.3%）、
+  2027年の祝日は13.4〜16.8%（成人の日・1月11日は411件中69件）。
+- 年末年始: 12月29日41.6%、30日28.0%、31日16.6%、元日5.7%。12月29日・30日にふだんの平日ダイヤで走る事業者も多いので、
+  ここは誤りとは限りません。
+- 同じファイルの中でも、先の祝日ほど抜けています。11月3日と2027年1月11日の両方が対象の405件のうち、11月3日は祝日として扱うのに
+  1月11日はふだんどおりのものが31件、その逆は1件でした（符号検定 p ≈ 1.5×10⁻⁸）。11月の祝日を2つとも祝日として扱いながら
+  1月11日はふだんどおりのデータが30件あり、うち17件は元日を祝日として扱っています。2027年の祝日はまだ入れていないとみられます。
+- GTFS-JPの標準のservice_id（「平日（月～金）」など）だけのデータは5件です。仕様上、これらは国内の経路検索事業者が祝日を考慮しますが、
+  それ以外のデータでは祝日をファイルに書く必要があります。calendar_dates.txt があるのは550件中513件。
+- 事前に記録した4つの予測（`holidays/predictions-2026-10-22.md`）はすべて当たりました。P1（11月3日のふだんどおりが5〜30%）は
+  10.3%で、幅の広い予測でした。P2（国民の休日・9月22日のふだんどおりが前後の祝日より多い）は30件対28件・26件で、差は小さく
+  偶然の範囲です。P3（6つの祝日の扱いがそろうデータが80%以上）は368件中335件（91%）。P4（12月30日が11月3日より15ポイント以上高い）は
+  17.7ポイント差でした。
+- これからの祝日・年末年始にふだんどおりの運行が入っているデータは236件（`holidays/2026-10-22/upcoming.csv`）。
+- 再確認（事前登録）: 2026年12月10日〜28日に同じ調査をもう一度行い、年末年始や2027年の祝日が12月に加わるかを
+  `tools/holiday_recheck.py` で比べます。予測3つ（R1〜R3）は `holidays/predictions-recheck-2026-12.md` にあります。
+- 限界: 祝日にふだんの平日ダイヤで走る路線もあり、「ふだんどおり」は誤りとは限りません。2027年の祝日の割合は、その日までを含む
+  ファイルだけの値です。各データの現行ファイルを10月22日に1回読んだだけで、その後の更新は見ていません。個別の地域名は事実の記録であり、
+  評価ではありません。
+
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
 データを残り日数の順に並べ、それぞれの過去の空白回数（うち4月1日）をこの調査の `lapses.csv` から付けます。
@@ -142,11 +169,15 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - `forecast/2027-04-01/` グループ別の予測（`cohort.csv`・`forecast.json`・`forecast.md`）、まとまりを考えた幅と過去の検証
   （`cluster_band.json`・`cluster_band.md`）、割合の伸びを入れた予測（`trend_band.json`・`trend_band.md`）
 - `forecast/recovery/2026-10-16/` 続いている空白が終わる確率（`recovery.json`・`recovery.md`・`recovery.csv`）
+- `holidays/2026-10-22/` 祝日・年末年始の扱い（`feeds.csv` データと日ごとの分類、`dates.csv` 日ごとの集計、`upcoming.csv`、
+  `skipped.csv`、`summary.json`、`holidays.md`）、`holidays/predictions-2026-10-22.md`・`holidays/predictions-recheck-2026-12.md`（事前登録）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
-  `tools/lapse_survival.py`（空白の続く日数）、`tools/recovery_forecast.py`（続いている空白の予測と採点）、各 `test_*.py`
+  `tools/lapse_survival.py`（空白の続く日数）、`tools/recovery_forecast.py`（続いている空白の予測と採点）、
+  `tools/holiday_check.py`（祝日・年末年始）、`tools/holiday_recheck.py`（先の祝日の抜けと12月の再確認）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
-  → `python tools/repeat_cliff.py out/lapses/2026-10-16`
+  → `python tools/repeat_cliff.py out/lapses/2026-10-16`。祝日: `python tools/holiday_check.py --as-of 2026-10-22 --out out`
+  （その日の現行ファイルを読みます）→ `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`
 
 ### 出典とライセンス
 版履歴はGTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPIから取得しました。各データの提供者とライセンスは `feeds.csv` の
@@ -274,6 +305,39 @@ chance that a valid file exists again within 30 and 90 days (`forecast/recovery/
 - Limits: one publisher's feeds often recover together, so the real range is wider. The tail of the curve rests on few
   lapses and is jumpy (the one open lapse at 381 days gets 14% within 30 days, more than the 3% of the 199-day ones).
 
+### Holidays and the New Year break (2026-10-22, predictions recorded in advance)
+`tools/holiday_check.py` read the current file of each of 550 active, openly licensed feeds and compared the services
+(service_ids) running on each national holiday from April 2026 to March 2027 (Sundays left out) and on each New Year
+day (2026-12-29 to 2027-01-02) with the nearest ordinary day of the same weekday (not a holiday, New Year or Obon day)
+and with the nearest Sunday and Saturday (`holidays/2026-10-22/holidays.md`). A file counts as showing the "ordinary"
+timetable on a holiday when it runs its ordinary weekday (or Saturday) services that day although its Sunday services
+differ. We found no earlier census of this across Japan's feeds (searched 2026-10-22; Cal-ITP studied California's
+feeds in 2023, and there are tools that check one feed at a time).
+- Share of applicable feeds showing the ordinary timetable: 8.5–10.4% on the 2026 holidays (Culture Day, 2026-11-03:
+  47 of 457, 10.3%) and 13.4–16.8% on the 2027 ones (Coming of Age Day, 2027-01-11: 69 of 411).
+- New Year break: 41.6% on 12-29, 28.0% on 12-30, 16.6% on 12-31, 5.7% on New Year's Day. Many operators really do
+  run their weekday timetable on 12-29 and 12-30, so these days are not necessarily mistakes.
+- Within one file, later holidays are left out more often. Of the 405 feeds applicable on both 2026-11-03 and
+  2027-01-11, 31 handle 11-03 as a holiday but show the ordinary timetable on 01-11; 1 does the reverse (exact sign test
+  p ≈ 1.5e-8). 30 feeds handle both November holidays but show the ordinary timetable on 2027-01-11, and 17 of those
+  handle New Year's Day itself. The 2027 holidays have most likely not been entered yet.
+- Only 5 files use nothing but GTFS-JP's standard service_ids (平日（月～金） …), for which the spec says domestic
+  route-search providers apply the holidays themselves; every other file has to carry the holidays itself. 513 of the
+  550 files have a calendar_dates.txt.
+- All four predictions recorded before the run (`holidays/predictions-2026-10-22.md`) held. P1 (5–30% ordinary on
+  2026-11-03) came out at 10.3%; it was a wide range. P2 (more ordinary on 2026-09-22, the day between two holidays,
+  than on the holidays either side) held at 30 against 28 and 26, a gap well within chance. P3 (at least 80% of feeds
+  treat all six upcoming weekday holidays alike) held at 335 of 368 (91%). P4 (12-30 at least 15 points above 11-03)
+  held at 17.7 points.
+- 236 feeds show the ordinary timetable on at least one holiday or New Year day still to come
+  (`holidays/2026-10-22/upcoming.csv`).
+- Re-check (recorded in advance): the same census will be run again between 2026-12-10 and 2026-12-28 and compared with
+  this one by `tools/holiday_recheck.py`, to see whether the New Year break and the 2027 holidays are added in December.
+  Its three predictions (R1–R3) are in `holidays/predictions-recheck-2026-12.md`.
+- Limits: some routes really do run their weekday timetable on holidays, so "ordinary" is not always a mistake. The
+  2027 shares cover only the files that reach those days. Each feed's current file was read once, on 2026-10-22; later
+  files are not seen. Place names in the data are records of fact, not judgements.
+
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
 whose latest file has already ended or ends within 60 days, with the feed's own past lapses (and how many began on
@@ -305,13 +369,19 @@ include networks that stopped updating without being marked discontinued. The li
   ranges with their back-test (`cluster_band.json`, `cluster_band.md`) and the trend check (`trend_band.json`,
   `trend_band.md`)
 - `forecast/recovery/2026-10-16/` the chance that each open lapse ends (`recovery.json`, `recovery.md`, `recovery.csv`)
+- `holidays/2026-10-22/` holidays and the New Year break (`feeds.csv` one class per feed and day, `dates.csv` per day,
+  `upcoming.csv`, `skipped.csv`, `summary.json`, `holidays.md`); `holidays/predictions-2026-10-22.md` and
+  `holidays/predictions-recheck-2026-12.md` (recorded in advance)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
   `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score),
   `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check),
   `tools/lapse_survival.py` (how long lapses last), `tools/recovery_forecast.py` (open-lapse forecast and its score),
+  `tools/holiday_check.py` (holidays), `tools/holiday_recheck.py` (later holidays and the December re-check),
   each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
-  `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`
+  `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`.
+  Holidays: `python tools/holiday_check.py --as-of 2026-10-22 --out out` (reads the files current on the day it runs) →
+  `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`
 
 ### Sources and licences
 Version histories come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's publisher and licence are
