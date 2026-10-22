@@ -1,0 +1,184 @@
+{
+ "tau_days": 365,
+ "groups": [
+  {
+   "group": "all",
+   "lapses": 203,
+   "ended": 175,
+   "still_open": 28,
+   "followed_to_days": 929,
+   "km_median_days": 80,
+   "ended_only_median_days": 56,
+   "rmst_365_days": 130.2,
+   "still_lapsed_30d": 0.679,
+   "still_lapsed_30d_se": 0.033,
+   "still_lapsed_90d": 0.474,
+   "still_lapsed_90d_se": 0.035,
+   "still_lapsed_180d": 0.285,
+   "still_lapsed_180d_se": 0.032,
+   "still_lapsed_365d": 0.134,
+   "still_lapsed_365d_se": 0.027
+  },
+  {
+   "group": "april_1",
+   "lapses": 121,
+   "ended": 103,
+   "still_open": 18,
+   "followed_to_days": 929,
+   "km_median_days": 96,
+   "ended_only_median_days": 61,
+   "rmst_365_days": 136.9,
+   "still_lapsed_30d": 0.727,
+   "still_lapsed_30d_se": 0.04,
+   "still_lapsed_90d": 0.512,
+   "still_lapsed_90d_se": 0.045,
+   "still_lapsed_180d": 0.298,
+   "still_lapsed_180d_se": 0.042,
+   "still_lapsed_365d": 0.152,
+   "still_lapsed_365d_se": 0.038
+  },
+  {
+   "group": "other_days",
+   "lapses": 82,
+   "ended": 72,
+   "still_open": 10,
+   "followed_to_days": 807,
+   "km_median_days": 60,
+   "ended_only_median_days": 50.0,
+   "rmst_365_days": 121.1,
+   "still_lapsed_30d": 0.607,
+   "still_lapsed_30d_se": 0.054,
+   "still_lapsed_90d": 0.417,
+   "still_lapsed_90d_se": 0.055,
+   "still_lapsed_180d": 0.266,
+   "still_lapsed_180d_se": 0.05,
+   "still_lapsed_365d": 0.117,
+   "still_lapsed_365d_se": 0.039
+  },
+  {
+   "group": "april_1_2023",
+   "lapses": 9,
+   "ended": 9,
+   "still_open": 0,
+   "followed_to_days": 760,
+   "km_median_days": 25,
+   "ended_only_median_days": 25,
+   "rmst_365_days": 93.4,
+   "still_lapsed_30d": 0.222,
+   "still_lapsed_30d_se": 0.139,
+   "still_lapsed_90d": 0.222,
+   "still_lapsed_90d_se": 0.139,
+   "still_lapsed_180d": 0.222,
+   "still_lapsed_180d_se": 0.139,
+   "still_lapsed_365d": 0.222,
+   "still_lapsed_365d_se": 0.139
+  },
+  {
+   "group": "april_1_2024",
+   "lapses": 23,
+   "ended": 20,
+   "still_open": 3,
+   "followed_to_days": 929,
+   "km_median_days": 185,
+   "ended_only_median_days": 111.5,
+   "rmst_365_days": 167.7,
+   "still_lapsed_30d": 0.739,
+   "still_lapsed_30d_se": 0.092,
+   "still_lapsed_90d": 0.609,
+   "still_lapsed_90d_se": 0.102,
+   "still_lapsed_180d": 0.522,
+   "still_lapsed_180d_se": 0.104,
+   "still_lapsed_365d": 0.217,
+   "still_lapsed_365d_se": 0.086
+  },
+  {
+   "group": "april_1_2025",
+   "lapses": 33,
+   "ended": 30,
+   "still_open": 3,
+   "followed_to_days": 564,
+   "km_median_days": 136,
+   "ended_only_median_days": 131.0,
+   "rmst_365_days": 145.5,
+   "still_lapsed_30d": 0.818,
+   "still_lapsed_30d_se": 0.067,
+   "still_lapsed_90d": 0.606,
+   "still_lapsed_90d_se": 0.085,
+   "still_lapsed_180d": 0.273,
+   "still_lapsed_180d_se": 0.078,
+   "still_lapsed_365d": 0.109,
+   "still_lapsed_365d_se": 0.057
+  },
+  {
+   "group": "april_1_2026",
+   "lapses": 55,
+   "ended": 43,
+   "still_open": 12,
+   "followed_to_days": 199,
+   "km_median_days": 71,
+   "ended_only_median_days": 54,
+   "rmst_365_days": 133.2,
+   "still_lapsed_30d": 0.745,
+   "still_lapsed_30d_se": 0.059,
+   "still_lapsed_90d": 0.473,
+   "still_lapsed_90d_se": 0.067,
+   "still_lapsed_180d": 0.236,
+   "still_lapsed_180d_se": 0.057,
+   "still_lapsed_365d": null,
+   "still_lapsed_365d_se": null
+  }
+ ],
+ "tests": [
+  {
+   "test": "april_1 vs other_days",
+   "observed_ended_first": 103,
+   "expected_ended_first": 108.5,
+   "chi2": 0.74,
+   "p": 0.3898,
+   "first_group_ends": "later"
+  },
+  {
+   "test": "april_1_2026 vs april_1 before 2026",
+   "observed_ended_first": 43,
+   "expected_ended_first": 40.0,
+   "chi2": 0.409,
+   "p": 0.5224,
+   "first_group_ends": "sooner"
+  }
+ ],
+ "forecast_2027_feed_days": [
+  {
+   "model": "rates_2026",
+   "expected_lapses": 61.6,
+   "mean_days_per_lapse_365": 136.9,
+   "expected_feed_days_365": 8433
+  },
+  {
+   "model": "rates_2024_2026",
+   "expected_lapses": 52.7,
+   "mean_days_per_lapse_365": 136.9,
+   "expected_feed_days_365": 7215
+  },
+  {
+   "model": "flat_2026",
+   "expected_lapses": 59.4,
+   "mean_days_per_lapse_365": 136.9,
+   "expected_feed_days_365": 8132
+  },
+  {
+   "model": "trend_2022_2026",
+   "expected_lapses": 69.0,
+   "mean_days_per_lapse_365": 136.9,
+   "expected_feed_days_365": 9447
+  },
+  {
+   "model": "trend_2024_2026",
+   "expected_lapses": 64.9,
+   "mean_days_per_lapse_365": 136.9,
+   "expected_feed_days_365": 8885
+  }
+ ],
+ "as_of": "2026-10-16",
+ "generated_at": "2026-10-22T01:09:29Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

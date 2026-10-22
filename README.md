@@ -9,7 +9,8 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 最新の期限一覧 / Latest expiry list: [watch/2026-10-22/watch.md](watch/2026-10-22/watch.md) ・
 2027年4月1日のグループ別予測 / Forecast for 2027-04-01 by group: [forecast/2027-04-01/forecast.md](forecast/2027-04-01/forecast.md) ・
 まとまりを考えた幅と過去の検証 / Clustering and back-test: [forecast/2027-04-01/cluster_band.md](forecast/2027-04-01/cluster_band.md) ・
-割合の伸びを入れた予測 / Trend check: [forecast/2027-04-01/trend_band.md](forecast/2027-04-01/trend_band.md)
+割合の伸びを入れた予測 / Trend check: [forecast/2027-04-01/trend_band.md](forecast/2027-04-01/trend_band.md) ・
+空白はどれだけ続くか / How long lapses last: [data/2026-10-16/lapse_survival.md](data/2026-10-16/lapse_survival.md)
 
 ---
 
@@ -28,6 +29,7 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 前年の4月1日にも空白になったデータは、2026年には25件中10件（40%）が再び空白に（他は247件中45件、18%、片側二項検定 p ≈ 0.009）。
   2025年は17件中3件（18%、他は212件中30件、14%）、2024年は5件中2件（他は144件中21件、15%）で、差は小さめでした。
   同じ提供者のデータはまとめて空白になりやすく、件数は独立ではありません（`data/2026-10-16/repeat_cliff.md`）。
+- 空白が始まってから有効なデータが戻るまでの日数の中央値は80日（まだ続いている空白も含めた推定）。1年たっても13%が空白のままでした。
 - 現在有効な574件のうち292件（51%）は2027年3月31日に期限を迎えます（2026年10月22日の一覧では580件中294件）。
 
 **訂正（2026-10-22）:** 以前の版は2026年の再発を「21件中10件（48%）、他は251件中45件」と書いていました。公開している
@@ -80,6 +82,25 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 限界: 数年分の点に引いた直線にすぎず、伸びが続く保証はありません。割合がいつまでも上がり続けることはありません。
   prior/other の分け方はここでは使っていません。これらの数字も2027年4月1日以降に上の予測と一緒に採点します。
 
+### 空白はどれだけ続くか（2026年10月22日）
+`tools/lapse_survival.py` で、空白が始まってから有効なデータが戻るまでの日数を推定しました。調査日（2026年10月16日）にまだ続いている
+空白28回は、その日までの長さで打ち切り（censored）として扱うカプラン・マイヤー法です（`data/2026-10-16/lapse_survival.md`）。
+- 空白203回全体: 中央値80日。終わった175回だけの中央値は56日で、続いている長い空白を落とすぶん短く出ます。
+  30日後に67.9%、90日後に47.4%、180日後に28.5%、1年後に13.4%がまだ空白でした。乗換案内アプリTransitは期限の切れた時刻表を
+  1か月延長して表示すると公表しています（https://resources.transitapp.com/article/458-guidelines-for-producing-gtfs-static-data-for-transit ）が、
+  空白の3分の2はその1か月より長く続いています。
+- 4月1日に始まった121回: 中央値96日（終わったものだけでは61日）、1年後も15.2%が空白、最初の1年のうち平均136.9日が空白
+  （制限付き平均）。それ以外の日に始まった82回: 中央値60日、1年後11.7%、平均121.1日。
+- ログランク検定では、4月1日の空白が他より長く続くとは言えません（p = 0.39）。2026年4月1日の空白（中央値71日、12回はまだ継続中）
+  とそれ以前の4月1日の空白にも差は見られません（p = 0.52）。空白は独立ではないので、p値は実際より小さめに出ているはずです。
+- 年ごとの「終わった空白だけの中央値」（2024年111.5日、2025年131日、2026年54日）は `fy_cliff.md` と一致します。
+  カプラン・マイヤーの中央値は2024年185日、2025年136日、2026年71日です。
+- 2027年4月1日（事前記録）: 上の各予測の件数 × 4月1日の空白1回あたりの最初の1年の平均空白日数（136.9日）で、2027年4月1日から
+  1年の間に約7,200データ日（2024〜2026年のグループ別割合）〜約9,400データ日（2022〜2026年の直線）が空白になると見込みます。
+  採点できるのはその1年が終わる2028年4月以降です。
+- 限界: 運行終了の印がないまま終わった路線は終わらない空白に見え、長さを長めにします。あとから公開された版の有効期間が
+  さかのぼって空白を埋めた場合も、空白はその日に終わったと数えます。すでに集計で見ていたデータの記述で、事前登録ではありません。
+
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
 データを残り日数の順に並べ、それぞれの過去の空白回数（うち4月1日）をこの調査の `lapses.csv` から付けます。
@@ -100,13 +121,14 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 
 ### ファイル
 - `data/2026-10-16/feeds.csv` データごとの集計（提供者・ライセンス付き）、`versions.csv` 全版、`lapses.csv` 空白1回ごと、
-  `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`repeat_cliff.csv`・`repeat_cliff.md`（再発）、`summary.json`、`findings.md`
+  `years.csv`、`prefectures.csv`、`fy_cliff.csv`（4月1日の集計）、`repeat_cliff.csv`・`repeat_cliff.md`（再発）、`summary.json`、`findings.md`、
+  `lapse_survival.json`・`lapse_survival.md`（空白の続く日数）
 - `watch/<日付>/` 期限の一覧
 - `forecast/2027-04-01/` グループ別の予測（`cohort.csv`・`forecast.json`・`forecast.md`）、まとまりを考えた幅と過去の検証
   （`cluster_band.json`・`cluster_band.md`）、割合の伸びを入れた予測（`trend_band.json`・`trend_band.md`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
-  各 `test_*.py`
+  `tools/lapse_survival.py`（空白の続く日数）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
@@ -133,6 +155,8 @@ From the version history (publication date, validity period) that the GTFS Data 
   the rest (one-sided binomial p ≈ 0.009). The gap was smaller in 2025 (3 of 17, 18%, vs 30 of 212, 14%) and 2024
   (2 of 5 vs 21 of 144, 15%). Feeds from one publisher tend to lapse together, so these counts are not independent
   (`data/2026-10-16/repeat_cliff.md`).
+- Once a lapse begins, the median time until a valid file exists again is 80 days (an estimate that includes the
+  lapses still open); 13% were still lapsed after a year.
 - 292 of the 574 active feeds (51%) are set to expire on 2027-03-31 (294 of 580 in the 2026-10-22 list).
 
 **Correction (2026-10-22):** an earlier version gave the 2026 repeat figures as 10 of 21 (48%) against 45 of 251.
@@ -194,6 +218,30 @@ on April 1 (intra-cluster correlation, ICC, ANOVA estimate) and widens the rough
 - Limits: a line through a few yearly points; nothing says the rise will continue, and a share cannot rise for ever.
   The prior/other split is not used here. These figures will be scored with the forecasts above after 2027-04-01.
 
+### How long lapses last (2026-10-22)
+`tools/lapse_survival.py` estimates the time from a lapse's first day to the day a valid file exists again with the
+Kaplan-Meier method, counting the 28 lapses still open on the census day (2026-10-16) as censored at their length so
+far (`data/2026-10-16/lapse_survival.md`).
+- All 203 lapses: median 80 days. The 175 ended lapses alone give 56 days, which runs short because it drops the long
+  open ones. 67.9% were still lapsed after 30 days, 47.4% after 90, 28.5% after 180 and 13.4% after a year. The
+  Transit app says it extends an expired schedule for one month
+  (https://resources.transitapp.com/article/458-guidelines-for-producing-gtfs-static-data-for-transit); two thirds of
+  these lapses last longer than that.
+- The 121 lapses that began on April 1: median 96 days (61 for the ended ones only), 15.2% still lapsed after a year,
+  on average 136.9 days without a valid file within the first year (restricted mean). The 82 that began on other days:
+  median 60 days, 11.7% after a year, 121.1 days.
+- A log-rank test finds no clear difference: April-1 lapses do not end detectably later than the rest (p = 0.39), and
+  the 2026 April-1 lapses (median 71 days, 12 still open) do not differ from earlier April-1 lapses (p = 0.52). Lapses
+  are not independent, so these p-values are, if anything, too small.
+- The ended-only medians by year (2024 111.5, 2025 131, 2026 54 days) match `fy_cliff.md`; the Kaplan-Meier medians
+  are 185, 136 and 71 days.
+- 2027-04-01 (recorded in advance): each forecast count above times the April-1 restricted mean (136.9 days) gives about
+  7,200 (2024–2026 rates by group) to 9,400 (2022–2026 line) feed-days without a valid file in the year from
+  2027-04-01. That can be scored only once the year is over (from 2028-04).
+- Limits: a network that ended without being marked discontinued looks like a lapse that never ends and lengthens the
+  estimate. A lapse also counts as over on the day a later, back-dated file covers. This describes data already seen in
+  aggregate; it was not registered in advance.
+
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
 whose latest file has already ended or ends within 60 days, with the feed's own past lapses (and how many began on
@@ -219,14 +267,15 @@ include networks that stopped updating without being marked discontinued. The li
 ### Files
 - `data/2026-10-16/feeds.csv` per feed (with publisher and licence), `versions.csv` every file, `lapses.csv` one row per
   lapse, `years.csv`, `prefectures.csv`, `fy_cliff.csv` (April 1), `repeat_cliff.csv` and `repeat_cliff.md` (repeats),
-  `summary.json`, `findings.md`
+  `summary.json`, `findings.md`, `lapse_survival.json` and `lapse_survival.md` (how long lapses last)
 - `watch/<date>/` expiry lists
 - `forecast/2027-04-01/` the forecast by group (`cohort.csv`, `forecast.json`, `forecast.md`), the clustering
   ranges with their back-test (`cluster_band.json`, `cluster_band.md`) and the trend check (`trend_band.json`,
   `trend_band.md`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
   `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score),
-  `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check), each with `test_*.py`
+  `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check),
+  `tools/lapse_survival.py` (how long lapses last), each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`
 
