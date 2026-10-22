@@ -12,7 +12,8 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 割合の伸びを入れた予測 / Trend check: [forecast/2027-04-01/trend_band.md](forecast/2027-04-01/trend_band.md) ・
 空白はどれだけ続くか / How long lapses last: [data/2026-10-16/lapse_survival.md](data/2026-10-16/lapse_survival.md) ・
 続いている空白はいつ終わるか / When the open lapses end: [forecast/recovery/2026-10-16/recovery.md](forecast/recovery/2026-10-16/recovery.md) ・
-祝日・年末年始の扱い / Holidays and the New Year break: [holidays/2026-10-22/holidays.md](holidays/2026-10-22/holidays.md)
+祝日・年末年始の扱い / Holidays and the New Year break: [holidays/2026-10-22/holidays.md](holidays/2026-10-22/holidays.md) ・
+停留所名のよみがな・英語 / Stop-name readings and English: [names/2026-10-22/names.md](names/2026-10-22/names.md)（再集計 / recount: [verify/recount.md](names/2026-10-22/verify/recount.md)）
 
 ---
 
@@ -130,6 +131,8 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 同じファイルの中でも、先の祝日ほど抜けています。11月3日と2027年1月11日の両方が対象の405件のうち、11月3日は祝日として扱うのに
   1月11日はふだんどおりのものが31件、その逆は1件でした（符号検定 p ≈ 1.5×10⁻⁸）。11月の祝日を2つとも祝日として扱いながら
   1月11日はふだんどおりのデータが30件あり、うち17件は元日を祝日として扱っています。2027年の祝日はまだ入れていないとみられます。
+- 11月3日と比べた先の祝日ごとの数（`holidays/2026-10-22/horizon.md`）: 同じ2026年の11月23日は2件対2件で差がなく、2027年の
+  2月11日は19件対1件、2月23日は20件対2件、3月22日（振替休日）は22件対2件でした。年が変わる祝日から差が出ます。
 - GTFS-JPの標準のservice_id（「平日（月～金）」など）だけのデータは5件です。仕様上、これらは国内の経路検索事業者が祝日を考慮しますが、
   それ以外のデータでは祝日をファイルに書く必要があります。calendar_dates.txt があるのは550件中513件。
 - 事前に記録した4つの予測（`holidays/predictions-2026-10-22.md`）はすべて当たりました。P1（11月3日のふだんどおりが5〜30%）は
@@ -142,6 +145,38 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
 - 限界: 祝日にふだんの平日ダイヤで走る路線もあり、「ふだんどおり」は誤りとは限りません。2027年の祝日の割合は、その日までを含む
   ファイルだけの値です。各データの現行ファイルを10月22日に1回読んだだけで、その後の更新は見ていません。個別の地域名は事実の記録であり、
   評価ではありません。
+
+### 停留所名のよみがな・英語（2026年10月22日、予測は事前登録）
+`tools/names_check.py` で、有効でオープンライセンスのデータ553件の現行ファイルについて、停留所（標柱、location_type 0）と行先
+（trips.txt の trip_headsign）ごとに、translations.txt によみがな（ja-Hrkt）と英語（en）があるかを数えました（`names/2026-10-22/names.md`）。
+GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは必須、英語（ローマ字表記）は推奨です。GTFS本来の形式
+（table_name・field_name と record_id か field_value）と、以前のGTFS-JPの形式（trans_id・lang・translation）の両方を読みます。
+国土交通省は2025年10月の第1回GTFS-JPアップデート検討会の資料（https://www.mlit.go.jp/sogoseisaku/transport/content/001914061.pdf ）で、
+全国の公開データについて項目ごとの設定率を示しています。停留所ごとに、よみがな・英語が付いているかを全国のデータで数えた例は
+見つかりませんでした（2026年10月22日に検索。仕様・作り方の手引きとチェックツールはあります）。
+- 停留所98,776か所のうち、よみがながあるのは97.9%、英語があるのは77.6%。
+- 9割以上の停留所によみがなを付けたデータは553件中545件（98.6%）、英語は407件（73.6%）。英語がまったくないデータは124件。
+- translations.txt の形式: GTFS本来の形式537件、以前のGTFS-JPの形式10件、空1件、ファイルなし5件。よみがなの付いていない
+  データ6件は、この空・なしの6件です。
+- よみがなに漢字が入っている停留所22か所。英語の名前にかな・漢字が入っている停留所133か所（英語のある76,662か所の0.2%）、
+  うち日本語の名前をそのまま写したもの1か所。自分には訳がなく親の駅（location_type 1）にだけ訳がある標柱が608か所（うち606か所は1件のデータ）。
+- 行先5,489種類のうち、よみがながあるのは16.0%、英語は17.1%。第4.0版は行先も訳の対象に挙げていますが、作り方の手引きが
+  必ずよみがなを付けるとしているのは停留所名なので、ここは数だけを示し、不備とは扱いません。
+- 英語以外では、ローマ字（ja-Latn）21件、韓国語11件、中国語（zh-tw 7、zh-cn 6、zh-hans 3、zh-hant 3、zh 3）などがありました。
+  ローマ字（ja-Latn）は上の「英語」に数えていません。
+- 都道府県による差が大きいのは英語です（`names/2026-10-22/prefectures.csv`）。よみがなは多くの都道府県でほぼ100%です。
+- 事前に記録した4つの予測（`names/predictions-2026-10-22.md`）: N1（よみがなを9割以上に付けたデータが70%以上）は98.6%で当たり。
+  N2（英語を9割以上に付けたデータが20〜60%）は73.6%で外れ、英語は予想よりずっと多く付いていました。N3（英語の名前の1%以上に
+  かな・漢字）は0.2%で外れ。N4（訳のあるデータの10%以上が以前の形式）は547件中10件（1.8%）で外れました。
+- 再集計: names_check.py とは別に書いたコード（`tools/verify_names.py`）で、553件の現行ファイルを調査の約1時間後にもう一度
+  ダウンロードして数え直したところ、553件すべてで停留所・よみがな・英語の数が一致しました（UTF-8でないファイル0件、
+  translations.txt の形式の読み違い0件。`names/2026-10-22/verify/`）。ローマ字（ja-Latn）も英語と同じように数えると、停留所の80.6%
+  （79,607か所）に英語かローマ字があり、9割以上の停留所に付けたデータは416件（うち9件はローマ字があって初めて9割に届く）。
+  ローマ字のある21件はすべて高知県のデータで、英語の代わりに ja-Latn でローマ字名を付けているものが多くあります。
+  ローマ字の集計は事前登録の予測には含まれていません。
+- 限界: 停留所は標柱ごとに数えます。訳があるかだけを見て、よみがなや英語の中身が正しいかは確かめていません（かな・漢字が入って
+  いるかだけ）。行先は trip_headsign だけで、stop_headsign は見ていません。各データの現行ファイルは10月22日に読んだもの
+  （再集計で2回）だけです。個別の地域名は事実の記録であり、評価ではありません。
 
 ### 期限切れ・期限間近の一覧（expiry_watch.py）
 `tools/expiry_watch.py` は、リポジトリのデータ一覧（APIへの1回の問い合わせ）から、最新データの期限が過ぎた、または60日以内に切れる
@@ -170,14 +205,19 @@ GTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPI v2が返す各デ
   （`cluster_band.json`・`cluster_band.md`）、割合の伸びを入れた予測（`trend_band.json`・`trend_band.md`）
 - `forecast/recovery/2026-10-16/` 続いている空白が終わる確率（`recovery.json`・`recovery.md`・`recovery.csv`）
 - `holidays/2026-10-22/` 祝日・年末年始の扱い（`feeds.csv` データと日ごとの分類、`dates.csv` 日ごとの集計、`upcoming.csv`、
-  `skipped.csv`、`summary.json`、`holidays.md`）、`holidays/predictions-2026-10-22.md`・`holidays/predictions-recheck-2026-12.md`（事前登録）
+  `skipped.csv`、`summary.json`、`holidays.md`、先の祝日の比較 `horizon.json`・`horizon.md`）、
+  `holidays/predictions-2026-10-22.md`・`holidays/predictions-recheck-2026-12.md`（事前登録）
+- `names/2026-10-22/` 停留所名のよみがな・英語（`feeds.csv`、`prefectures.csv`、`skipped.csv`、`summary.json`、`names.md`、
+  再集計 `verify/` の `recount.csv`・`recount.md`・`summary.json`）、`names/predictions-2026-10-22.md`（事前登録）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
   `tools/lapse_survival.py`（空白の続く日数）、`tools/recovery_forecast.py`（続いている空白の予測と採点）、
-  `tools/holiday_check.py`（祝日・年末年始）、`tools/holiday_recheck.py`（先の祝日の抜けと12月の再確認）、各 `test_*.py`
+  `tools/holiday_check.py`（祝日・年末年始）、`tools/holiday_recheck.py`（先の祝日の抜けと12月の再確認）、
+  `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`。祝日: `python tools/holiday_check.py --as-of 2026-10-22 --out out`
-  （その日の現行ファイルを読みます）→ `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`
+  （その日の現行ファイルを読みます）→ `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`。
+  停留所名: `python tools/names_check.py --as-of 2026-10-22 --out out` → `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`
 
 ### 出典とライセンス
 版履歴はGTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPIから取得しました。各データの提供者とライセンスは `feeds.csv` の
@@ -321,6 +361,9 @@ feeds in 2023, and there are tools that check one feed at a time).
   2027-01-11, 31 handle 11-03 as a holiday but show the ordinary timetable on 01-11; 1 does the reverse (exact sign test
   p ≈ 1.5e-8). 30 feeds handle both November holidays but show the ordinary timetable on 2027-01-11, and 17 of those
   handle New Year's Day itself. The 2027 holidays have most likely not been entered yet.
+- Against 2026-11-03, holiday by holiday (`holidays/2026-10-22/horizon.md`): 2026-11-23, in the same year, is 2 against 2
+  (no difference); 2027-02-11 is 19 against 1, 2027-02-23 is 20 against 2 and 2027-03-22 (a substitute holiday) is
+  22 against 2. The gap opens at the turn of the year.
 - Only 5 files use nothing but GTFS-JP's standard service_ids (平日（月～金） …), for which the spec says domestic
   route-search providers apply the holidays themselves; every other file has to carry the holidays itself. 513 of the
   550 files have a calendar_dates.txt.
@@ -337,6 +380,46 @@ feeds in 2023, and there are tools that check one feed at a time).
 - Limits: some routes really do run their weekday timetable on holidays, so "ordinary" is not always a mistake. The
   2027 shares cover only the files that reach those days. Each feed's current file was read once, on 2026-10-22; later
   files are not seen. Place names in the data are records of fact, not judgements.
+
+### Stop-name readings and English (2026-10-22, predictions recorded in advance)
+`tools/names_check.py` read the current file of each of 553 active, openly licensed feeds and checked, for every stop
+(pole, location_type 0) and every destination text (trip_headsign in trips.txt), whether translations.txt gives a kana
+reading (ja-Hrkt) and an English name (en) (`names/2026-10-22/names.md`). GTFS-JP (v4.0, March 2026) makes
+translations.txt and the reading required and English (romanised) recommended. Both formats in use are read: GTFS's own
+(table_name, field_name and record_id or field_value) and the older GTFS-JP one (trans_id, lang, translation). Japan's
+transport ministry (MLIT) showed national setting rates per field for published feeds at its first GTFS-JP update
+meeting in October 2025 (https://www.mlit.go.jp/sogoseisaku/transport/content/001914061.pdf). We found no earlier
+stop-by-stop count of readings and English across Japan's feeds (searched 2026-10-22; there are specs, how-to guides
+and checking tools).
+- Of 98,776 stops, 97.9% have a reading and 77.6% an English name.
+- 545 of the 553 feeds (98.6%) give a reading for at least 90% of their stops; 407 (73.6%) give English. 124 feeds
+  give no English at all.
+- translations.txt format: GTFS's own 537, older GTFS-JP 10, empty 1, missing 5. The 6 feeds with no readings are
+  exactly these empty and missing ones.
+- 22 stops have kanji in their reading. 133 stops have kana or kanji in their English name (0.2% of the 76,662 with
+  English), 1 of them a straight copy of the Japanese name. 608 poles have no translation of their own while their
+  parent station (location_type 1) has one (606 of them in one file).
+- Of 5,489 destination texts, 16.0% have a reading and 17.1% English. v4.0 lists destinations among the names to
+  translate, but the how-to guides make the reading a must only for stop names, so this is reported as a count, not as
+  a defect.
+- Other languages: romanised Japanese (ja-Latn) in 21 feeds, Korean in 11, Chinese (zh-tw 7, zh-cn 6, zh-hans 3,
+  zh-hant 3, zh 3) and others. ja-Latn is not counted as English above.
+- English varies most by prefecture (`names/2026-10-22/prefectures.csv`); readings are close to 100% in most.
+- The four predictions recorded before the run (`names/predictions-2026-10-22.md`): N1 (at least 70% of feeds give
+  readings for at least 90% of stops) held at 98.6%. N2 (20–60% of feeds give English for at least 90% of stops) did
+  not hold: 73.6%, so English is far more common than we expected. N3 (at least 1% of English names contain kana or
+  kanji) did not hold at 0.2%. N4 (at least 10% of feeds with rows use the older format) did not hold: 10 of 547 (1.8%).
+- Recount: code written separately from names_check.py (`tools/verify_names.py`) downloaded the current file of all
+  553 feeds again within about an hour of the census and got the same stop, reading and English counts for every one
+  of them (553 of 553 match; no file that is not valid UTF-8; no translations.txt format read differently;
+  `names/2026-10-22/verify/`). Counting romanised names (ja-Latn) alongside English, 80.6% of stops (79,607) have one
+  or the other, and 416 feeds give one for at least 90% of their stops, 9 of them only thanks to ja-Latn. All 21 feeds
+  with ja-Latn are in Kochi Prefecture, and many of them give romanised names as ja-Latn instead of en. The ja-Latn
+  counts were not among the predictions recorded in advance.
+- Limits: stops are counted per pole. Only whether a translation exists is checked, not whether the reading or English
+  is right (apart from kana or kanji in it). Destinations are trip_headsign only, not stop_headsign. Each feed's
+  current file was read on 2026-10-22 only (twice, counting the recount). Place names in the data are records of fact,
+  not judgements.
 
 ### Expiring feeds (expiry_watch.py)
 `tools/expiry_watch.py` reads the repository's feed list (one API request) and lists, by days left, every active feed
@@ -370,21 +453,27 @@ include networks that stopped updating without being marked discontinued. The li
   `trend_band.md`)
 - `forecast/recovery/2026-10-16/` the chance that each open lapse ends (`recovery.json`, `recovery.md`, `recovery.csv`)
 - `holidays/2026-10-22/` holidays and the New Year break (`feeds.csv` one class per feed and day, `dates.csv` per day,
-  `upcoming.csv`, `skipped.csv`, `summary.json`, `holidays.md`); `holidays/predictions-2026-10-22.md` and
-  `holidays/predictions-recheck-2026-12.md` (recorded in advance)
+  `upcoming.csv`, `skipped.csv`, `summary.json`, `holidays.md`, later holidays against 11-03 in `horizon.json` and
+  `horizon.md`); `holidays/predictions-2026-10-22.md` and `holidays/predictions-recheck-2026-12.md` (recorded in advance)
+- `names/2026-10-22/` stop-name readings and English (`feeds.csv`, `prefectures.csv`, `skipped.csv`, `summary.json`,
+  `names.md`, the recount in `verify/`: `recount.csv`, `recount.md`, `summary.json`); `names/predictions-2026-10-22.md`
+  (recorded in advance)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
   `tools/expiry_watch.py` (expiry list), `tools/fy2027_risk.py` (forecast by group and its score),
   `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check),
   `tools/lapse_survival.py` (how long lapses last), `tools/recovery_forecast.py` (open-lapse forecast and its score),
   `tools/holiday_check.py` (holidays), `tools/holiday_recheck.py` (later holidays and the December re-check),
-  each with `test_*.py`
+  `tools/names_check.py` (stop names), `tools/verify_names.py` (stop-name recount), each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`.
   Holidays: `python tools/holiday_check.py --as-of 2026-10-22 --out out` (reads the files current on the day it runs) →
-  `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`
+  `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`.
+  Stop names: `python tools/names_check.py --as-of 2026-10-22 --out out` →
+  `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`
 
 ### Sources and licences
-Version histories come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's publisher and licence are
-in the organization_name and license columns of `feeds.csv`. No timetable data is redistributed here.
+Version histories and timetable files come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's
+publisher and licence are in the organization_name and license columns of `feeds.csv`. No timetable data is
+redistributed here.
 
 Contact: MV2, Munim, Inc., mv2@munimtech.com

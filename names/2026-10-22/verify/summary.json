@@ -1,0 +1,25 @@
+{
+ "feeds": 553,
+ "status": {
+  "match": 553
+ },
+ "not_utf8": 0,
+ "format_differs": 0,
+ "totals": {
+  "stops": 98776,
+  "reading": 96719,
+  "en": 76662,
+  "latn": 3096,
+  "en_or_latn": 79607
+ },
+ "share_reading": 0.979,
+ "share_en": 0.776,
+ "share_en_or_latn": 0.806,
+ "feeds_with_latn": 21,
+ "feeds_most_reading": 545,
+ "feeds_most_en": 407,
+ "feeds_most_en_or_latn": 416,
+ "feeds_latn_without_en": 9,
+ "generated_at": "2026-10-22T11:25:02Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
