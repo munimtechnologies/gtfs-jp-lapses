@@ -1,0 +1,244 @@
+{
+ "min_at_risk": 30,
+ "shares": [
+  {
+   "year": 2019,
+   "at_risk": 4,
+   "lapsed": 0,
+   "share": 0.0,
+   "used": false
+  },
+  {
+   "year": 2020,
+   "at_risk": 7,
+   "lapsed": 0,
+   "share": 0.0,
+   "used": false
+  },
+  {
+   "year": 2021,
+   "at_risk": 14,
+   "lapsed": 0,
+   "share": 0.0,
+   "used": false
+  },
+  {
+   "year": 2022,
+   "at_risk": 40,
+   "lapsed": 1,
+   "share": 0.025,
+   "used": true
+  },
+  {
+   "year": 2023,
+   "at_risk": 99,
+   "lapsed": 9,
+   "share": 0.0909,
+   "used": true
+  },
+  {
+   "year": 2024,
+   "at_risk": 149,
+   "lapsed": 23,
+   "share": 0.1544,
+   "used": true
+  },
+  {
+   "year": 2025,
+   "at_risk": 229,
+   "lapsed": 33,
+   "share": 0.1441,
+   "used": true
+  },
+  {
+   "year": 2026,
+   "at_risk": 272,
+   "lapsed": 55,
+   "share": 0.2022,
+   "used": true
+  }
+ ],
+ "backtest": [
+  {
+   "year": 2023,
+   "model": "persistence",
+   "at_risk": 99,
+   "observed": 9,
+   "publisher_deff": 1.0,
+   "share": 0.025,
+   "expected": 2.5,
+   "error": 6.5
+  },
+  {
+   "year": 2024,
+   "model": "persistence",
+   "at_risk": 149,
+   "observed": 23,
+   "publisher_deff": 2.785,
+   "share": 0.0909,
+   "expected": 13.5,
+   "error": 9.5
+  },
+  {
+   "year": 2024,
+   "model": "trend_all",
+   "at_risk": 149,
+   "observed": 23,
+   "publisher_deff": 2.785,
+   "share": 0.1568,
+   "expected": 23.4,
+   "independent_low90": 16,
+   "independent_high90": 31,
+   "publisher_low90": 11,
+   "publisher_high90": 36,
+   "publisher_fit_low90": 0,
+   "publisher_fit_high90": 64,
+   "fit_years": "2022-2023",
+   "error": -0.4,
+   "independent_covered": true,
+   "publisher_covered": true,
+   "publisher_fit_covered": true
+  },
+  {
+   "year": 2025,
+   "model": "persistence",
+   "at_risk": 229,
+   "observed": 33,
+   "publisher_deff": 1.837,
+   "share": 0.1544,
+   "expected": 35.3,
+   "error": -2.3
+  },
+  {
+   "year": 2025,
+   "model": "trend_all",
+   "at_risk": 229,
+   "observed": 33,
+   "publisher_deff": 1.837,
+   "share": 0.219,
+   "expected": 50.1,
+   "independent_low90": 39,
+   "independent_high90": 61,
+   "publisher_low90": 36,
+   "publisher_high90": 65,
+   "publisher_fit_low90": 16,
+   "publisher_fit_high90": 84,
+   "fit_years": "2022-2024",
+   "error": -17.1,
+   "independent_covered": false,
+   "publisher_covered": false,
+   "publisher_fit_covered": true
+  },
+  {
+   "year": 2026,
+   "model": "persistence",
+   "at_risk": 272,
+   "observed": 55,
+   "publisher_deff": 1.889,
+   "share": 0.1441,
+   "expected": 39.2,
+   "error": 15.8
+  },
+  {
+   "year": 2026,
+   "model": "trend_all",
+   "at_risk": 272,
+   "observed": 55,
+   "publisher_deff": 1.889,
+   "share": 0.1892,
+   "expected": 51.5,
+   "independent_low90": 40,
+   "independent_high90": 63,
+   "publisher_low90": 36,
+   "publisher_high90": 67,
+   "publisher_fit_low90": 23,
+   "publisher_fit_high90": 80,
+   "fit_years": "2022-2025",
+   "error": 3.5,
+   "independent_covered": true,
+   "publisher_covered": true,
+   "publisher_fit_covered": true
+  },
+  {
+   "year": 2026,
+   "model": "trend_last3",
+   "at_risk": 272,
+   "observed": 55,
+   "publisher_deff": 1.889,
+   "share": 0.1734,
+   "expected": 47.2,
+   "independent_low90": 36,
+   "independent_high90": 58,
+   "publisher_low90": 33,
+   "publisher_high90": 62,
+   "publisher_fit_low90": 17,
+   "publisher_fit_high90": 77,
+   "fit_years": "2023-2025",
+   "error": 7.8,
+   "independent_covered": true,
+   "publisher_covered": true,
+   "publisher_fit_covered": true
+  }
+ ],
+ "scores": [
+  {
+   "model": "trend_all",
+   "years": [
+    2024,
+    2025,
+    2026
+   ],
+   "mean_error": -4.67,
+   "mean_abs_error": 7.0,
+   "persistence_mean_error": 7.67,
+   "persistence_mean_abs_error": 9.2
+  },
+  {
+   "model": "trend_last3",
+   "years": [
+    2026
+   ],
+   "mean_error": 7.8,
+   "mean_abs_error": 7.8,
+   "persistence_mean_error": 15.8,
+   "persistence_mean_abs_error": 15.8
+  }
+ ],
+ "cohort_2027": {
+  "feeds": 294,
+  "publisher_weighted_size": 2.633,
+  "publisher_deff": 2.055
+ },
+ "forecast_2027": [
+  {
+   "model": "persistence_2026",
+   "share": 0.2022,
+   "expected": 59.4
+  },
+  {
+   "model": "trend_2022_2026",
+   "share": 0.2348,
+   "expected": 69.0,
+   "independent_low90": 57,
+   "independent_high90": 81,
+   "publisher_low90": 51,
+   "publisher_high90": 87,
+   "publisher_fit_low90": 40,
+   "publisher_fit_high90": 98
+  },
+  {
+   "model": "trend_2024_2026",
+   "share": 0.2208,
+   "expected": 64.9,
+   "independent_low90": 53,
+   "independent_high90": 77,
+   "publisher_low90": 48,
+   "publisher_high90": 82,
+   "publisher_fit_low90": 31,
+   "publisher_fit_high90": 98
+  }
+ ],
+ "matches_forecast": true,
+ "generated_at": "2026-10-21T23:13:03Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
