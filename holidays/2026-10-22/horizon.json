@@ -1,0 +1,82 @@
+{
+ "feeds": 550,
+ "horizon": [
+  {
+   "date": "2026-11-23",
+   "feeds": 445,
+   "both_handled": 404,
+   "handled_then_shown": 2,
+   "shown_then_handled": 2,
+   "both_shown": 37,
+   "sign_test_p": 1.0
+  },
+  {
+   "date": "2027-01-11",
+   "feeds": 405,
+   "both_handled": 338,
+   "handled_then_shown": 31,
+   "shown_then_handled": 1,
+   "both_shown": 35,
+   "sign_test_p": 1.5366822481155396e-08
+  },
+  {
+   "date": "2027-02-11",
+   "feeds": 387,
+   "both_handled": 335,
+   "handled_then_shown": 19,
+   "shown_then_handled": 1,
+   "both_shown": 32,
+   "sign_test_p": 4.00543212890625e-05
+  },
+  {
+   "date": "2027-02-23",
+   "feeds": 395,
+   "both_handled": 335,
+   "handled_then_shown": 20,
+   "shown_then_handled": 2,
+   "both_shown": 38,
+   "sign_test_p": 0.00012111663818359375
+  },
+  {
+   "date": "2027-03-22",
+   "feeds": 372,
+   "both_handled": 319,
+   "handled_then_shown": 22,
+   "shown_then_handled": 2,
+   "both_shown": 29,
+   "sign_test_p": 3.5881996154785156e-05
+  }
+ ],
+ "cohort_r1": [
+  "chigasakicity/eboshigou",
+  "chitetsu/chitetsubus",
+  "geiseivillage/GTFS-Geiseivill_Bus",
+  "hokushin-bus/hokushinbus",
+  "hyogo-kamikawatown/communitybus",
+  "kaetsunou/kaetsunouhimi",
+  "kaetsunou/kaetsunouippan",
+  "kaetsunou/kaetsunousekaiisan",
+  "keisei-transitbus/keiseitransitbus",
+  "kuma-bus/kuma-bus",
+  "kumamoto-toshibus/kumamoto-toshibus",
+  "kumamotodentetsu/kumamotodentetsu-bus",
+  "kusakarukotsu/kusakarubus",
+  "mie-kotsu/sancoiga",
+  "mie-kotsu/sancoise",
+  "mie-kotsu/sancokuwana",
+  "mie-kotsu/sancoshima",
+  "niimicity/niimishieibus",
+  "ongatown/OngaTownCommunityBus",
+  "sankobus/sankobus",
+  "shichinohetown/shichinohe_community-bus",
+  "takashimacity/takasimasicommunitybus",
+  "tosashimizucity/GTFS-Tosashimizucity_Bus",
+  "toyamacity/fuchucommunitybus",
+  "toyamacity/horikawaminamicommunitybus",
+  "toyamacity/kurehaikiikibus",
+  "toyamacity/oyamacommunitybus",
+  "toyamacity/yamadacommunitybus",
+  "toyamacity/yatsuocommunitybus",
+  "yaitacity/chuuou-junkan"
+ ]
+}

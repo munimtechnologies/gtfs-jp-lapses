@@ -1,0 +1,100 @@
+{
+ "as_of": "2026-10-22",
+ "feeds_listed": 608,
+ "feeds_checked": 553,
+ "skipped_by_reason": {
+  "discontinued": 28,
+  "ended": 27
+ },
+ "formats": {
+  "gtfs": 537,
+  "jp_v2": 10,
+  "empty": 1,
+  "missing": 5
+ },
+ "bands": {
+  "reading": {
+   "none": 6,
+   "some": 2,
+   "most": 545
+  },
+  "en": {
+   "none": 124,
+   "some": 22,
+   "most": 407
+  }
+ },
+ "totals": {
+  "stops": 98776,
+  "stops_reading": 96719,
+  "stops_en": 76662,
+  "reading_parent_only": 608,
+  "en_parent_only": 608,
+  "reading_kanji": 22,
+  "en_japanese": 133,
+  "en_copy": 1,
+  "headsigns": 5489,
+  "headsigns_reading": 879,
+  "headsigns_en": 940,
+  "share_reading": 0.979,
+  "share_en": 0.776,
+  "share_headsigns_reading": 0.16,
+  "share_headsigns_en": 0.171
+ },
+ "other_languages": {
+  "ja-latn": 21,
+  "ko": 11,
+  "zh-tw": 7,
+  "zh-cn": 6,
+  "zh-hans": 3,
+  "zh-hant": 3,
+  "zh": 3,
+  "pt": 1,
+  "pt-br": 1,
+  "es": 1,
+  "fr": 1,
+  "hi": 1,
+  "id": 1,
+  "it": 1,
+  "mn": 1,
+  "ne": 1,
+  "ru": 1,
+  "ta": 1,
+  "th": 1,
+  "vi": 1
+ },
+ "predictions": {
+  "N1": {
+   "feeds": 553,
+   "most_reading": 545,
+   "share": 0.986,
+   "held": true,
+   "text": "At least 70% of the checked feeds give a kana reading (ja-Hrkt) for at least 90% of their stops."
+  },
+  "N2": {
+   "feeds": 553,
+   "most_en": 407,
+   "share": 0.736,
+   "held": false,
+   "text": "Between 20% and 60% of the checked feeds give an English name for at least 90% of their stops."
+  },
+  "N3": {
+   "stops_en": 76662,
+   "en_japanese": 133,
+   "share": 0.002,
+   "held": false,
+   "text": "Of all stops with an English name, at least 1% have kana or kanji in that English name."
+  },
+  "N4": {
+   "with_rows": 547,
+   "jp_v2": 10,
+   "share": 0.018,
+   "held": false,
+   "text": "Of the feeds whose translations.txt has rows, at least 10% use the older GTFS-JP format (trans_id, lang, translation)."
+  }
+ },
+ "most_threshold": 0.9,
+ "source": "https://api.gtfs-data.jp/v2/feeds and each feed's files/feed.zip?rid=current",
+ "generated_at": "2026-10-22T10:17:31Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
