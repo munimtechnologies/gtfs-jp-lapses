@@ -1,0 +1,33 @@
+{
+ "checked_on": "2026-10-23",
+ "feeds": 21,
+ "classes": {
+  "later_file_covers": 8,
+  "later_file_partial": 0,
+  "no_later_file": 13,
+  "api_failed": 0
+ },
+ "hidden": {
+  "later_file_covers": 5,
+  "later_file_partial": 0,
+  "no_later_file": 1,
+  "api_failed": 0
+ },
+ "over_7_days": {
+  "later_file_covers": 8,
+  "later_file_partial": 0,
+  "no_later_file": 12,
+  "api_failed": 0
+ },
+ "file_ended": {
+  "later_file_covers": 0,
+  "later_file_partial": 0,
+  "no_later_file": 10,
+  "api_failed": 0
+ },
+ "memo_ended": 12,
+ "marked_discontinued": 0,
+ "no_later_file_memo_ended": 10,
+ "generated_at": "2026-10-23T07:46:30Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

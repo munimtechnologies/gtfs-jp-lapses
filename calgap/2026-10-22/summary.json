@@ -1,0 +1,29 @@
+{
+ "as_of": "2026-10-22",
+ "warn_days": 60,
+ "feeds": 553,
+ "classes": {
+  "same": 506,
+  "file_ends_earlier": 21,
+  "file_ends_later": 17,
+  "no_file_dates": 4,
+  "no_listed_date": 5,
+  "not_read": 0
+ },
+ "earlier": {
+  "feeds": 21,
+  "over_7_days": 20,
+  "over_30_days": 19,
+  "median_gap_days": 31,
+  "max_gap_days": 214
+ },
+ "hidden": 6,
+ "file_ended_while_listed_current": 10,
+ "listed_sources": {
+  "": 5,
+  "census": 520,
+  "watch": 28
+ },
+ "generated_at": "2026-10-23T01:30:12Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
