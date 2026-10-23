@@ -1,0 +1,243 @@
+{
+ "census": "2026-10-16",
+ "cohort": [
+  "2023-01-01",
+  "2026-06-30"
+ ],
+ "counts": {
+  "feeds": 602,
+  "files": 9475,
+  "unreadable": 0,
+  "first_day": 981,
+  "reissue": 6102,
+  "new_period": 2392
+ },
+ "all_new_periods": 2392,
+ "cohort_stats": {
+  "n": 2119,
+  "late": 623,
+  "late_share": 0.294,
+  "lead_days": {
+   "n": 2119,
+   "min": -760,
+   "q1": -1.0,
+   "median": 2,
+   "q3": 12.5,
+   "max": 116
+  },
+  "buckets": {
+   "late": 623,
+   "same_day": 340,
+   "1-6": 379,
+   "7-13": 293,
+   "14-20": 197,
+   "21-27": 130,
+   "28+": 157
+  },
+  "share_at_least_7": 0.3667,
+  "share_at_least_14": 0.2284,
+  "share_at_least_21": 0.1354
+ },
+ "by_start_year": {
+  "2022": {
+   "n": 12,
+   "late": 9,
+   "late_share": 0.75,
+   "lead_days": {
+    "n": 12,
+    "min": -262,
+    "q1": -219.5,
+    "median": -109.0,
+    "q3": -1.5,
+    "max": 11
+   },
+   "share_at_least_7": 0.0833,
+   "share_at_least_14": 0.0,
+   "share_at_least_21": 0.0
+  },
+  "2023": {
+   "n": 295,
+   "late": 81,
+   "late_share": 0.2746,
+   "lead_days": {
+    "n": 295,
+    "min": -760,
+    "q1": -1.0,
+    "median": 4,
+    "q3": 17.0,
+    "max": 89
+   },
+   "share_at_least_7": 0.4169,
+   "share_at_least_14": 0.2915,
+   "share_at_least_21": 0.2136
+  },
+  "2024": {
+   "n": 521,
+   "late": 155,
+   "late_share": 0.2975,
+   "lead_days": {
+    "n": 521,
+    "min": -730,
+    "q1": -1.0,
+    "median": 3,
+    "q3": 11.0,
+    "max": 57
+   },
+   "share_at_least_7": 0.3551,
+   "share_at_least_14": 0.2246,
+   "share_at_least_21": 0.1132
+  },
+  "2025": {
+   "n": 817,
+   "late": 254,
+   "late_share": 0.3109,
+   "lead_days": {
+    "n": 817,
+    "min": -366,
+    "q1": -1.0,
+    "median": 1,
+    "q3": 11.0,
+    "max": 116
+   },
+   "share_at_least_7": 0.3537,
+   "share_at_least_14": 0.2081,
+   "share_at_least_21": 0.1297
+  },
+  "2026": {
+   "n": 746,
+   "late": 189,
+   "late_share": 0.2534,
+   "lead_days": {
+    "n": 746,
+    "min": -214,
+    "q1": -1.0,
+    "median": 4.0,
+    "q3": 14.0,
+    "max": 207
+   },
+   "share_at_least_7": 0.4008,
+   "share_at_least_14": 0.2574,
+   "share_at_least_21": 0.1501
+  },
+  "2027": {
+   "n": 1,
+   "late": 0,
+   "late_share": 0.0,
+   "lead_days": {
+    "n": 1,
+    "min": 198,
+    "q1": 198,
+    "median": 198,
+    "q3": 198,
+    "max": 198
+   },
+   "share_at_least_7": 1.0,
+   "share_at_least_14": 1.0,
+   "share_at_least_21": 1.0
+  }
+ },
+ "april_1_vs_other": {
+  "april_1": {
+   "n": 651,
+   "late": 129,
+   "late_share": 0.1982,
+   "median": 8
+  },
+  "other": {
+   "n": 1468,
+   "late": 494,
+   "late_share": 0.3365,
+   "median": 0.0
+  },
+  "fisher_p_greater": 1.0
+ },
+ "by_update_type": {
+  "NEW": {
+   "n": 2015,
+   "late": 572,
+   "late_share": 0.2839
+  },
+  "UPDATE": {
+   "n": 104,
+   "late": 51,
+   "late_share": 0.4904
+  }
+ },
+ "late_kind": {
+  "stale": 512,
+  "gap": 111
+ },
+ "per_feed": {
+  "feeds": 457,
+  "median_of_feed_medians": 2.5,
+  "feeds_any_late": 307,
+  "feeds_median_at_least_14": 81,
+  "top": [
+   {
+    "organization_id": "nisshincity",
+    "feed_id": "communitybus",
+    "files": 33
+   },
+   {
+    "organization_id": "meikobus",
+    "feed_id": "meikobus",
+    "files": 29
+   },
+   {
+    "organization_id": "tokubus",
+    "feed_id": "tokushimabus",
+    "files": 25
+   },
+   {
+    "organization_id": "chitetsu",
+    "feed_id": "chitetsubus",
+    "files": 22
+   },
+   {
+    "organization_id": "nagai-unyu",
+    "feed_id": "Nagaibus",
+    "files": 19
+   }
+  ],
+  "without_top": {
+   "n": 1991,
+   "late": 602,
+   "late_share": 0.3024,
+   "lead_days": {
+    "n": 1991,
+    "min": -760,
+    "q1": -1.0,
+    "median": 2,
+    "q3": 13.0,
+    "max": 116
+   },
+   "share_at_least_7": 0.3782,
+   "share_at_least_14": 0.2391,
+   "share_at_least_21": 0.1426
+  }
+ },
+ "predictions": {
+  "P1": {
+   "text": "Between 15% and 45% of the new-period files that start in the cohort (2023-01-01 to 2026-06-30) were published after their start date (lead under 0 days).",
+   "value": 0.294,
+   "held": true
+  },
+  "P2": {
+   "text": "The median lead of those files is between 0 and 10 days.",
+   "value": 2,
+   "held": true
+  },
+  "P3": {
+   "text": "Fewer than 35% of those files were published at least 14 days ahead.",
+   "value": 0.2284,
+   "held": true
+  },
+  "P4": {
+   "text": "Those starting on April 1 were published after their start date more often than those starting on other days (one-sided Fisher exact test, p < 0.05).",
+   "value": 1.0,
+   "held": false
+  }
+ },
+ "generated_at": "2026-10-23T14:05:59Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
