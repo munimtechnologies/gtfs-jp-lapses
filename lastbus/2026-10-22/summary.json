@@ -1,0 +1,120 @@
+{
+ "as_of": "2026-10-22",
+ "days": {
+  "wed": "2026-11-11",
+  "sat": "2026-11-14",
+  "sun": "2026-11-15"
+ },
+ "feeds": 553,
+ "read": 553,
+ "failed": 0,
+ "feeds_covering": {
+  "wed": 527,
+  "sat": 527,
+  "sun": 527
+ },
+ "feeds_with_departures": {
+  "wed": 480,
+  "sat": 386,
+  "sun": 310
+ },
+ "places": {
+  "wed": 56496,
+  "sat": 42823,
+  "sun": 33468
+ },
+ "last_wed": {
+  "p10": "15:38",
+  "p25": "17:04",
+  "p50": "18:21",
+  "p75": "19:31",
+  "p90": "20:50"
+ },
+ "first_wed_median": "7:22",
+ "share_last_wed": {
+  "before_18:00": 0.418,
+  "before_19:00": 0.655,
+  "before_20:00": 0.814,
+  "before_21:00": 0.91,
+  "before_22:00": 0.964,
+  "from_23:00": 0.011
+ },
+ "last_wed_by_hour": {
+  "05": 1,
+  "06": 92,
+  "07": 552,
+  "08": 242,
+  "09": 137,
+  "10": 104,
+  "11": 286,
+  "12": 450,
+  "13": 838,
+  "14": 1570,
+  "15": 2849,
+  "16": 6356,
+  "17": 10116,
+  "18": 13399,
+  "19": 8990,
+  "20": 5407,
+  "21": 3084,
+  "22": 1413,
+  "23": 563,
+  "24": 46,
+  "30": 1
+ },
+ "no_sunday": {
+  "places": 56496,
+  "without": 23290,
+  "share": 0.412
+ },
+ "no_saturday": {
+  "places": 56496,
+  "without": 14673,
+  "share": 0.26
+ },
+ "sunday_earlier": {
+  "places": 33206,
+  "earlier": 16184,
+  "share": 0.487,
+  "median_minutes_earlier": 0
+ },
+ "feeds_median_before_18": {
+  "feeds": 480,
+  "count": 215,
+  "share": 0.448
+ },
+ "predictions": {
+  "L1": {
+   "statement": "Over all places with a bus departure on the Wednesday, the median last departure is between 19:00 and 21:00.",
+   "value": "18:21",
+   "held": false
+  },
+  "L2": {
+   "statement": "At least 25% of the places with a bus departure on the Wednesday have their last departure before 19:00.",
+   "value": 0.655,
+   "held": true
+  },
+  "L3": {
+   "statement": "At least 15% of the places with a bus departure on the Wednesday, in files that cover the Sunday, have no bus departure on the Sunday.",
+   "value": 0.412,
+   "held": true
+  },
+  "L4": {
+   "statement": "At least 30% of the feeds with a bus departure on the Wednesday have a median last departure (over their places) before 18:00.",
+   "value": 0.448,
+   "held": true
+  },
+  "L5": {
+   "statement": "Fewer than 10% of the places with a bus departure on the Wednesday have their last departure at 23:00 or later.",
+   "value": 0.011,
+   "held": true
+  },
+  "L6": {
+   "statement": "Of the places with a bus departure on both the Wednesday and the Sunday, at least 40% have an earlier last departure on the Sunday.",
+   "value": 0.487,
+   "held": true
+  }
+ },
+ "generated_at": "2026-10-22T21:43:48Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

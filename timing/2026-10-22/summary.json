@@ -1,0 +1,70 @@
+{
+ "as_of": "2026-10-22",
+ "feeds": 553,
+ "read": 553,
+ "failed": 0,
+ "feeds_with": {
+  "fast": 4,
+  "time_travel": 1,
+  "bad_or_outside_coords": 1,
+  "stack": 20,
+  "missing_stop_refs": 0
+ },
+ "stops": 98778,
+ "stops_bad_coords": 0,
+ "stops_outside_japan": 2,
+ "stacked_stops": 645,
+ "trips": 80048,
+ "steps": 2267151,
+ "fast_steps": 19,
+ "fast_steps_0min": 16,
+ "time_travel_steps": 1,
+ "missing_stop_refs": 0,
+ "timing": {
+  "flag": 6,
+  "n/a": 3,
+  "ok": 544
+ },
+ "bus_speed": {
+  "trips": 76033,
+  "p25_kmh": 14.2,
+  "median_kmh": 17.5,
+  "p75_kmh": 22.0,
+  "feeds": 524,
+  "median_of_feed_medians_kmh": 18.5
+ },
+ "predictions": {
+  "T1": {
+   "statement": "Between 5% and 30% of the files read have at least one step faster than the limit for its route_type.",
+   "value": 0.007,
+   "held": false
+  },
+  "T2": {
+   "statement": "Fewer than 5% of the files read have at least one step where a trip arrives before it left the stop before.",
+   "value": 0.002,
+   "held": true
+  },
+  "T3": {
+   "statement": "Fewer than 3% of the files read have a pole with missing, zero or outside-Japan coordinates.",
+   "value": 0.002,
+   "held": true
+  },
+  "T4": {
+   "statement": "The median scheduled straight-line speed of bus trips, over all bus trips in all files read, is between 12 and 25 km/h.",
+   "value": 17.5,
+   "held": true
+  },
+  "T5": {
+   "statement": "At least half of all too-fast steps are scheduled at under one minute (0 minutes in a timetable given to the minute).",
+   "value": 0.842,
+   "held": true
+  },
+  "T6": {
+   "statement": "At least 10% of the files read have a stack: two or more differently named poles at exactly the same coordinates.",
+   "value": 0.036,
+   "held": false
+  }
+ },
+ "generated_at": "2026-10-22T21:03:26Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
