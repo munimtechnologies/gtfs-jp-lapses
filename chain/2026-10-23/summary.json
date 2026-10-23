@@ -1,0 +1,60 @@
+{
+ "as_of": "2026-10-23",
+ "counts": {
+  "feeds_in_list": 608,
+  "discontinued": 28,
+  "no_end_date": 0,
+  "active": 580
+ },
+ "classes": {
+  "continuous": 553,
+  "break": 0,
+  "not_in_force": 0,
+  "list_mismatch": 0,
+  "no_files": 0,
+  "api_failed": 0,
+  "expired": 27
+ },
+ "checked_ok": 553,
+ "breaks": 0,
+ "break_within_60": 0,
+ "with_later_file": 20,
+ "in_force_ends_within_60": 33,
+ "in_force_ends_within_60_continued": 7,
+ "in_force_ends_within_60_listed_later": 6,
+ "memo_ended": 46,
+ "api_discontinued": 0,
+ "lead_days": {
+  "n": 20,
+  "min": 4,
+  "q1": 10.0,
+  "median": 18.0,
+  "q3": 28.0,
+  "max": 113
+ },
+ "lead_days_under_7": 1,
+ "predictions": {
+  "C1": {
+   "text": "Fewer than 2% of the checked feeds have a break (a day with no published file) between today and their listed end date, counting feeds with no file in force today (classes break + not_in_force).",
+   "value": 0.0,
+   "held": true
+  },
+  "C2": {
+   "text": "Between 5% and 30% of the checked feeds already have at least one later file published.",
+   "value": 0.0362,
+   "held": false
+  },
+  "C3": {
+   "text": "Of the checked feeds whose file in force today ends within 60 days, between 10% and 40% already have a later file that continues it with no break.",
+   "value": 0.2121,
+   "held": true
+  },
+  "C4": {
+   "text": "The median lead time of the later files (start date minus publication date in Japan time) is at least 14 days.",
+   "value": 18.0,
+   "held": true
+  }
+ },
+ "generated_at": "2026-10-23T11:19:18Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

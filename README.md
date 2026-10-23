@@ -17,6 +17,7 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 時刻と停留所位置・表定速度 / Timing, stop positions and bus speeds: [timing/2026-10-22/timing.md](timing/2026-10-22/timing.md) ・
 始発と終バス / First and last buses: [lastbus/2026-10-22/lastbus.md](lastbus/2026-10-22/lastbus.md)（停留所ごとの表 / per-place tables: [places/index.csv](lastbus/2026-10-22/places/index.csv)） ・
 掲載上の期限とファイル自体の期限 / Listed end date against the file's own dates: [calgap/2026-10-22/calendar_gap.md](calgap/2026-10-22/calendar_gap.md)（後続のファイル / later files: [next.md](calgap/2026-10-22/next/next.md)） ・
+公開済みのファイルのつながり / The chain of published files: [chain/2026-10-23/chain.md](chain/2026-10-23/chain.md) ・
 データの健康診断 / Data-health table: [health/2026-10-22/health.md](health/2026-10-22/health.md)
 
 ---
@@ -257,6 +258,28 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   1回読んだだけです。ファイルに運行日のない日があっても、バスが走らないとは限りません（季節運行や、別のデータで公開された運行）。
   事前登録の予測はない記述的な集計です。個別の地域名は事実の記録であり、評価ではありません。
 
+### 公開済みのファイルのつながり（2026年10月23日、予測は事前登録）
+`tools/file_chain.py` で、一覧にある有効なデータ580件のうち期限の切れていない553件それぞれについて、10月23日にAPIを1回読み、
+いま有効なファイルがいつ終わるか、次のファイルがいつ始まり何日前に公開されたか、今日から掲載上の期限まで公開済みのファイルが
+すき間なくつながっているかを確かめました（`chain/2026-10-23/`）。時刻表ファイルはダウンロードせず、リポジトリが示す各ファイルの
+有効期間と公開日時だけを使います。期限の一覧が見ている掲載上の期限は最新の版の期限なので、途中のすき間はこの確認でしか見えません。
+- 553件すべてを読めました（API失敗0件）。途中にすき間のあるデータ、今日有効なファイルのないデータ、一覧の期限とファイルの期限が
+  合わないデータはいずれも0件で、553件すべてが掲載上の期限までつながっていました。期限切れの27件は読んでいません。
+- 後続のファイルがすでに公開されているのは20件（3.6%）。いま有効なファイルが60日以内に終わる33件のうち、後続のファイルがつないで
+  いるのは7件（21.2%）で、うち6件は掲載上の期限が60日より先です。残る26件は、この日には後続のファイルがありませんでした。
+- 後続のファイルの公開から開始までの日数: 中央値18日（四分位10〜28日、範囲4〜113日）。20件のうち7日未満は1件、14日未満は9件。
+- 後続のファイルがないまま10月31日までに終わる17件のうち10件は、前の節の1つの市の10路線（メモに10月1日に廃止とある）です。
+  残る7件について、2026年11月1日以降に最初にAPIを読んだ日に有効なファイルがないのは4件以上と予測しました（事前登録、
+  `chain/predictions-2026-11-01.md`）。結果はここに追記します。
+- 事前に記録した4つの予測（`chain/predictions-2026-10-23.md`）のうち3つが当たりました。C1（すき間のあるデータが2%未満）は0.0%、
+  C3（60日以内に終わるデータのうち後続がつなぐのが10〜40%）は21.2%、C4（日数の中央値が14日以上）は18日で当たり。
+  C2（後続のファイルが公開済みのデータが5〜30%）は3.6%で外れ、先の版を前もって公開しているデータは予想より少数でした。
+- 注意: ある1日に見える「まだ有効でないファイル」は、早く公開されたものほど長く見えるので、この日数は長めに出ます。開始日より後に
+  公開されたファイルはそもそも見えません。典型的な日数は、全版の履歴から数える必要があります。
+- 限界: ファイルの中の運行日は読んでいません（`calgap/2026-10-22/`）。そのため、10月1日に廃止された10路線も、ファイルの上では
+  10月31日までつながって見えます。リポジトリから消えた古い版は見えません。APIは10月23日に1回読んだだけです。すき間がないことは、
+  バスが走ることの証明ではありません。個別の地域名は事実の記録であり、評価ではありません。
+
 ### データの健康診断（2026年10月22日、予測は事前登録）
 `tools/data_health.py` で、ここまでの4つの集計（10月22日の期限一覧、10月16日の空白の調査、祝日、停留所名）を、新しいダウンロードを
 せずにデータごとに1行にまとめました（`health/2026-10-22/`）。対象は、祝日か停留所名の調査で現行ファイルを読んだ有効でオープンライセンスの
@@ -295,6 +318,7 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
 - 期限の一覧は latest_feed_end_date だけを見るので、次のデータの開始が遅れる場合の空白などは拾えません。
 - 掲載上の期限は、まだ有効になっていない後続の版の期限であることがあります。また、路線が終わったあとも、ファイルが有効のまま
   掲載されていることがあります（`calgap/2026-10-22/`）。
+- ある1日に見える後続のファイルの公開日数は、早く公開されたものほど見えやすいため長めに出ます（`chain/2026-10-23/`）。
 
 ### ファイル
 - `data/2026-10-16/feeds.csv` データごとの集計（提供者・ライセンス付き）、`versions.csv` 全版、`lapses.csv` 空白1回ごと、
@@ -316,6 +340,8 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   `lastbus/predictions-2026-10-22.md`（事前登録）
 - `calgap/2026-10-22/` 掲載上の期限とファイル自体の期限（`feeds.csv`、`summary.json`、`calendar_gap.md`、後続のファイルの確認 `next/` の
   `feeds.csv`・`summary.json`・`next.md`）
+- `chain/2026-10-23/` 公開済みのファイルのつながり（`chain.csv` データごと、`summary.json`、`chain.md`）、
+  `chain/predictions-2026-10-23.md`・`chain/predictions-2026-11-01.md`（事前登録）
 - `health/2026-10-22/` データの健康診断（`feeds.csv` データごとの4つの確認、`prefectures.csv`、`summary.json`、`health.md`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
@@ -323,7 +349,8 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   `tools/holiday_check.py`（祝日・年末年始）、`tools/holiday_recheck.py`（先の祝日の抜けと12月の再確認）、
   `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、`tools/timing_check.py`（時刻と位置）、
   `tools/last_bus.py`（始発と終バス）、`tools/split_places.py`（停留所ごとの表を都道府県ごとに分ける）、
-  `tools/calendar_gap.py`（掲載上の期限とファイルの期限）、`tools/calendar_next.py`（後続のファイル）、`tools/data_health.py`（健康診断）、
+  `tools/calendar_gap.py`（掲載上の期限とファイルの期限）、`tools/calendar_next.py`（後続のファイル）、
+  `tools/file_chain.py`（公開済みのファイルのつながり）、`tools/data_health.py`（健康診断）、
   各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`。祝日: `python tools/holiday_check.py --as-of 2026-10-22 --out out`
@@ -334,6 +361,7 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   → `python tools/split_places.py --places out/lastbus/2026-10-22/places.csv --rerun-feeds out/lastbus/2026-10-22/feeds.csv --published-feeds lastbus/2026-10-22/feeds.csv --out out/places`。
   掲載上の期限: `python tools/calendar_gap.py --health health/2026-10-22/feeds.csv --lastbus lastbus/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/calgap`
   → `python tools/calendar_next.py --gaps out/calgap/feeds.csv --out out/calgap/next`（APIをその日に読みます）。
+  ファイルのつながり: `python tools/file_chain.py --pause 1.0 --out out/chain`（APIをその日に読みます）。
   健康診断: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### 出典とライセンス
@@ -631,6 +659,36 @@ covers the remaining days (`calgap/2026-10-22/next/`).
   no bus runs (seasonal routes, or service published in another feed). Descriptive, with no predictions recorded in
   advance. Place names in the data are records of fact, not judgements.
 
+### The chain of published files (2026-10-23, predictions recorded in advance)
+`tools/file_chain.py` read the API entry of each of the 553 feeds among the 580 active ones whose listed end date had
+not passed, once, on 2026-10-23, and found when the file in force today ends, when the next file starts and how many
+days ahead it was published, and whether the published files run without a break from today to the listed end date
+(`chain/2026-10-23/`). No timetable file is downloaded; only the validity dates and publication times the repository
+gives for each file are used. The expiry list reads only the listed end date, the end of the latest file held, so a
+break between files can be seen only this way.
+- All 553 were read (no API failures). None has a break, none has no file in force today and none has a listed end date
+  that the files do not reach: all 553 chains run unbroken to the listed end. The 27 expired feeds were not read.
+- 20 feeds (3.6%) already have a later file published. Of the 33 whose file in force ends within 60 days, 7 (21.2%)
+  are continued by a later file, 6 of them with a listed end more than 60 days away; the other 26 had no later file
+  that day.
+- Lead time of the next file (start date minus publication date in Japan time): median 18 days (quartiles 10 and 28,
+  range 4 to 113). Of the 20, 1 was published under 7 days ahead and 9 under 14 days ahead.
+- 17 feeds end by 2026-10-31 with no later file; 10 of them are the ten routes of one city in the section above (their
+  note says they ended on 2026-10-01). For the other 7 we predicted, before their end dates, that at least 4 will have
+  no file in force on the first day on or after 2026-11-01 on which the API is read (`chain/predictions-2026-11-01.md`).
+  The result will be added here.
+- Three of the four predictions recorded before the run (`chain/predictions-2026-10-23.md`) held. C1 (under 2% with a
+  break) held at 0.0%, C3 (10–40% of feeds ending within 60 days continued by a later file) at 21.2% and C4 (median
+  lead at least 14 days) at 18 days. C2 (5–30% with a later file published) did not hold: 3.6%, so far fewer feeds
+  publish their next version ahead of time than we expected.
+- Caution: a file not yet in force stays visible on more days the earlier it is published, so a one-day snapshot like
+  this overstates lead times, and files published after their start date are never seen in it. Typical lead times have
+  to be counted over the whole version history.
+- Limits: the files' own service days are not read (`calgap/2026-10-22/`), so the ten routes that ended on 2026-10-01
+  still look continuous to 2026-10-31 here. Old files no longer in the API are not seen. The API was read once, on
+  2026-10-23. An unbroken chain of files is not proof that buses run. Place names in the data are records of fact, not
+  judgements.
+
 ### Data-health table (2026-10-22, predictions recorded in advance)
 `tools/data_health.py` joins the four censuses above (the 2026-10-22 expiry list, the 2026-10-16 lapse census, holidays
 and stop names) into one row per feed, with no new downloads (`health/2026-10-22/`). It covers the 553 active, openly
@@ -678,6 +736,8 @@ include networks that stopped updating without being marked discontinued. The li
   the old one ends.
 - The listed end date can belong to a later file that is not in force yet, and a file can stay listed as valid after
   its routes have ended (`calgap/2026-10-22/`).
+- Lead times of the later files seen on one day run long, because files published early are visible for longer
+  (`chain/2026-10-23/`).
 
 ### Files
 - `data/2026-10-16/feeds.csv` per feed (with publisher and licence), `versions.csv` every file, `lapses.csv` one row per
@@ -703,6 +763,8 @@ include networks that stopped updating without being marked discontinued. The li
   advance)
 - `calgap/2026-10-22/` the listed end date against the file's own dates (`feeds.csv`, `summary.json`, `calendar_gap.md`,
   and the later-file check in `next/`: `feeds.csv`, `summary.json`, `next.md`)
+- `chain/2026-10-23/` the chain of published files (`chain.csv` one row per feed, `summary.json`, `chain.md`);
+  `chain/predictions-2026-10-23.md` and `chain/predictions-2026-11-01.md` (recorded in advance)
 - `health/2026-10-22/` the data-health table (`feeds.csv` four checks per feed, `prefectures.csv`, `summary.json`,
   `health.md`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
@@ -713,7 +775,8 @@ include networks that stopped updating without being marked discontinued. The li
   `tools/names_check.py` (stop names), `tools/verify_names.py` (stop-name recount), `tools/timing_check.py` (timing and
   positions), `tools/last_bus.py` (first and last buses), `tools/split_places.py` (per-place table by prefecture),
   `tools/calendar_gap.py` (listed end against the file's dates), `tools/calendar_next.py` (later files),
-  `tools/data_health.py` (data-health table), each with `test_*.py`
+  `tools/file_chain.py` (the chain of published files), `tools/data_health.py` (data-health table), each with
+  `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`.
   Holidays: `python tools/holiday_check.py --as-of 2026-10-22 --out out` (reads the files current on the day it runs) →
@@ -726,6 +789,7 @@ include networks that stopped updating without being marked discontinued. The li
   `python tools/split_places.py --places out/lastbus/2026-10-22/places.csv --rerun-feeds out/lastbus/2026-10-22/feeds.csv --published-feeds lastbus/2026-10-22/feeds.csv --out out/places`.
   Listed end dates: `python tools/calendar_gap.py --health health/2026-10-22/feeds.csv --lastbus lastbus/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/calgap` →
   `python tools/calendar_next.py --gaps out/calgap/feeds.csv --out out/calgap/next` (reads the API on the day it runs).
+  Chain of files: `python tools/file_chain.py --pause 1.0 --out out/chain` (reads the API on the day it runs).
   Data health: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### Sources and licences
