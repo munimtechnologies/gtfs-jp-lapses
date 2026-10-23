@@ -5,6 +5,7 @@
 # The 2026-10-16 census (leads/2026-10-16/) found April-1 files late less often than others but, when late, usually
 # with no valid file, because the file before them mostly ended on March 31. This tool reproduces those counts and
 # scores the predictions for 2027-04-01 in PREDICTIONS (leads/predictions-2027-04-01.md) on a later census.
+# p-values are kept to 6 significant figures and shown to 3, so a very small p is not printed as 0.
 # No network; standard library only.
 # MV2 of Munim, Inc. - Apache-2.0 license. Made with AI agents working in MV2's name.
 import argparse
@@ -43,13 +44,17 @@ def share(a, b):
 
 
 def fisher_greater(a, b, c, d):
-    """One-sided Fisher exact p that a/(a+b) is greater than c/(c+d)."""
+    """One-sided Fisher exact p that a/(a+b) is greater than c/(c+d), to 6 significant figures."""
     n1, n2, k = a + b, c + d, a + c
     if not n1 or not n2:
         return None
     lo, hi = max(0, k - n2), min(k, n1)
     num = sum(math.comb(n1, x) * math.comb(n2, k - x) for x in range(max(a, lo), hi + 1))
-    return round(num / math.comb(n1 + n2, k), 6)
+    return float(f'{num / math.comb(n1 + n2, k):.6g}')
+
+
+def pval(x):
+    return '' if x is None else f'{x:.3g}'
 
 
 def group_stats(rows):
@@ -116,8 +121,8 @@ def report(s, source):
     for name, g in (('day', d), ('other', o)):
         lines.append(f'| {name} | {g["n"]} | {g["late"]} | {g["gap"]} | {g["stale"]} | {pct(g["late_share"])} | '
                      f'{pct(g["gap_share"])} | {pct(g["gap_of_late"])} | {g["gap_feeds"]} | {g["gap_publishers"]} |')
-    lines += ['', f'- one-sided Fisher exact p, gap share of {s["day"]} greater: {t["gap_p_greater"]}',
-              f'- one-sided Fisher exact p, late share of {s["day"]} smaller: {t["late_p_less"]}', '',
+    lines += ['', f'- one-sided Fisher exact p, gap share of {s["day"]} greater: {pval(t["gap_p_greater"])}',
+              f'- one-sided Fisher exact p, late share of {s["day"]} smaller: {pval(t["late_p_less"])}', '',
               '## 開始年ごと / By start year', '',
               '| year | day files | day gap | day gap share | other files | other gap | other gap share |',
               '|---|---|---|---|---|---|---|']
@@ -129,7 +134,7 @@ def report(s, source):
         lines += ['', '## 事前に記録した予測 / Predictions recorded in advance', '']
         for k, p in s['predictions'].items():
             v = p['value']
-            shown = '' if v is None else (f'p = {v}' if k == 'G2' else pct(v))
+            shown = '' if v is None else (f'p = {pval(v)}' if k == 'G2' else pct(v))
             lines.append(f'- {k}: {p["text"]} Result: {shown}, {"held" if p["held"] else "did not hold"}.')
     lines += ['', 'Limits: files are not independent (one publisher often publishes several feeds together), so the '
               'p-values are, if anything, too small. Only files that were eventually published are counted: a feed '

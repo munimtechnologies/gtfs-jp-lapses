@@ -25,9 +25,9 @@ def r(org, feed, a, lead, kind=''):
 # Other days (rows 5, 6, 8, 9): 4 files, late 2 (5, 8), gap 1 (8), stale 1 (5); gap share 0.25, late share 0.5,
 #   gap of late 0.5; 1 feed, 1 publisher.
 # Gap share greater: a=3, b=2, c=1, d=3; n1=5, n2=4, k=4, C(9,4)=126; x=3: C(5,3)C(4,1)=40, x=4: C(5,4)C(4,0)=5;
-#   p = 45/126 = 0.357143.
+#   p = 45/126 = 0.357143 (shown 0.357).
 # Late share smaller: fisher_greater(2, 2, 4, 1): n1=4, n2=5, k=6, C(9,6)=84; x=2: C(4,2)C(5,4)=30, x=3: C(4,3)C(5,3)
-#   =40, x=4: C(4,4)C(5,2)=10; p = 80/84 = 0.952381.
+#   =40, x=4: C(4,4)C(5,2)=10; p = 80/84 = 0.952381 (shown 0.952).
 # By year: 2024 April rows 1-4 (n 4, gap 2, 0.5), other rows 5, 6 (n 2, gap 0, 0.0); 2025 April row 7 (n 1, gap 1,
 #   1.0), other rows 8, 9 (n 2, gap 1, 0.5).
 # Predictions: G1 0.6 is outside 6-18% (no); G2 p 0.357143 (no); G3 0.75 >= 0.40 (yes).
@@ -51,6 +51,18 @@ class TestFisher(unittest.TestCase):
 
     def test_empty_group(self):
         self.assertIsNone(gs.fisher_greater(0, 0, 1, 2))
+
+    def test_small_p_is_not_rounded_to_zero(self):
+        # 10/10 against 0/10: only x = 10 counts, C(10,10)C(10,0) = 1 of C(20,10) = 184756, p = 5.41254e-06.
+        p = gs.fisher_greater(10, 0, 0, 10)
+        self.assertGreater(p, 0)
+        self.assertAlmostEqual(p * 184756, 1.0, places=4)
+        self.assertEqual(gs.pval(p), '5.41e-06')
+
+    def test_pval(self):
+        self.assertEqual(gs.pval(None), '')
+        self.assertEqual(gs.pval(0.357143), '0.357')
+        self.assertEqual(gs.pval(0.05), '0.05')
 
 
 class TestSummary(unittest.TestCase):
@@ -125,6 +137,10 @@ class TestMain(unittest.TestCase):
             self.assertIn('| day | 5 | 4 | 3 | 1 | 80.0% | 60.0% | 75.0% | 3 | 2 |', md)
             self.assertIn('| other | 4 | 2 | 1 | 1 | 50.0% | 25.0% | 50.0% | 1 | 1 |', md)
             self.assertIn('| 2024 | 4 | 2 | 50.0% | 2 | 0 | 0.0% |', md)
+            self.assertIn('gap share of 04-01 greater: 0.357\n', md)
+            self.assertIn('late share of 04-01 smaller: 0.952\n', md)
+            self.assertIn('G2: ', md)
+            self.assertIn('Result: p = 0.357, did not hold.', md)
             self.assertIn('G3:', md)
 
 
