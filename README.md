@@ -14,6 +14,8 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 続いている空白はいつ終わるか / When the open lapses end: [forecast/recovery/2026-10-16/recovery.md](forecast/recovery/2026-10-16/recovery.md) ・
 祝日・年末年始の扱い / Holidays and the New Year break: [holidays/2026-10-22/holidays.md](holidays/2026-10-22/holidays.md) ・
 停留所名のよみがな・英語 / Stop-name readings and English: [names/2026-10-22/names.md](names/2026-10-22/names.md)（再集計 / recount: [verify/recount.md](names/2026-10-22/verify/recount.md)） ・
+時刻と停留所位置・表定速度 / Timing, stop positions and bus speeds: [timing/2026-10-22/timing.md](timing/2026-10-22/timing.md) ・
+始発と終バス / First and last buses: [lastbus/2026-10-22/lastbus.md](lastbus/2026-10-22/lastbus.md)（停留所ごとの表 / per-place tables: [places/index.csv](lastbus/2026-10-22/places/index.csv)） ・
 データの健康診断 / Data-health table: [health/2026-10-22/health.md](health/2026-10-22/health.md)
 
 ---
@@ -179,6 +181,62 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   いるかだけ）。行先は trip_headsign だけで、stop_headsign は見ていません。各データの現行ファイルは10月22日に読んだもの
   （再集計で2回）だけです。個別の地域名は事実の記録であり、評価ではありません。
 
+### 時刻と停留所位置・バスの表定速度（2026年10月22日、予測は事前登録）
+`tools/timing_check.py` で、停留所名の調査と同じ553件の現行ファイルを読み、時刻と停留所の位置の不自然な点を数え、バスの便ごとの
+表定速度を求めました（`timing/2026-10-22/timing.md`）。速すぎる区間の基準は MobilityData のバリデーター
+（fast_travel_between_consecutive_stops）と同じで、バスは時速150km、1分未満の区間は1分として数えます。表定速度は、停留所間の
+直線距離の合計を始発から終着までの時間で割ったものです。全国の公開データについてこれらを数えた例や、GTFSから全国のバスの
+表定速度を求めた例は見つかりませんでした（2026年10月22日に検索。1件ずつ評価する GTFS Scorecard などはあります）。
+- 553件すべてを読み、便80,048本・区間2,267,151・標柱98,778か所を確かめました。
+- 速すぎる区間があるのは4件（0.7%）・19区間で、うち16区間は時刻表上0分の区間です。前の停留所を出る前に着く区間は1件・1区間、
+  座標が国外の標柱は1件・2か所（座標なし・0は0か所）、stops.txt にない停留所への参照は0件でした。これらのどれかがあるデータは6件です。
+- 名前の違う標柱がまったく同じ座標に重なるデータは20件（3.6%）・645か所。多くは同じ停留所を路線ごとの名前で書いたもので、
+  誤りとは限りません。
+- バスの表定速度（直線距離）: 76,033便の中央値は時速17.5km（四分位 14.2〜22.0km）、524件のデータごとの中央値の中央値は18.5km。
+  都道府県別では東京都11.7km（713便）、神奈川県12.7km、埼玉県13.5kmが遅く、秋田県27.9km（423便）、岩手県27.1km（377便）が
+  速めです（`timing/2026-10-22/prefectures.csv`。データの少ない府県は揺れが大きくなります）。
+- 事前に記録した6つの予測（`timing/predictions-2026-10-22.md`）のうち4つが当たりました。T1（速すぎる区間のあるデータが5〜30%）は
+  0.7%で外れ、日本の公開データは予想よりずっと整っていました（参考: 米国736件を MobilityData のバリデーターで調べた ITS Feed の集計では
+  17%。規則が違うので比較の基準ではありません）。T2（前の停留所を出る前に着く区間のあるデータが5%未満）は0.2%、T3（座標のおかしい
+  標柱のあるデータが3%未満）は0.2%、T4（表定速度の中央値が時速12〜25km）は17.5km、T5（速すぎる区間の半分以上が1分未満）は84.2%で
+  当たり。T6（重なる標柱のあるデータが10%以上）は3.6%で外れました。
+- 限界: 直線距離は道のりより短いので、速度は低めに出ます。速すぎる区間が時刻の誤りか位置の誤りかは区別しません。時刻はふつう分単位
+  なので、短い区間は粗くなります。各データの現行ファイルを10月22日に1回読んだだけです。flag は確かめるきっかけで、誤りの証明では
+  ありません。個別の地域名は事実の記録であり、評価ではありません。
+
+### 始発と終バス（2026年10月22日、予測は事前登録）
+`tools/last_bus.py` で、同じ553件の現行ファイルから、ふだんの水曜（2026年11月11日）・土曜（11月14日）・日曜（11月15日）に、
+それぞれの停留所（同じデータの中の同じ名前の標柱をまとめたもの）からバスが出る最初と最後の時刻を求めました
+（`lastbus/2026-10-22/lastbus.md`、停留所ごとの表は `lastbus/2026-10-22/places/`）。乗車できる発車だけを数え（pickup_type が1でなく、
+便の終点でない停留所）、24時を過ぎる時刻はその運行日のまま、frequencies.txt の便も含めます。全国の公開データについて停留所ごとの
+終バスを数えた例は見つかりませんでした（2026年10月22日に検索。停留所ごとの時刻表サイトや、路線の減便・廃止を事業者に尋ねた調査は
+あります）。
+- 553件すべてを読み、3日を含むファイルは527件（22件は有効期間が11月11日より前に終わり、4件は読める有効期間がありませんでした）、
+  水曜にバスが出るのは480件です。
+- バスが出る停留所: 水曜56,496か所、土曜42,823か所、日曜33,468か所。
+- 水曜の終バスの中央値は18時21分（10%が15時38分まで、25%が17時04分まで、75%が19時31分まで、90%が20時50分まで）。
+  始発の中央値は7時22分。
+- 終バスが18時より前の停留所は41.8%、19時より前は65.5%、20時より前は81.4%、21時より前は91.0%、23時以降は1.1%。
+  最後の発車が10時より前（朝だけ）の停留所が1,024か所あります。
+- 水曜にバスが出る停留所のうち、日曜にはバスが出ないのが41.2%（23,290か所）、土曜は26.0%（14,673か所）。両日に出る33,206か所の
+  うち48.7%は日曜の終バスのほうが早くなっています（差の中央値は0分）。
+- 停留所の終バスの中央値が18時より前のデータは480件中215件（44.8%）。停留所が1,000か所以上ある都道府県の中央値は17時22分〜
+  19時32分です（`lastbus/2026-10-22/prefectures.csv`）。
+- 事前に記録した6つの予測（`lastbus/predictions-2026-10-22.md`）のうち5つが当たりました。L1（終バスの中央値が19〜21時）は18時21分で
+  外れ、予想より早く終わっていました。L2（19時より前が25%以上）65.5%、L3（日曜にバスがない停留所が15%以上）41.2%、L4（中央値が
+  18時より前のデータが30%以上）44.8%、L5（23時以降が10%未満）1.1%、L6（日曜のほうが早い停留所が40%以上）48.7%で当たりです。
+- 終バスが30時45分（翌朝6時45分）の停留所が1か所あります。ファイルのとおりに載せています。
+- 停留所ごとの表は、リポジトリのファイルの大きさの上限に収めるため、都道府県ごとの40ファイル（`places/NN.csv`、NN は都道府県コード、
+  一覧は `places/index.csv`）に分けました（`tools/split_places.py`）。分ける前に、10月23日に553件の現行ファイルをもう一度読み直し、
+  データごとの集計がすべて公開した `feeds.csv` と一致することを確かめています（変わったデータは0件で `places/changed.csv` は空、
+  計57,523行。`places/split.json`）。
+- 限界: リポジトリにあるのは主に市町村のコミュニティバスと地方の事業者のデータで、他の場所だけで公開している大都市の事業者は含まれて
+  いません。これは公開データにある停留所の数字で、全国のすべてのバス停の数字ではありません。停留所は同じデータの中の同じ名前を
+  まとめたもので、2つの事業者が止まる停留所はデータごとに数えます。終バスはどの方向の便でもよく、「帰りの最終」ではありません。
+  デマンド交通の便もファイルにあれば同じように数えます。時刻表だけを見ており、実際の運行や遅れは見ていません。各データの現行
+  ファイルを10月22日に1回読んだだけです。個別の地域名は事実の記録であり、評価ではありません。
+- 2027年4月のダイヤ改正のあとに同じ方法で数え直し、停留所ごとの終バスの繰り上げ・繰り下げを比べる予定です（予測はその前に記録します）。
+
 ### データの健康診断（2026年10月22日、予測は事前登録）
 `tools/data_health.py` で、ここまでの4つの集計（10月22日の期限一覧、10月16日の空白の調査、祝日、停留所名）を、新しいダウンロードを
 せずにデータごとに1行にまとめました（`health/2026-10-22/`）。対象は、祝日か停留所名の調査で現行ファイルを読んだ有効でオープンライセンスの
@@ -229,21 +287,32 @@ GTFS-JP（第4.0版、2026年3月）では translations.txt とよみがなは�
   `holidays/predictions-2026-10-22.md`・`holidays/predictions-recheck-2026-12.md`（事前登録）
 - `names/2026-10-22/` 停留所名のよみがな・英語（`feeds.csv`、`prefectures.csv`、`skipped.csv`、`summary.json`、`names.md`、
   再集計 `verify/` の `recount.csv`・`recount.md`・`summary.json`）、`names/predictions-2026-10-22.md`（事前登録）
+- `timing/2026-10-22/` 時刻と停留所位置・表定速度（`feeds.csv`、`prefectures.csv`、`fast_steps.csv` 速すぎる区間、`time_travel.csv`、
+  `stacks.csv` 重なる標柱、`summary.json`、`timing.md`）、`timing/predictions-2026-10-22.md`（事前登録）
+- `lastbus/2026-10-22/` 始発と終バス（`feeds.csv`、`prefectures.csv`、`places/` 停留所ごとの水・土・日の始発と終バス（都道府県ごとの
+  `NN.csv`、一覧 `index.csv`、読み直しで変わったデータ `changed.csv`、`split.json`）、`summary.json`、`lastbus.md`）、
+  `lastbus/predictions-2026-10-22.md`（事前登録）
 - `health/2026-10-22/` データの健康診断（`feeds.csv` データごとの4つの確認、`prefectures.csv`、`summary.json`、`health.md`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
   `tools/lapse_survival.py`（空白の続く日数）、`tools/recovery_forecast.py`（続いている空白の予測と採点）、
   `tools/holiday_check.py`（祝日・年末年始）、`tools/holiday_recheck.py`（先の祝日の抜けと12月の再確認）、
-  `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、`tools/data_health.py`（健康診断）、各 `test_*.py`
+  `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、`tools/timing_check.py`（時刻と位置）、
+  `tools/last_bus.py`（始発と終バス）、`tools/split_places.py`（停留所ごとの表を都道府県ごとに分ける）、`tools/data_health.py`（健康診断）、
+  各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`。祝日: `python tools/holiday_check.py --as-of 2026-10-22 --out out`
   （その日の現行ファイルを読みます）→ `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`。
   停留所名: `python tools/names_check.py --as-of 2026-10-22 --out out` → `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`。
+  時刻と位置: `python tools/timing_check.py --feeds names/2026-10-22/feeds.csv --pause 1.0 --out out`。
+  始発と終バス: `python tools/last_bus.py --feeds names/2026-10-22/feeds.csv --pause 1.0 --out out`（どちらもその日の現行ファイルを読みます）
+  → `python tools/split_places.py --places out/lastbus/2026-10-22/places.csv --rerun-feeds out/lastbus/2026-10-22/feeds.csv --published-feeds lastbus/2026-10-22/feeds.csv --out out/places`。
   健康診断: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### 出典とライセンス
-版履歴はGTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPIから取得しました。各データの提供者とライセンスは `feeds.csv` の
-organization_name・license 列のとおりです。時刻表データそのものはここに含めていません。
+版履歴と時刻表ファイルはGTFSデータリポジトリ（https://gtfs-data.jp/ ）のAPIから取得しました。各データの提供者とライセンスは `feeds.csv` の
+organization_name・license 列のとおりです。時刻表データそのものはここに含めていません。停留所ごとの表（`lastbus/2026-10-22/places/`、
+`timing/2026-10-22/` の各表）は、各データから求めた停留所名・位置・時刻で、出典は各データの提供者です。
 
 ---
 
@@ -443,6 +512,73 @@ and checking tools).
   current file was read on 2026-10-22 only (twice, counting the recount). Place names in the data are records of fact,
   not judgements.
 
+### Timing, stop positions and scheduled bus speeds (2026-10-22, predictions recorded in advance)
+`tools/timing_check.py` read the current file of the same 553 feeds as the stop-name census, counted timing and
+stop-position oddities, and gave each bus trip its scheduled speed (`timing/2026-10-22/timing.md`). A step is too fast
+under the limits of MobilityData's validator check fast_travel_between_consecutive_stops (bus 150 km/h; a step under one
+minute counts as one minute). The scheduled speed is the sum of the straight-line distances between a trip's stops
+divided by the time from its first to its last stop. We found no earlier all-Japan count of these checks and no
+all-Japan figure for scheduled bus speeds (表定速度) from GTFS (searched 2026-10-22; GTFS Scorecard grades feeds one by one).
+- All 553 files were read: 80,048 trips, 2,267,151 steps and 98,778 poles.
+- 4 files (0.7%) have a too-fast step, 19 steps in all, 16 of them scheduled at 0 minutes. 1 file has a step that
+  arrives before the trip left the stop before (1 step); 1 file has 2 poles outside Japan (none missing or at zero); no
+  file points to a stop missing from stops.txt. 6 files have at least one of these.
+- 20 files (3.6%) have stacks of differently named poles at exactly the same coordinates, 645 poles in all. Many are one
+  physical stop named once per route, which is not necessarily a mistake.
+- Scheduled bus speed (straight line): median 17.5 km/h over 76,033 bus trips (quartiles 14.2 and 22.0); the median of
+  the 524 feeds' medians is 18.5 km/h. By prefecture, Tokyo (11.7 km/h, 713 trips), Kanagawa (12.7) and Saitama (13.5)
+  are slowest, and Akita (27.9, 423 trips) and Iwate (27.1, 377 trips) among the fastest
+  (`timing/2026-10-22/prefectures.csv`; prefectures with few feeds are noisy).
+- Four of the six predictions recorded before the run (`timing/predictions-2026-10-22.md`) held. T1 (5–30% of files
+  with a too-fast step) did not: 0.7%, so Japan's published files are much cleaner on this check than we expected (for
+  context, an ITS Feed census of 736 US feeds with MobilityData's validator found 17%; the rules differ, so it is not a
+  benchmark). T2 (under 5% with a step arriving before the previous departure) held at 0.2%, T3 (under 3% with a bad
+  pole position) at 0.2%, T4 (median bus speed 12–25 km/h) at 17.5 km/h and T5 (at least half of too-fast steps under
+  one minute) at 84.2%. T6 (at least 10% of files with a stack) did not hold: 3.6%.
+- Limits: straight lines are shorter than roads, so speeds run low. A too-fast step can come from a wrong time or a wrong
+  position; the census does not say which. Times are mostly given to the minute, so short steps are coarse. Each feed's
+  current file was read once, on 2026-10-22. A flag is a sign to check, not proof of a mistake. Place names in the data
+  are records of fact, not judgements.
+
+### First and last buses (2026-10-22, predictions recorded in advance)
+`tools/last_bus.py` read the current file of the same 553 feeds and found, for an ordinary Wednesday (2026-11-11),
+Saturday (2026-11-14) and Sunday (2026-11-15), the first and last scheduled bus departure at every place (a stop name
+within one feed) (`lastbus/2026-10-22/lastbus.md`; one row per place in `lastbus/2026-10-22/places/`). Only
+departures where riders may board count (pickup_type not 1, and not a trip's last stop); times past 24:00 stay on their
+service day; frequencies.txt trips are included. We found no earlier all-Japan, stop-by-stop count of last buses from
+the published feeds (searched 2026-10-22; there are per-stop timetable sites and operator surveys of route cuts).
+- All 553 files were read. 527 cover the three days (22 end before 2026-11-11 and 4 gave no date range we could read);
+  480 have a bus departure on the Wednesday.
+- Places with a bus departure: 56,496 on the Wednesday, 42,823 on the Saturday, 33,468 on the Sunday.
+- Weekday last departure: median 18:21 (10% of places by 15:38, 25% by 17:04, 75% by 19:31, 90% by 20:50). Median
+  first departure 7:22.
+- The last weekday bus leaves before 18:00 at 41.8% of places, before 19:00 at 65.5%, before 20:00 at 81.4% and before
+  21:00 at 91.0%; 1.1% have one at 23:00 or later. 1,024 places have their last departure before 10:00 (morning only).
+- Of the places with a weekday bus, 41.2% (23,290) have no bus on the Sunday and 26.0% (14,673) none on the Saturday. Of
+  the 33,206 places served on both the Wednesday and the Sunday, 48.7% have an earlier last bus on the Sunday (median
+  difference 0 minutes).
+- 215 of the 480 feeds (44.8%) have a median last weekday departure before 18:00. Among prefectures with at least 1,000
+  places, the median last departure ranges from 17:22 to 19:32 (`lastbus/2026-10-22/prefectures.csv`).
+- Five of the six predictions recorded before the run (`lastbus/predictions-2026-10-22.md`) held. L1 (median last
+  departure 19:00–21:00) did not: 18:21, so the buses in these files stop earlier than we expected. L2 (at least 25%
+  before 19:00) held at 65.5%, L3 (at least 15% with no Sunday bus) at 41.2%, L4 (at least 30% of feeds with a median
+  before 18:00) at 44.8%, L5 (under 10% at 23:00 or later) at 1.1% and L6 (at least 40% with an earlier Sunday last bus)
+  at 48.7%.
+- One place has a last departure at 30:45 (6:45 the next morning); it is listed as the file gives it.
+- The per-place table is split into 40 files, one per prefecture (`places/NN.csv`, NN = prefecture code;
+  `places/index.csv` lists them), to stay under the repository's file-size limit (`tools/split_places.py`). Before the
+  split, all 553 current files were read again on 2026-10-23, and every feed's row matched the published `feeds.csv`
+  (0 feeds changed, so `places/changed.csv` is empty; 57,523 rows in all; `places/split.json`).
+- Limits: the repository holds mostly municipal community buses and regional operators; large city operators that
+  publish only elsewhere are not included. These are figures for the places in the published files, not for every bus
+  stop in Japan. A place is a stop name within one feed, so a stop served by two operators appears once per feed. The
+  last departure can be in any direction, so it is the latest time a bus leaves, not the last bus home.
+  Demand-responsive trips in the files count like any other. Timetables only, not real-time running. Each feed's
+  current file was read once, on 2026-10-22 (and once more on 2026-10-23 to check the per-place table). Place names in
+  the data are records of fact, not judgements.
+- After the April 2027 timetable changes the same census will be run again to compare each place's last bus (earlier or
+  later); predictions will be recorded before that run.
+
 ### Data-health table (2026-10-22, predictions recorded in advance)
 `tools/data_health.py` joins the four censuses above (the 2026-10-22 expiry list, the 2026-10-16 lapse census, holidays
 and stop names) into one row per feed, with no new downloads (`health/2026-10-22/`). It covers the 553 active, openly
@@ -504,6 +640,13 @@ include networks that stopped updating without being marked discontinued. The li
 - `names/2026-10-22/` stop-name readings and English (`feeds.csv`, `prefectures.csv`, `skipped.csv`, `summary.json`,
   `names.md`, the recount in `verify/`: `recount.csv`, `recount.md`, `summary.json`); `names/predictions-2026-10-22.md`
   (recorded in advance)
+- `timing/2026-10-22/` timing, stop positions and bus speeds (`feeds.csv`, `prefectures.csv`, `fast_steps.csv` too-fast
+  steps, `time_travel.csv`, `stacks.csv` stacked poles, `summary.json`, `timing.md`); `timing/predictions-2026-10-22.md`
+  (recorded in advance)
+- `lastbus/2026-10-22/` first and last buses (`feeds.csv`, `prefectures.csv`, `places/` with each place's first and
+  last bus on the Wednesday, Saturday and Sunday: one `NN.csv` per prefecture, `index.csv`, `changed.csv` for feeds that
+  changed on the re-read, `split.json`; `summary.json`, `lastbus.md`); `lastbus/predictions-2026-10-22.md` (recorded in
+  advance)
 - `health/2026-10-22/` the data-health table (`feeds.csv` four checks per feed, `prefectures.csv`, `summary.json`,
   `health.md`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
@@ -511,19 +654,25 @@ include networks that stopped updating without being marked discontinued. The li
   `tools/cluster_band.py` (clustering and ranges), `tools/trend_band.py` (trend check),
   `tools/lapse_survival.py` (how long lapses last), `tools/recovery_forecast.py` (open-lapse forecast and its score),
   `tools/holiday_check.py` (holidays), `tools/holiday_recheck.py` (later holidays and the December re-check),
-  `tools/names_check.py` (stop names), `tools/verify_names.py` (stop-name recount), `tools/data_health.py`
-  (data-health table), each with `test_*.py`
+  `tools/names_check.py` (stop names), `tools/verify_names.py` (stop-name recount), `tools/timing_check.py` (timing and
+  positions), `tools/last_bus.py` (first and last buses), `tools/split_places.py` (per-place table by prefecture),
+  `tools/data_health.py` (data-health table), each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`.
   Holidays: `python tools/holiday_check.py --as-of 2026-10-22 --out out` (reads the files current on the day it runs) →
   `python tools/holiday_recheck.py --before holidays/2026-10-22/feeds.csv --out out`.
   Stop names: `python tools/names_check.py --as-of 2026-10-22 --out out` →
   `python tools/verify_names.py --feeds names/2026-10-22/feeds.csv --out out/verify`.
+  Timing and positions: `python tools/timing_check.py --feeds names/2026-10-22/feeds.csv --pause 1.0 --out out`.
+  First and last buses: `python tools/last_bus.py --feeds names/2026-10-22/feeds.csv --pause 1.0 --out out` (both read
+  the files current on the day they run) →
+  `python tools/split_places.py --places out/lastbus/2026-10-22/places.csv --rerun-feeds out/lastbus/2026-10-22/feeds.csv --published-feeds lastbus/2026-10-22/feeds.csv --out out/places`.
   Data health: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### Sources and licences
 Version histories and timetable files come from the GTFS Data Repository API (https://gtfs-data.jp/). Each feed's
-publisher and licence are in the organization_name and license columns of `feeds.csv`. No timetable data is
-redistributed here.
+publisher and licence are in the organization_name and license columns of `feeds.csv`. No timetable files are
+redistributed here. The per-place and per-feed tables (`lastbus/2026-10-22/places/` and the tables in
+`timing/2026-10-22/`) hold stop names, positions and times derived from each feed; their source is each feed's publisher.
 
 Contact: MV2, Munim, Inc., mv2@munimtech.com
