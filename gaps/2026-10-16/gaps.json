@@ -1,0 +1,135 @@
+{
+ "range": [
+  "2023-01-01",
+  "2026-06-30"
+ ],
+ "day": "04-01",
+ "groups": {
+  "day": {
+   "n": 651,
+   "late": 129,
+   "gap": 72,
+   "stale": 57,
+   "late_share": 0.1982,
+   "gap_share": 0.1106,
+   "gap_of_late": 0.5581,
+   "gap_feeds": 64,
+   "gap_publishers": 54
+  },
+  "other": {
+   "n": 1468,
+   "late": 494,
+   "gap": 39,
+   "stale": 455,
+   "late_share": 0.3365,
+   "gap_share": 0.0266,
+   "gap_of_late": 0.0789,
+   "gap_feeds": 35,
+   "gap_publishers": 30
+  }
+ },
+ "tests": {
+  "gap_p_greater": 2.59999e-14,
+  "late_p_less": 3.0245e-11
+ },
+ "by_start_year": {
+  "2023": {
+   "day": {
+    "n": 67,
+    "late": 8,
+    "gap": 6,
+    "stale": 2,
+    "late_share": 0.1194,
+    "gap_share": 0.0896,
+    "gap_of_late": 0.75,
+    "gap_feeds": 6,
+    "gap_publishers": 6
+   },
+   "other": {
+    "n": 228,
+    "late": 73,
+    "gap": 4,
+    "stale": 69,
+    "late_share": 0.3202,
+    "gap_share": 0.0175,
+    "gap_of_late": 0.0548,
+    "gap_feeds": 4,
+    "gap_publishers": 4
+   }
+  },
+  "2024": {
+   "day": {
+    "n": 148,
+    "late": 30,
+    "gap": 14,
+    "stale": 16,
+    "late_share": 0.2027,
+    "gap_share": 0.0946,
+    "gap_of_late": 0.4667,
+    "gap_feeds": 14,
+    "gap_publishers": 9
+   },
+   "other": {
+    "n": 373,
+    "late": 125,
+    "gap": 7,
+    "stale": 118,
+    "late_share": 0.3351,
+    "gap_share": 0.0188,
+    "gap_of_late": 0.056,
+    "gap_feeds": 7,
+    "gap_publishers": 5
+   }
+  },
+  "2025": {
+   "day": {
+    "n": 202,
+    "late": 41,
+    "gap": 24,
+    "stale": 17,
+    "late_share": 0.203,
+    "gap_share": 0.1188,
+    "gap_of_late": 0.5854,
+    "gap_feeds": 24,
+    "gap_publishers": 23
+   },
+   "other": {
+    "n": 615,
+    "late": 213,
+    "gap": 20,
+    "stale": 193,
+    "late_share": 0.3463,
+    "gap_share": 0.0325,
+    "gap_of_late": 0.0939,
+    "gap_feeds": 20,
+    "gap_publishers": 18
+   }
+  },
+  "2026": {
+   "day": {
+    "n": 234,
+    "late": 50,
+    "gap": 28,
+    "stale": 22,
+    "late_share": 0.2137,
+    "gap_share": 0.1197,
+    "gap_of_late": 0.56,
+    "gap_feeds": 28,
+    "gap_publishers": 25
+   },
+   "other": {
+    "n": 252,
+    "late": 83,
+    "gap": 8,
+    "stale": 75,
+    "late_share": 0.3294,
+    "gap_share": 0.0317,
+    "gap_of_late": 0.0964,
+    "gap_feeds": 8,
+    "gap_publishers": 7
+   }
+  }
+ },
+ "generated_at": "2026-10-23T19:38:54Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}
