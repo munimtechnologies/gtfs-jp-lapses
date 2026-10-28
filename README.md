@@ -19,6 +19,7 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 掲載上の期限とファイル自体の期限 / Listed end date against the file's own dates: [calgap/2026-10-22/calendar_gap.md](calgap/2026-10-22/calendar_gap.md)（後続のファイル / later files: [next.md](calgap/2026-10-22/next/next.md)） ・
 公開済みのファイルのつながり / The chain of published files: [chain/2026-10-23/chain.md](chain/2026-10-23/chain.md) ・
 新しい期間のファイルは何日前に公開されたか / How far ahead new periods were published: [leads/2026-10-16/leads.md](leads/2026-10-16/leads.md) ・
+4月1日の分かれ方 / The April-1 split: [gaps/2026-10-16/gaps.md](gaps/2026-10-16/gaps.md) ・
 データの健康診断 / Data-health table: [health/2026-10-22/health.md](health/2026-10-22/health.md)
 
 ---
@@ -308,6 +309,7 @@ https://gtfs.org/documentation/schedule/schedule-best-practices/ ）はありま
   39版）です。2023〜2026年の各年とも4月1日のほうが高く（9.0%・9.5%・11.9%・12.0%対1.8%・1.9%・3.3%・3.2%）、72版は54の提供者の
   64件のデータにわたります。空白の調査で4月1日に空白が集中する（203回のうち121回）のは、4月1日のファイルが特に遅いからではなく、
   遅れたときに有効な古い版が残っていないからだと考えられます（解釈であり、検定したものではありません）。
+  この分かれ方は `tools/gap_split.py` で再現できます（`gaps/2026-10-16/`）。4月1日に始まるファイルのほうが開始日に有効なファイルのない割合が高いことは片側フィッシャー正確検定 p = 2.6×10⁻¹⁴、遅れの割合が低いことは p = 3.02×10⁻¹¹ です（事後の集計。版は独立ではないので p値は小さめに出ます）。
 - この差が続くかを確かめるため、2027年4月1日に始まるファイルについて3つの予測（G1〜G3）を記録しました
   （`leads/predictions-2027-04-01.md`）。2027年7月1日以降の調査で採点し、ここに追記します。
 - 限界: 公開日はリポジトリが各版に示すもので、アプリや経路検索に別の経路で先に渡ったデータは見えません。リポジトリから消えた古い版も
@@ -380,6 +382,7 @@ https://gtfs.org/documentation/schedule/schedule-best-practices/ ）はありま
   `chain/predictions-2026-10-23.md`・`chain/predictions-2026-11-01.md`（事前登録）
 - `leads/2026-10-16/` 新しい期間のファイルの公開日数（`leads.csv` 新しい期間のファイルごと、`summary.json`、`leads.md`）、
   `leads/predictions-2026-10-23.md`・`leads/predictions-2027-04-01.md`（事前登録）
+- `gaps/2026-10-16/` 4月1日に始まるファイルとそれ以外の分かれ方（`gaps.csv` 有効なファイルのない日を生んだファイルごと、`gaps.json`、`gaps.md`）
 - `health/2026-10-22/` データの健康診断（`feeds.csv` データごとの4つの確認、`prefectures.csv`、`summary.json`、`health.md`）
 - `tools/gtfs_lapses.py`（集計）、`tools/fy_cliff.py`（4月1日）、`tools/repeat_cliff.py`（再発）、`tools/expiry_watch.py`（期限の一覧）、
   `tools/fy2027_risk.py`（グループ別の予測と採点）、`tools/cluster_band.py`（まとまりと幅）、`tools/trend_band.py`（割合の伸び）、
@@ -388,7 +391,7 @@ https://gtfs.org/documentation/schedule/schedule-best-practices/ ）はありま
   `tools/names_check.py`（停留所名）、`tools/verify_names.py`（停留所名の再集計）、`tools/timing_check.py`（時刻と位置）、
   `tools/last_bus.py`（始発と終バス）、`tools/split_places.py`（停留所ごとの表を都道府県ごとに分ける）、
   `tools/calendar_gap.py`（掲載上の期限とファイルの期限）、`tools/calendar_next.py`（後続のファイル）、
-  `tools/file_chain.py`（公開済みのファイルのつながり）、`tools/lead_history.py`（新しい期間の公開日数）、
+  `tools/file_chain.py`（公開済みのファイルのつながり）、`tools/lead_history.py`（新しい期間の公開日数）、`tools/gap_split.py`（4月1日の分かれ方）、
   `tools/data_health.py`（健康診断）、各 `test_*.py`
 - 再現: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` → `python tools/fy_cliff.py out/lapses/2026-10-16`
   → `python tools/repeat_cliff.py out/lapses/2026-10-16`。祝日: `python tools/holiday_check.py --as-of 2026-10-22 --out out`
@@ -401,6 +404,7 @@ https://gtfs.org/documentation/schedule/schedule-best-practices/ ）はありま
   → `python tools/calendar_next.py --gaps out/calgap/feeds.csv --out out/calgap/next`（APIをその日に読みます）。
   ファイルのつながり: `python tools/file_chain.py --pause 1.0 --out out/chain`（APIをその日に読みます）。
   公開日数: `python tools/lead_history.py --versions data/2026-10-16/versions.csv --as-of 2026-10-16 --out out/leads`。
+  4月1日の分かれ方: `python tools/gap_split.py --leads leads/2026-10-16/leads.csv --start 2023-01-01 --end 2026-06-30 --out out/gaps`。
   健康診断: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### 出典とライセンス
@@ -762,6 +766,9 @@ updated and how long they ran).
   in each year 2023–2026 (9.0%, 9.5%, 11.9%, 12.0% against 1.8%, 1.9%, 3.3%, 3.2%), and the 72 come from 64 feeds of 54
   publishers. Our reading, not a test: lapses pile up on April 1 in the census (121 of 203) not because April-1 files
   are especially late but because, when one is late, there is no old file left to fall back on.
+  These counts are reproduced by `tools/gap_split.py` (`gaps/2026-10-16/`): one-sided Fisher exact p = 2.6e-14
+  for the higher share of April-1 starts with no valid file on their first day, and 3.02e-11 for their lower late
+  share (counted after the run; files are not independent, so these p-values are, if anything, too small).
 - To test whether this holds, three predictions (G1–G3) for the files starting on 2027-04-01 are recorded in
   `leads/predictions-2027-04-01.md`. They will be scored with a census taken on or after 2027-07-01 and the result
   added here.
@@ -852,6 +859,8 @@ include networks that stopped updating without being marked discontinued. The li
 - `leads/2026-10-16/` how far ahead new periods were published (`leads.csv` one row per new-period file,
   `summary.json`, `leads.md`); `leads/predictions-2026-10-23.md` and `leads/predictions-2027-04-01.md` (recorded in
   advance)
+- `gaps/2026-10-16/` the April-1 split (`gaps.csv` one row per file that left a day with no valid file,
+  `gaps.json`, `gaps.md`)
 - `health/2026-10-22/` the data-health table (`feeds.csv` four checks per feed, `prefectures.csv`, `summary.json`,
   `health.md`)
 - `tools/gtfs_lapses.py` (census), `tools/fy_cliff.py` (April 1), `tools/repeat_cliff.py` (repeats),
@@ -863,6 +872,7 @@ include networks that stopped updating without being marked discontinued. The li
   positions), `tools/last_bus.py` (first and last buses), `tools/split_places.py` (per-place table by prefecture),
   `tools/calendar_gap.py` (listed end against the file's dates), `tools/calendar_next.py` (later files),
   `tools/file_chain.py` (the chain of published files), `tools/lead_history.py` (lead times of new periods),
+  `tools/gap_split.py` (the April-1 split),
   `tools/data_health.py` (data-health table), each with `test_*.py`
 - Reproduce: `python tools/gtfs_lapses.py --as-of 2026-10-16 --pause 1.0 --out out` →
   `python tools/fy_cliff.py out/lapses/2026-10-16` → `python tools/repeat_cliff.py out/lapses/2026-10-16`.
@@ -878,6 +888,7 @@ include networks that stopped updating without being marked discontinued. The li
   `python tools/calendar_next.py --gaps out/calgap/feeds.csv --out out/calgap/next` (reads the API on the day it runs).
   Chain of files: `python tools/file_chain.py --pause 1.0 --out out/chain` (reads the API on the day it runs).
   Lead times: `python tools/lead_history.py --versions data/2026-10-16/versions.csv --as-of 2026-10-16 --out out/leads`.
+  April-1 split: `python tools/gap_split.py --leads leads/2026-10-16/leads.csv --start 2023-01-01 --end 2026-06-30 --out out/gaps`.
   Data health: `python tools/data_health.py --lapses data/2026-10-16/feeds.csv --watch watch/2026-10-22/expiring.csv --holidays holidays/2026-10-22/feeds.csv --names names/2026-10-22/feeds.csv --as-of 2026-10-22 --out out/health`
 
 ### Sources and licences
