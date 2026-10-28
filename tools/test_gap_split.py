@@ -65,6 +65,20 @@ class TestFisher(unittest.TestCase):
         self.assertEqual(gs.pval(0.05), '0.05')
 
 
+class TestPercent(unittest.TestCase):
+    def test_from_counts(self):
+        # 20/615 = 3.252%: the 4-place share 0.0325 used to print 3.2%.
+        self.assertEqual(gs.pct_of(20, 615), '3.3%')
+        # 72/651 = 11.06%; 39/494 = 7.89%.
+        self.assertEqual(gs.pct_of(72, 651), '11.1%')
+        self.assertEqual(gs.pct_of(39, 494), '7.9%')
+        # 1/16 = 6.25% exactly: half up gives 6.3%, where f'{6.25:.1f}' gives 6.2.
+        self.assertEqual(gs.pct_of(1, 16), '6.3%')
+        self.assertEqual(gs.pct_of(0, 2), '0.0%')
+        self.assertEqual(gs.pct_of(3, 3), '100.0%')
+        self.assertEqual(gs.pct_of(1, 0), '')
+
+
 class TestSummary(unittest.TestCase):
     def setUp(self):
         self.s, self.on, self.off = gs.summarise(ROWS, START, END, '04-01', predictions=True)
@@ -141,6 +155,9 @@ class TestMain(unittest.TestCase):
             self.assertIn('late share of 04-01 smaller: 0.952\n', md)
             self.assertIn('G2: ', md)
             self.assertIn('Result: p = 0.357, did not hold.', md)
+            # G1 3/5 = 60.0%, G3 3/4 = 75.0%, both from the counts.
+            self.assertIn('Result: 60.0%, did not hold.', md)
+            self.assertIn('Result: 75.0%, held.', md)
             self.assertIn('G3:', md)
 
 

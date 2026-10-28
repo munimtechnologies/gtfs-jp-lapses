@@ -5,7 +5,8 @@
 # The 2026-10-16 census (leads/2026-10-16/) found April-1 files late less often than others but, when late, usually
 # with no valid file, because the file before them mostly ended on March 31. This tool reproduces those counts and
 # scores the predictions for 2027-04-01 in PREDICTIONS (leads/predictions-2027-04-01.md) on a later census.
-# p-values are kept to 6 significant figures and shown to 3, so a very small p is not printed as 0.
+# p-values are kept to 6 significant figures and shown to 3, so a very small p is not printed as 0. Percentages are
+# formatted from the counts, rounded half up, not from the rounded shares in gaps.json.
 # No network; standard library only.
 # MV2 of Munim, Inc. - Apache-2.0 license. Made with AI agents working in MV2's name.
 import argparse
@@ -105,8 +106,13 @@ def summarise(rows, start, end, md, predictions=False):
     return s, on, off
 
 
-def pct(x):
-    return '' if x is None else f'{100 * x:.1f}%'
+def pct_of(a, b):
+    """a/b as a percentage to one decimal, from the counts, rounded half up. Formatting the 4-place share instead
+    can print one tenth low (20/615 is 0.0325 to 4 places, which printed 3.2% rather than 3.3%)."""
+    if not b:
+        return ''
+    q = (2000 * a + b) // (2 * b)
+    return f'{q // 10}.{q % 10}%'
 
 
 def report(s, source):
@@ -119,8 +125,9 @@ def report(s, source):
              '| group | files | late | gap | stale | late share | gap share | gap of late | feeds with a gap | '
              'publishers with a gap |', '|---|---|---|---|---|---|---|---|---|---|']
     for name, g in (('day', d), ('other', o)):
-        lines.append(f'| {name} | {g["n"]} | {g["late"]} | {g["gap"]} | {g["stale"]} | {pct(g["late_share"])} | '
-                     f'{pct(g["gap_share"])} | {pct(g["gap_of_late"])} | {g["gap_feeds"]} | {g["gap_publishers"]} |')
+        lines.append(f'| {name} | {g["n"]} | {g["late"]} | {g["gap"]} | {g["stale"]} | '
+                     f'{pct_of(g["late"], g["n"])} | {pct_of(g["gap"], g["n"])} | {pct_of(g["gap"], g["late"])} | '
+                     f'{g["gap_feeds"]} | {g["gap_publishers"]} |')
     lines += ['', f'- one-sided Fisher exact p, gap share of {s["day"]} greater: {pval(t["gap_p_greater"])}',
               f'- one-sided Fisher exact p, late share of {s["day"]} smaller: {pval(t["late_p_less"])}', '',
               '## 開始年ごと / By start year', '',
@@ -128,13 +135,14 @@ def report(s, source):
               '|---|---|---|---|---|---|---|']
     for y, v in s['by_start_year'].items():
         a, b = v['day'], v['other']
-        lines.append(f'| {y} | {a["n"]} | {a["gap"]} | {pct(a["gap_share"])} | {b["n"]} | {b["gap"]} | '
-                     f'{pct(b["gap_share"])} |')
+        lines.append(f'| {y} | {a["n"]} | {a["gap"]} | {pct_of(a["gap"], a["n"])} | {b["n"]} | {b["gap"]} | '
+                     f'{pct_of(b["gap"], b["n"])} |')
     if 'predictions' in s:
         lines += ['', '## 事前に記録した予測 / Predictions recorded in advance', '']
         for k, p in s['predictions'].items():
             v = p['value']
-            shown = '' if v is None else (f'p = {pval(v)}' if k == 'G2' else pct(v))
+            counts = {'G1': (d['gap'], d['n']), 'G3': (d['gap'], d['late'])}
+            shown = '' if v is None else (f'p = {pval(v)}' if k == 'G2' else pct_of(*counts[k]))
             lines.append(f'- {k}: {p["text"]} Result: {shown}, {"held" if p["held"] else "did not hold"}.')
     lines += ['', 'Limits: files are not independent (one publisher often publishes several feeds together), so the '
               'p-values are, if anything, too small. Only files that were eventually published are counted: a feed '

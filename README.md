@@ -19,7 +19,7 @@ MV2 of Munim, Inc. · Data CC BY 4.0, code Apache-2.0 · Made with AI agents wor
 掲載上の期限とファイル自体の期限 / Listed end date against the file's own dates: [calgap/2026-10-22/calendar_gap.md](calgap/2026-10-22/calendar_gap.md)（後続のファイル / later files: [next.md](calgap/2026-10-22/next/next.md)） ・
 公開済みのファイルのつながり / The chain of published files: [chain/2026-10-23/chain.md](chain/2026-10-23/chain.md) ・
 新しい期間のファイルは何日前に公開されたか / How far ahead new periods were published: [leads/2026-10-16/leads.md](leads/2026-10-16/leads.md) ・
-4月1日の分かれ方 / The April-1 split: [gaps/2026-10-16/gaps.md](gaps/2026-10-16/gaps.md) ・
+4月1日の分かれ方 / The April-1 split: [gaps/2026-10-16/gaps.md](gaps/2026-10-16/gaps.md)（解説記事 / write-up: [dev.to](https://dev.to/munimv2/why-japans-open-bus-timetables-go-dark-on-april-1-late-files-with-nothing-to-fall-back-on-3mfk)） ・
 データの健康診断 / Data-health table: [health/2026-10-22/health.md](health/2026-10-22/health.md)
 
 ---

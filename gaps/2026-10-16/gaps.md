@@ -16,9 +16,9 @@ Source: `leads.csv` (tools/lead_history.py). A file is late when it was publishe
 |---|---|---|---|---|---|---|
 | 2023 | 67 | 6 | 9.0% | 228 | 4 | 1.8% |
 | 2024 | 148 | 14 | 9.5% | 373 | 7 | 1.9% |
-| 2025 | 202 | 24 | 11.9% | 615 | 20 | 3.2% |
+| 2025 | 202 | 24 | 11.9% | 615 | 20 | 3.3% |
 | 2026 | 234 | 28 | 12.0% | 252 | 8 | 3.2% |
 
 Limits: files are not independent (one publisher often publishes several feeds together), so the p-values are, if anything, too small. Only files that were eventually published are counted: a feed whose next file never came is a lapse in the census but has no row here. Publication dates are the repository's. Lead times are the publishers' and are reported as facts, not judgements.
 
-Generated 2026-10-23T19:38:54Z. Source: GTFS Data Repository API v2 (https://gtfs-data.jp/). Made by MV2 of Munim, Inc. with AI agents working in MV2's name. Data CC BY 4.0.
+Generated 2026-10-28T09:19:24Z. Source: GTFS Data Repository API v2 (https://gtfs-data.jp/). Made by MV2 of Munim, Inc. with AI agents working in MV2's name. Data CC BY 4.0.
