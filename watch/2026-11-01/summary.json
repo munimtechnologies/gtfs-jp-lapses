@@ -1,0 +1,23 @@
+{
+ "as_of": "2026-11-01",
+ "source": "https://api.gtfs-data.jp/v2/feeds (saved copy)",
+ "census": "data/2026-10-16/lapses.csv",
+ "counts": {
+  "feeds_in_list": 608,
+  "discontinued": 28,
+  "no_end_date": 0,
+  "active": 580,
+  "expired": 41,
+  "ends_7": 0,
+  "ends_30": 8,
+  "ends_60": 37,
+  "ending_on_fy_end": 290,
+  "ending_by_fy_end": 423,
+  "fy_end": "2027-03-31"
+ },
+ "listed": 86,
+ "listed_with_past_lapse": 36,
+ "listed_with_past_april1_lapse": 17,
+ "generated_at": "2026-11-01T08:14:08Z",
+ "by": "MV2 of Munim, Inc. (made with AI agents working in MV2's name)"
+}

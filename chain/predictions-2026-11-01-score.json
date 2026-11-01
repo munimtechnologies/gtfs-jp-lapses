@@ -1,0 +1,99 @@
+{
+ "prediction": "F1",
+ "as_of": "2026-11-01",
+ "need": 4,
+ "feeds": [
+  {
+   "organization_id": "tosaden-kotsu",
+   "feed_id": "GTFS-Tosadentraffic_Airportbus",
+   "end_2026_10_23": "2026-10-25",
+   "outcome": "in_force",
+   "reason": "continuous",
+   "class": "continuous",
+   "in_force_to": "2026-12-31",
+   "next_from": "",
+   "listed_end": "2026-12-31",
+   "api_discontinued": "no"
+  },
+  {
+   "organization_id": "rokkashovillage",
+   "feed_id": "rokkasho-sharedtaxi",
+   "end_2026_10_23": "2026-10-30",
+   "outcome": "none",
+   "reason": "expired",
+   "class": "expired",
+   "in_force_to": "",
+   "next_from": "",
+   "listed_end": "2026-10-30",
+   "api_discontinued": ""
+  },
+  {
+   "organization_id": "kamigoritown",
+   "feed_id": "ainorigo",
+   "end_2026_10_23": "2026-10-31",
+   "outcome": "in_force",
+   "reason": "continuous",
+   "class": "continuous",
+   "in_force_to": "2027-10-31",
+   "next_from": "",
+   "listed_end": "2027-10-31",
+   "api_discontinued": "no"
+  },
+  {
+   "organization_id": "kamishihorotown",
+   "feed_id": "kamishihoro",
+   "end_2026_10_23": "2026-10-31",
+   "outcome": "none",
+   "reason": "expired",
+   "class": "expired",
+   "in_force_to": "",
+   "next_from": "",
+   "listed_end": "2026-10-31",
+   "api_discontinued": ""
+  },
+  {
+   "organization_id": "kamishihorotown",
+   "feed_id": "kamishihoro-self-bus",
+   "end_2026_10_23": "2026-10-31",
+   "outcome": "none",
+   "reason": "expired",
+   "class": "expired",
+   "in_force_to": "",
+   "next_from": "",
+   "listed_end": "2026-10-31",
+   "api_discontinued": ""
+  },
+  {
+   "organization_id": "kumanogobobus",
+   "feed_id": "kumanogobobus_gobo",
+   "end_2026_10_23": "2026-10-31",
+   "outcome": "in_force",
+   "reason": "continuous",
+   "class": "continuous",
+   "in_force_to": "2027-12-31",
+   "next_from": "",
+   "listed_end": "2027-12-31",
+   "api_discontinued": "no"
+  },
+  {
+   "organization_id": "nishinomiyacity",
+   "feed_id": "sakurayamanami",
+   "end_2026_10_23": "2026-10-31",
+   "outcome": "in_force",
+   "reason": "continuous",
+   "class": "continuous",
+   "in_force_to": "2027-10-31",
+   "next_from": "",
+   "listed_end": "2027-10-31",
+   "api_discontinued": "no"
+  }
+ ],
+ "counts": {
+  "in_force": 4,
+  "none": 3,
+  "none_discontinued": 0,
+  "unresolved": 0
+ },
+ "none_total": 3,
+ "verdict": "failed"
+}
