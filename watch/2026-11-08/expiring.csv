@@ -1,0 +1,88 @@
+﻿status,days_left,latest_feed_end_date,organization_id,feed_id,organization_name,feed_name,pref_id,pref_name,license,latest_feed_start_date,last_published_at,days_since_published,past_lapses,past_april1_lapses,latest_lapse_start
+expired,-952,2024-03-31,hyogo-kamitown,kamichominbus,香美町,香美町民バス,28,兵庫県,CC BY 2.1 JP,2021-12-01,2023-06-08,1249,1,1,2024-04-01
+expired,-952,2024-03-31,kitaaikivillage,soneibus,北相木村,北相木村村営バス,20,長野県,CC BY 4.0,2023-08-31,2023-08-31,1165,1,1,2024-04-01
+expired,-952,2024-03-31,shinanotown,rosenbus,信濃町,信濃町路線バス,20,長野県,CC0 1.0,2023-06-02,2023-06-02,1255,1,1,2024-04-01
+expired,-830,2024-07-31,kanumacity,ri-bus,鹿沼市,リーバス,9,栃木県,CC BY 4.0,2024-02-01,2024-02-09,1003,2,0,2024-08-01
+expired,-677,2024-12-31,yabucity,waiwai-sekimiya-yoka,養父市,わいわいバス/関宮ふれあいバス/八鹿コミュニティバス,28,兵庫県,CC BY 2.1 JP,2021-10-01,2022-12-03,1436,1,0,2025-01-01
+expired,-666,2025-01-11,nagano-nakanocity,fureaibus,中野市,中野市ふれあいバス,20,長野県,CC0 1.0,2024-01-12,2024-03-08,975,1,0,2025-01-12
+expired,-587,2025-03-31,katocity,yashiroshigaichinoriaitaxi,加東市,社市街地乗合タクシー,28,兵庫県,CC BY 2.1 JP,2024-04-01,2024-03-25,958,1,1,2025-04-01
+expired,-587,2025-03-31,susamitown,Communitybus,すさみ町,すさみ町コミュニティバス,30,和歌山県,CC0 1.0,2024-04-01,2024-03-24,959,1,1,2025-04-01
+expired,-404,2025-09-30,chiba-rainbow-bus,chibarainbowbus,ちばレインボーバス株式会社,ちばレインボーバス,12,千葉県,CC BY 4.0,2024-10-01,2024-10-08,761,1,0,2025-10-01
+expired,-334,2025-12-09,iijimatown,iichanbus,飯島町,いいちゃんバス,20,長野県,CC BY 4.0,2024-12-10,2025-01-30,647,1,0,2025-12-10
+expired,-312,2025-12-31,waketown,wakechoueibasu,和気町,和気町営バス「わけまろ号」,33,岡山県,CC0 1.0,2025-03-11,2025-03-11,607,1,0,2026-01-01
+expired,-237,2026-03-16,uozucity,omotenashi,魚津市,おもてなし魚津直行便,16,富山県,CC0 1.0,2025-03-15,2025-08-28,437,4,0,2026-03-17
+expired,-233,2026-03-20,tokushima-minamitown,minabubyoinrenrakubus,美波町,美波病院連絡バス,36,徳島県,CC BY 4.0,2025-03-21,2025-03-21,597,2,0,2026-03-21
+expired,-222,2026-03-31,kamikatsutown,kamikatsutownbus,上勝町,上勝町営バス,36,徳島県,CC BY 4.0,2025-04-01,2025-04-18,569,2,2,2026-04-01
+expired,-222,2026-03-31,rittocity,rittoukurichanbus,栗東市,栗東市　くりちゃんバス,25,滋賀県,CC BY 4.0,2025-04-01,2025-04-10,577,2,2,2026-04-01
+expired,-222,2026-03-31,tateshinatown,tateshinasmile,立科町,たてしなスマイル交通,20,長野県,CC BY 4.0,2025-10-14,2025-10-14,390,2,2,2026-04-01
+expired,-222,2026-03-31,andotown,andocombus,安堵町,安堵町コミュニティバス,29,奈良県,CC BY 4.0,2025-02-01,2025-05-09,548,1,1,2026-04-01
+expired,-222,2026-03-31,kiyosato,kiyosato-picnicbus,NPO法人清里観光振興会,清里ピクニックバス,19,山梨県,CC0 1.0,2025-04-01,2025-03-11,607,1,1,2026-04-01
+expired,-222,2026-03-31,minobutown,furusekikaiiwamasen,身延町,古関甲斐岩間線,19,山梨県,CC0 1.0,2025-04-01,2025-07-11,485,1,1,2026-04-01
+expired,-222,2026-03-31,minobutown,furusekizyunkansen,身延町,古関循環線,19,山梨県,CC0 1.0,2025-04-01,2025-07-11,485,1,1,2026-04-01
+expired,-222,2026-03-31,minobutown,iitomimotosukosen,身延町,飯富本栖湖線,19,山梨県,CC0 1.0,2025-04-01,2025-07-11,485,1,1,2026-04-01
+expired,-222,2026-03-31,nirasakicity,shiminbus,韮崎市,韮崎市民バス,19,山梨県,CC0 1.0,2025-04-01,2025-04-30,557,1,1,2026-04-01
+expired,-222,2026-03-31,okayacity,silkybus,岡谷市,シルキーバス,20,長野県,CC BY 4.0,2024-12-09,2024-12-09,699,1,1,2026-04-01
+expired,-222,2026-03-31,sanjocity,guruttosan,三条市,三条市循環バスぐるっとさん,15,新潟県,CC BY 2.1 JP,2025-11-01,2025-11-04,369,1,1,2026-04-01
+expired,-222,2026-03-31,tochigi-nakagawatown,nakagawamaticommunitybus,那珂川町,那珂川町コミュニティバス（馬頭烏山線）,9,栃木県,CC BY 4.0,2025-04-01,2025-03-27,591,1,1,2026-04-01
+expired,-222,2026-03-31,tokushimacity,oujinfureaibus,徳島市,応神ふれあいバス,36,徳島県,CC BY 4.0,2025-11-19,2025-11-19,354,1,0,2024-10-01
+expired,-39,2026-09-30,higashiomicity,higasiohmisicommunitybus,東近江市,東近江市ちょこっとバス,25,滋賀県,CC BY 4.0,2025-04-01,2025-03-31,587,2,0,2026-10-01
+expired,-39,2026-09-30,kotosan,kotohira-local,琴参バス株式会社,琴平路線,37,香川県,CC BY 4.0,2025-10-01,2026-02-26,255,2,0,2026-10-01
+expired,-9,2026-10-30,rokkashovillage,rokkasho-sharedtaxi,六ヶ所村,六ヶ所村乗合タクシー,2,青森県,CC BY 4.0,2025-10-31,2026-03-26,227,0,0,
+expired,-8,2026-10-31,kamishihorotown,kamishihoro,上士幌町,上士幌町コミュニティバス,1,北海道,CC BY 4.0,2025-12-01,2025-12-02,341,0,0,
+expired,-8,2026-10-31,kamishihorotown,kamishihoro-self-bus,上士幌町,上士幌町自動運転バス,1,北海道,CC BY 4.0,2025-11-28,2025-12-02,341,0,0,
+expired,-8,2026-10-31,nakatsucity,HiyamajiKamagi,中津市,樋山路鎌城線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,Kawaraguchi,中津市,川原口線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,Kii,中津市,城井線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,OshimaIfuku,中津市,大島伊福線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,OshimadaiKanayoshi,中津市,大島台金吉線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,ShinyabaHigashi,中津市,深耶馬東線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,ShinyabaNishi,中津市,深耶馬西線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,UenokawauchiMasaki,中津市,上ノ川内柾木線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,YamautsuriKita,中津市,山移北線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+expired,-8,2026-10-31,nakatsucity,YamautsuriMinami,中津市,山移南線,44,大分県,CC BY 4.0,2023-04-01,2026-09-20,49,0,0,
+ends_30,15,2026-11-23,nagadenbus,obuse-romango,長電バス株式会社,おぶせロマン号,20,長野県,CC BY 4.0,2026-04-25,2026-04-25,197,0,0,
+ends_30,22,2026-11-30,komonotown,communitybus,菰野町,菰野町「かもしか号」,24,三重県,CC BY 4.0,2026-04-01,2026-08-24,76,2,0,2026-05-11
+ends_30,22,2026-11-30,isecity,communitybus,伊勢市,伊勢市コミュニティバス「おかげバス」,24,三重県,CC BY 4.0,2026-04-01,2026-08-24,76,0,0,
+ends_30,22,2026-11-30,owariasahicity,communitybus,尾張旭市,尾張旭市あさぴー号,23,愛知県,CC BY 4.0,2026-04-01,2026-03-18,235,0,0,
+ends_30,22,2026-11-30,towadakankodentetsu,toutetsu_airport_line,十和田観光電鉄株式会社,十和田観光電鉄（八戸～三沢空港線）,2,青森県,CC BY 4.0,2026-10-25,2026-10-15,24,0,0,
+ends_30,22,2026-11-30,yonezawacity,Yonezawa,米沢市,米沢市営バス,6,山形県,CC BY 4.0,2026-04-16,2026-04-17,205,0,0,
+ends_30,26,2026-12-04,nagadenbus,nagadenbus-exp,長電バス株式会社,長電バス急行,20,長野県,CC BY 4.0,2026-04-07,2026-07-06,125,0,0,
+ends_60,47,2026-12-25,kuroiwa-kanko,GTFS-Kuroiwakanko_Localbus,有限会社黒岩観光,路線バス,39,高知県,CC BY 4.0,2026-09-01,2026-09-15,54,0,0,
+ends_60,49,2026-12-27,niyodogawatown,GTFS-Niyodogawatown_Townsbus,仁淀川町,仁淀川町町民バス,39,高知県,CC BY 4.0,2026-07-01,2026-06-25,136,0,0,
+ends_60,49,2026-12-27,reihoku-kanko,GTFS-Reihokukanko_Localbus,有限会社嶺北観光自動車,路線バス,39,高知県,CC BY 4.0,2026-10-01,2026-09-07,62,0,0,
+ends_60,50,2026-12-28,kumamotodentetsu,kumamotodentetsu,熊本電鉄,熊本電鉄電車,43,熊本県,CC0 1.0,2026-05-11,2026-08-26,74,0,0,
+ends_60,50,2026-12-28,yanaizutown,yanaizutown-bus,柳津町,柳津町町民バス”ふれあい号”,7,福島県,CC BY 4.0,2026-10-19,2026-10-19,20,0,0,
+ends_60,52,2026-12-30,kochi-koryo-kotsu,GTFS-Koryotraffic_Localbus,高知高陵交通株式会社,路線バス,39,高知県,CC BY 4.0,2026-10-01,2026-11-03,5,0,0,
+ends_60,52,2026-12-30,naritacity,narita-community-bus,成田市,成田市コミュニティバス,12,千葉県,CC BY 4.0,2026-04-01,2026-02-13,268,0,0,
+ends_60,53,2026-12-31,yanbaru-expressbus,yanbaru-express-bus,合同会社やんばる急行バス,やんばる急行バス,47,沖縄県,CC BY 4.0,2026-04-21,2026-04-17,205,2,0,2025-11-01
+ends_60,53,2026-12-31,hannocity,odekakemuma-minamikoma,飯能市,飯能市乗合ワゴン　南高麗,11,埼玉県,CC0 1.0,2025-01-01,2025-12-25,318,1,0,2025-01-01
+ends_60,53,2026-12-31,samukawatown,mokusei-go_eastroute,寒川町,寒川町コミュニティバス「もくせい号」東ルート,14,神奈川県,CC BY 4.0,2025-12-01,2025-12-25,318,1,0,2025-01-01
+ends_60,53,2026-12-31,samukawatown,mokusei-go_kuramiomuraroute,寒川町,寒川町コミュニティバス「もくせい号」倉見大村ルート,14,神奈川県,CC BY 4.0,2025-12-01,2025-12-25,318,1,0,2025-01-01
+ends_60,53,2026-12-31,samukawatown,mokusei-go_southroute,寒川町,寒川町コミュニティバス「もくせい号」南ルート,14,神奈川県,CC BY 4.0,2025-12-01,2025-12-25,318,1,0,2025-01-01
+ends_60,53,2026-12-31,wakocity,Wako-City-junkanbus,和光市,和光市内循環バス（わこば）,11,埼玉県,CC BY 4.0,2026-01-04,2026-04-27,195,1,0,2026-01-01
+ends_60,53,2026-12-31,chiryucity,communitybus,知立市,知立市「ミニバス」（コミュニティバス）,23,愛知県,CC BY 2.1 JP,2025-12-23,2025-12-24,319,0,0,
+ends_60,53,2026-12-31,hannocity,odekakemuma-haraichiba,飯能市,飯能市乗合ワゴン　原市場,11,埼玉県,CC0 1.0,2025-01-01,2025-12-25,318,0,0,
+ends_60,53,2026-12-31,inotown,GTFS-Inotown_Loopbus,いの町,いの町営バス「伊野循環線」,39,高知県,CC BY 4.0,2026-03-01,2026-03-17,236,0,0,
+ends_60,53,2026-12-31,jr-east-morioka,JReast_wandotaxi,JR東日本盛岡支社,わんタク定時便,2,青森県,CC BY 4.0,2026-05-01,2026-04-17,205,0,0,
+ends_60,53,2026-12-31,katsushikacity,sakura,葛飾区,さくら,13,東京都,CC BY 4.0,2025-12-29,2025-12-17,326,0,0,
+ends_60,53,2026-12-31,kochi-ekimae-kanko,GTFS-Ekimae_Airportbus,株式会社高知駅前観光,空港連絡バス,39,高知県,CC BY 4.0,2026-11-01,2026-10-29,10,0,0,
+ends_60,53,2026-12-31,kochi-ekimae-kanko,GTFS-Ekimae_Expressbus,株式会社高知駅前観光,高速バス,39,高知県,CC BY 4.0,2026-10-01,2026-09-15,54,0,0,
+ends_60,53,2026-12-31,miharavillage,GTFS-Miharavill_Bus,三原村,三原村「三原バス」,39,高知県,CC BY 4.0,2026-11-01,2026-10-13,26,0,0,
+ends_60,53,2026-12-31,nakadomaritown,nakadomari-communitybus,中泊町,中泊町コミュニティバス,2,青森県,CC BY 4.0,2026-01-08,2026-03-26,227,0,0,
+ends_60,53,2026-12-31,ninomiyatown,Ninomiyatowncommunitybus,二宮町,二宮町コミュニティバス,14,神奈川県,CC BY 4.0,2022-10-01,2026-10-15,24,0,0,
+ends_60,53,2026-12-31,owanitown,owanitown-sunekarabus,大鰐町,大鰐町スネカラバス,2,青森県,CC BY 4.0,2025-11-20,2026-03-18,235,0,0,
+ends_60,53,2026-12-31,ryugasakicity,Ryugasakishi-communitybus,龍ケ崎市,龍ケ崎市コミュニティバス,8,茨城県,CC BY 4.0,2025-09-01,2026-01-29,283,0,0,
+ends_60,53,2026-12-31,shingovillage,shingo-mizubashogo,新郷村,新郷村営バス,2,青森県,CC BY 4.0,2025-12-08,2026-03-27,226,0,0,
+ends_60,53,2026-12-31,sotogahamatown,sotogahama-townbus,外ヶ浜町,外ヶ浜町営バス,2,青森県,CC BY 4.0,2026-04-01,2026-03-18,235,0,0,
+ends_60,53,2026-12-31,tokicity,communitybus,土岐市,土岐市民バス,21,岐阜県,CC BY 4.0,2026-02-01,2026-01-21,291,0,0,
+ends_60,53,2026-12-31,tokonamecity,Gruun,常滑市,コミュニティバスグルーン,23,愛知県,CC0 1.0,2026-01-01,2025-11-27,346,0,0,
+ends_60,53,2026-12-31,tokubus-nanbu,tokushimabusnanbu,徳島バス南部株式会社,徳島バス南部株式会社,36,徳島県,CC BY 4.0,2025-10-01,2025-10-06,398,0,0,
+ends_60,53,2026-12-31,tosaden-kotsu,GTFS-Tosadentraffic_Airportbus,とさでん交通株式会社,空港連絡バス,39,高知県,CC BY 4.0,2026-11-01,2026-11-01,7,0,0,
+ends_60,53,2026-12-31,towadacity,towadacity_communitybus,十和田市,十和田市コミュニティバス,2,青森県,CC BY 4.0,2025-11-06,2026-03-18,235,0,0,
+ends_60,53,2026-12-31,tsugarucity,tsugarucity_localtransportation,つがる市,つがる市地域内交通,2,青森県,CC BY 4.0,2025-10-25,2026-03-18,235,0,0,
+ends_60,53,2026-12-31,uchinadatown,communitybus,内灘町,コミュニティバス,17,石川県,CC BY 4.0,2025-11-17,2026-01-28,284,0,0,
+ends_60,53,2026-12-31,yokkaichicity,communitybus,四日市市,四日市市自主運行バス,24,三重県,CC BY 4.0,2025-12-01,2025-12-03,340,0,0,
+ends_60,57,2027-01-04,kochi-suzakicity,GTFS-Susakicity_Bus,須崎市,須崎市営バス,39,高知県,CC BY 4.0,2026-10-01,2026-11-03,5,0,0,
+ends_60,57,2027-01-04,kochi-suzakicity,GTFS-Susakicity_Ferry,須崎市,須崎市営巡航船,39,高知県,CC BY 4.0,2025-12-01,2026-11-03,5,0,0,
+ends_60,58,2027-01-05,busnet-tsu,guruttotsubus,バスネット津,ぐるっと・つーバス,24,三重県,CC BY 4.0,2025-05-07,2025-04-27,560,0,0,
+ends_60,58,2027-01-05,inotown,GTFS-Inotown_HongawaArea,いの町,いの町営バス「本川地区」,39,高知県,CC BY 4.0,2025-07-01,2025-07-04,492,0,0,
