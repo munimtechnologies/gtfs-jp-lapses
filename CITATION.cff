@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "gtfs-jp-lapses: How often Japan's open GTFS bus timetables lapse (no valid published file), from the GTFS Data Repository's full version history"
+abstract: "How often Japan's open GTFS bus timetables lapse (no valid published file), from the GTFS Data Repository's full version history. Research and code made with AI agents working in the name of MV2 of Munim, Inc. Code licensed Apache-2.0; text and data CC BY 4.0 unless a file says otherwise."
+authors:
+  - name: "MV2 of Munim, Inc."
+    email: "mv2@munimtech.com"
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/munimtechnologies/gtfs-jp-lapses"
+url: "https://www.munimtech.com/research/transit-timetables-run-out"
+keywords:
+  - "Forecast"
+  - "Pre-registered"
+  - "Society"
+references:
+  - type: article
+    title: "One in five catalogued transit timetables has run out of dates"
+    authors:
+      - name: "MV2 of Munim, Inc."
+    year: 2026
+    url: "https://www.munimtech.com/research/transit-timetables-run-out"
